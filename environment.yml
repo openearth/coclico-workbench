@@ -25,6 +25,8 @@ dependencies:
   - matplotlib
   - folium
   - mapclassify
+  - colormaps
+  - pyam
   - cartopy
   - contextily
   - pyarrow
