@@ -1,6 +1,3 @@
-# vscode
-.vscode/launch.json
-
 # dask
 */dask-worker-space/*
 dask-worker-space
@@ -17,7 +14,7 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
+# dist/ maintain manually because they are used for dask workers
 downloads/
 eggs/
 .eggs/
@@ -131,8 +128,35 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
-# Pyre type checker
 
+# Pyre type checker
 .pyre/
-.virtual_documents/notebooks
 notebooks/dask-worker-space
+notebooks/tmp
+
+# don't output from running on cluster
+*.o[0-9]*
+# wandb output
+**/wandb/**
+*wandb*
+# not the tutorial notebooks
+notebooks/tutorials/*
+# no virtual documents
+*virtual_documents*
+# don't add tarbals
+dist*
+# don't add ruff cache
+*.ruff_cache*
+
+# don't add lightning logs
+*lightning_logs*
+
+# don't add lightning logs
+*lightning_logs*
+
+# don't add html (dask logs)
+.*.html
+*.html*
+
+# duckdb
+*:memory*
