@@ -1,39 +1,29 @@
 # coclico-workbench
 
-CoCliCo workbench prototype repository with tools for Coastal Climate Core Services
+CoCliCo workbench prototype repository with tutorials & exploratory tools for Coastal Climate Core Services
 
-## Google Colab
+## Coding online in Google Colab
 
 Notebooks can be opened in Google Colab. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://colab.research.google.com/github/openearth/coclico-workbench)
 
+## Coding offline in the Workbench Environment  
 
+Please follow the instructions to install the CoCliCo environment as outlined in the [CoCliCo Data](https://github.com/openearth/coclicodata) repository.
+After step 13, please return to the instructions here again and clone the `coclico-workbench` repo by adding ("Add" --> "clone repository" --> "URL") URL in GitHub Desktop. You can find the URL under the green "code" button at the top of this repo. Please change the local path to something like: C:\Users\***\Documents\GitHub (where you create the GitHub folder yourself). The repo will be cloned here.
 
-## Workbench Environment  
+Next, open VS Code and select the cloned `coclico-workbench` folder as your working directory. As a test, you can open `IPCC_AR5_AR6_comparison.ipynb` in notebooks. Select your kernel (the `coclicodata` env) in the top right corner and run cells by pressing shift-enter. You should be able to progress through the notebook without any errors. 
 
-Open a terminal, then clone and access this repository:
-```shell
-git clone https://github.com/openearth/coclico-workbench.git
-cd coclico-workbench
-```
+Might you run into trouble with these installation guidelines, please reach out to [@EtienneKras](https://github.com/EtienneKras), [@mathvansoest](https://github.com/mathvansoest) or [@FlorisCalkoen](https://github.com/FlorisCalkoen) for help.  
 
-The required packages are most easily installed via the `conda` package manager, and they
-are available from the `conda-forge` channel. In order to install `conda` (and its faster
-C++ implementation `mamba`) and to configure the `conda-forge` channel as the default
-channel, download and run the following installation script:
+## Repository structure
 
-```shell
-wget https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh
-chmod +x Mambaforge-Linux-x86_64.sh
-./Mambaforge-Linux-x86_64.sh
-```
+- **exploratory_tools**: various notebooks that dive deep into user stories with very specific needs too detailed for the [CoCliCo web platform](https://coclico.netlify.app/#/data); i.e. comparisons to High-Resolution data, High-End sea level rise scenarios, etc.
 
-After accepting the license term and selecting the installation location (the default is `${HOME}/mambaforge`), type `yes` to initialize Mambaforge. Logout/login to activate.
+- **notebooks**: (DEPRECATION WARNING) various scripts that were developed in the first two years of the CoCliCo project. These scripts will be redistributed over exploratory tools and tutorials soon.
 
-Create a new environment using the conda environment file provided in this repository:
-```shell
-mamba env create -n coclico -f environment.yaml
-```
+- **tutorials**: short notebooks describing how to use the CoCliCo Data repository (STAC)
 
+- **src/coclicodata**: (OUTDATED) various scripts with basic functionalities that can be used for the tutorials & exploratory tools 
 
 ## Contributing
 
