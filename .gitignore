@@ -160,3 +160,6 @@ dist*
 
 # duckdb
 *:memory*
+
+src/coastpy/_version.py
+*.vscode*

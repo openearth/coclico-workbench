@@ -1,6 +1,14 @@
 # coclico-workbench
 
-CoCliCo workbench prototype repository with tutorials & exploratory tools for Coastal Climate Core Services
+CoCliCo workbench prototype repository with tutorials & exploratory tools for Coastal
+Climate Core Services
+
+## Usage
+
+```bash
+mamba env create -f environment.yaml
+pip install -e /path/to/cloned/workbench/directory
+```
 
 ## Coding online in Google Colab
 
