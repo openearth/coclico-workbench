@@ -58,7 +58,7 @@ test = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/TUDelft-CITG/coastpy"
+Homepage = "https://github.com/openearth/coclico-workbench"
 
 [tool.hatch.version]
 source = "vcs"
