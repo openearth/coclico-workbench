@@ -7841,7 +7841,7 @@ Wall time: 6min 54s
 <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
 
 <span class="c1"># populate AR5 plot</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">((</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span> 
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">((</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
 <span class="n">im5</span> <span class="o">=</span> <span class="n">ar5_item</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
     <span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span>
     <span class="n">add_colorbar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
@@ -7998,11 +7998,11 @@ Wall time: 6min 54s
 <span class="c1"># 2014 data (related to AR5, in m)</span>
 <span class="n">WGHL_2030l</span> <span class="o">=</span> <span class="mf">0.1</span>
 <span class="n">WGHL_2030h</span> <span class="o">=</span> <span class="mf">0.25</span>
-<span class="n">GLGH_2050l</span> <span class="o">=</span> <span class="mf">0.15</span> 
+<span class="n">GLGH_2050l</span> <span class="o">=</span> <span class="mf">0.15</span>
 <span class="n">GLGH_2050h</span> <span class="o">=</span> <span class="mf">0.3</span>
 <span class="n">GLGH_2085l</span> <span class="o">=</span> <span class="mf">0.25</span>
 <span class="n">GLGH_2085h</span> <span class="o">=</span> <span class="mf">0.6</span>
-<span class="n">WLWH_2050l</span> <span class="o">=</span> <span class="mf">0.2</span> 
+<span class="n">WLWH_2050l</span> <span class="o">=</span> <span class="mf">0.2</span>
 <span class="n">WLWH_2050h</span> <span class="o">=</span> <span class="mf">0.4</span>
 <span class="n">WLWH_2085l</span> <span class="o">=</span> <span class="mf">0.45</span>
 <span class="n">WLWH_2085h</span> <span class="o">=</span> <span class="mf">0.8</span>
@@ -8026,7 +8026,7 @@ Wall time: 6min 54s
 <span class="c1"># pre-processing function</span>
 <span class="k">def</span> <span class="nf">preprocess</span><span class="p">(</span><span class="n">ds</span><span class="p">):</span>
     <span class="n">point_geom</span> <span class="o">=</span> <span class="n">shapely</span><span class="o">.</span><span class="n">Point</span><span class="p">(</span><span class="n">point_location</span><span class="p">)</span>
-    
+
     <span class="n">ds</span> <span class="o">=</span> <span class="p">(</span>
         <span class="n">ds</span><span class="o">.</span><span class="n">rio</span><span class="o">.</span><span class="n">clip</span><span class="p">([</span><span class="n">point_geom</span><span class="p">])</span>
         <span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">point_location</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">point_location</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">method</span><span class="o">=</span><span class="s2">"nearest"</span><span class="p">)</span>
@@ -8137,7 +8137,7 @@ Wall time: 6min 54s
     <span class="n">ax1</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">2030.2</span><span class="p">,</span> <span class="n">ymin</span><span class="o">=</span><span class="n">WGHL_2030l</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span><span class="n">WGHL_2030h</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="s2">"AR5-RCP-8.5"</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">":"</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"KNMI'14 - RCP8.5 (W) low-high"</span><span class="p">)</span>
     <span class="n">ax1</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">2050.2</span><span class="p">,</span> <span class="n">ymin</span><span class="o">=</span><span class="n">WLWH_2050l</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span><span class="n">WLWH_2050h</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="s2">"AR5-RCP-8.5"</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">":"</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
     <span class="n">ax1</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">2085.2</span><span class="p">,</span> <span class="n">ymin</span><span class="o">=</span><span class="n">WLWH_2085l</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span><span class="n">WLWH_2085h</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="s2">"AR5-RCP-8.5"</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">":"</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
-    
+
 <span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">"upper left"</span><span class="p">)</span>
 
 <span class="c1"># AR6</span>
@@ -8256,7 +8256,7 @@ Wall time: 6min 54s
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span>
 </pre></div>
 </div>
 </div>
