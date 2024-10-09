@@ -36,6 +36,7 @@ dependencies:
   - sphinx-autodoc-typehints
   - sphinx-rtd-theme
   - sphinx_rtd_theme
+  - python-dotenv
 
   # Jupyter and extensions
   - ipython
@@ -82,12 +83,14 @@ dependencies:
   # Standard sci-data analytics libs
   - bottleneck
   - cchardet
+  - numexpr
   - fsspec
   - intake
   - jsonschema
   - netcdf4
   - numcodecs
   - numpy
+  - opencv
   - pandas
   - pint
   - polars
@@ -179,6 +182,21 @@ dependencies:
   - zarr
   - zstandard
 
+# other kind of libraries
+
+  - cfchecker
+  - colormaps
+  - defusedxml
+  - jupyter-ui-poll
+  - lmdb
+  - slicerator
+  - structlog
+  - python-rapidjson
+  - python-graphviz
+  - pyrsistent
+  - pyam
+  - eodatasets3
+
   - pip:
       - antimeridian
       - duckdb  # pypi has more recent releases
@@ -187,7 +205,8 @@ dependencies:
       - networkx
       - stac-geoparquet  # pypi has more recent releases
       # - coclico  # probably better to install in dev mode (pip install -e .)
-    # Some useful odc libraries 
+      - xstac
+    # Some useful odc libraries
     # - dea-tools
     # - odc-ui
     # - odc-stats
