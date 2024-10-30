@@ -19,23 +19,23 @@ dependencies:
   # Development Tools
   #- bandit
   - black
-  - click
+  #- click
   #- codespell
-  - flake8
-  - isort
-  - mypy
-  - nbsphinx
-  - poetry
-  - pre-commit
-  - pydantic
-  - pytest
-  - pytest-cov
-  - recommonmark
-  - ruff
-  - sphinx
-  - sphinx-autodoc-typehints
-  - sphinx-rtd-theme
-  - sphinx_rtd_theme
+  #- flake8
+  #- isort
+  #- mypy
+  #- nbsphinx
+  #- poetry
+  #- pre-commit
+  #- pydantic
+  #- pytest
+  #- pytest-cov
+  #- recommonmark
+  #- ruff
+  #- sphinx
+  #- sphinx-autodoc-typehints
+  #- sphinx-rtd-theme
+  #- sphinx_rtd_theme
   - python-dotenv
 
   # Jupyter and extensions
@@ -55,7 +55,7 @@ dependencies:
   - nb_conda_kernels
   - nbgitpuller
   - nbstripout
-  #- nodejs
+  - nodejs
   - python-lsp-server
   - voila
   - jupyter-book
@@ -88,7 +88,7 @@ dependencies:
   #- intake
   - jsonschema
   - netcdf4
-  - numcodecs
+  #- numcodecs
   - numpy
   - opencv
   - pandas
@@ -100,7 +100,7 @@ dependencies:
   - scikit-image
   - scikit-learn
   - scipy
-  - toml
+  #- toml
   - xarray
 
   # Cloud-related libraries
@@ -152,20 +152,19 @@ dependencies:
   #- intake-stac
   #- intake-xarray
   #- libpysal
-  - lmdb
-  - mapclassify
-  - mercantile
-  - netcdf4
-  - odc-algo
-  - odc-geo
+  #- lmdb
+  #- mapclassify
+  #- mercantile
+  #- odc-algo
+  #- odc-geo
   - odc-stac
-  - openpyxl
-  - pims
+  #- openpyxl
+  #- pims
   - planetary-computer
-  - pooch
+  #- pooch
   - pyarrow
-  - pyod
-  - pyogrio
+  #- pyod
+  #- pyogrio
   - rasterio
   - rio-cogeo
   - rio-tiler
@@ -185,8 +184,8 @@ dependencies:
   # other kind of libraries
   - cfchecker
   - colormaps
-  - defusedxml
-  - jupyter-ui-poll
+  #- defusedxml
+  #- jupyter-ui-poll
   #- lmdb
   #- slicerator
   #- structlog
@@ -194,7 +193,7 @@ dependencies:
   #- python-graphviz
   #- pyrsistent
   #- pyam
-  - eodatasets3
+  #- eodatasets3
 
   - pip:
       - antimeridian
