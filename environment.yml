@@ -8,19 +8,19 @@ dependencies:
   - python=3.12
   - pip>=20
   - setuptools
-  - conda-libmamba-solver
-  - ca-certificates
-  - certifi
-  - openssl
-  - boltons
-  - ciso8601
-  - cattrs
+  #- conda-libmamba-solver
+  #- ca-certificates
+  #- certifi
+  #- openssl
+  #- boltons
+  #- ciso8601
+  #- cattrs
 
-# Development Tools
-  - bandit
+  # Development Tools
+  #- bandit
   - black
   - click
-  - codespell
+  #- codespell
   - flake8
   - isort
   - mypy
@@ -55,7 +55,7 @@ dependencies:
   - nb_conda_kernels
   - nbgitpuller
   - nbstripout
-  - nodejs
+  #- nodejs
   - python-lsp-server
   - voila
   - jupyter-book
@@ -77,26 +77,26 @@ dependencies:
   - ipympl
   - jupyter_bokeh
   - panel
-  - param
-  - selenium
+  #- param
+  #- selenium
 
   # Standard sci-data analytics libs
-  - bottleneck
-  - cchardet
-  - numexpr
+  #- bottleneck
+  #- cchardet
+  #- numexpr
   - fsspec
-  - intake
+  #- intake
   - jsonschema
   - netcdf4
   - numcodecs
   - numpy
   - opencv
   - pandas
-  - pint
-  - polars
+  #- pint
+  #- polars
   - pyarrow
   - pyproj
-  - pyyaml
+  #- pyyaml
   - scikit-image
   - scikit-learn
   - scipy
@@ -127,7 +127,7 @@ dependencies:
   # Spatial libraries
   - astropy
   - cartopy
-  - cfgrib
+  #- cfgrib
   - contextily
   - dask[complete]
   - dask-geopandas
@@ -142,16 +142,16 @@ dependencies:
   - geodatasets
   - geojson
   - geopandas>=0.11.0
-  - h3-py
-  - h3pandas
-  - h5netcdf
-  - h5py
-  - imbalanced-learn
-  - intake-esm
-  - intake-geopandas
-  - intake-stac
-  - intake-xarray
-  - libpysal
+  #- h3-py
+  #- h3pandas
+  #- h5netcdf
+  #- h5py
+  #- imbalanced-learn
+  #- intake-esm
+  #- intake-geopandas
+  #- intake-stac
+  #- intake-xarray
+  #- libpysal
   - lmdb
   - mapclassify
   - mercantile
@@ -178,23 +178,22 @@ dependencies:
   - tqdm
   - xarray
   - xarray-spatial
-  - xvec
+  #- xvec
   - zarr
   - zstandard
 
-# other kind of libraries
-
+  # other kind of libraries
   - cfchecker
   - colormaps
   - defusedxml
   - jupyter-ui-poll
-  - lmdb
-  - slicerator
-  - structlog
-  - python-rapidjson
-  - python-graphviz
-  - pyrsistent
-  - pyam
+  #- lmdb
+  #- slicerator
+  #- structlog
+  #- python-rapidjson
+  #- python-graphviz
+  #- pyrsistent
+  #- pyam
   - eodatasets3
 
   - pip:
@@ -206,8 +205,8 @@ dependencies:
       - stac-geoparquet  # pypi has more recent releases
       # - coclico  # probably better to install in dev mode (pip install -e .)
       - xstac
-    # Some useful odc libraries
-    # - dea-tools
-    # - odc-ui
-    # - odc-stats
+      # Some useful odc libraries
+      # - dea-tools
+      # - odc-ui
+      # - odc-stats
 
