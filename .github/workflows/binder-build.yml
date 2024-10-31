@@ -21,15 +21,11 @@ jobs:
       with:
         python-version: '3.x'
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+    - name: Install repo2docker
+      run: pip install jupyter-repo2docker
 
     - name: Build Binder image
-      run: |
-        pip install jupyter-repo2docker
-        jupyter-repo2docker --no-run .
+      run: jupyter-repo2docker --no-run .
 
     - name: Check Binder build status
       if: failure()
