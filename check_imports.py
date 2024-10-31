@@ -25,16 +25,17 @@ def get_packages_from_environment_yml(env_path):
 
 def main():
     env_path = "environment.yml"
-    notebooks_dir = "."
+    directories = ["notebooks", "exploratory_tools", "tutorials"]
     missing_packages = set()
 
     env_packages = get_packages_from_environment_yml(env_path)
-    for root, _, files in os.walk(notebooks_dir):
-        for file in files:
-            if file.endswith(".ipynb"):
-                notebook_path = os.path.join(root, file)
-                imports = get_imports_from_notebook(notebook_path)
-                missing_packages.update(imports - env_packages)
+    for directory in directories:
+        for root, _, files in os.walk(directory):
+            for file in files:
+                if file.endswith(".ipynb"):
+                    notebook_path = os.path.join(root, file)
+                    imports = get_imports_from_notebook(notebook_path)
+                    missing_packages.update(imports - env_packages)
 
     if missing_packages:
         print(f"Missing packages in environment.yml: {missing_packages}")

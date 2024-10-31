@@ -4,11 +4,15 @@ on:
   push:
     paths:
       - environment.yml
-      - '**/*.ipynb'
+      - notebooks/**/*.ipynb
+      - exploratory_tools/**/*.ipynb
+      - tutorials/**/*.ipynb
   pull_request:
     paths:
       - environment.yml
-      - '**/*.ipynb'
+      - notebooks/**/*.ipynb
+      - exploratory_tools/**/*.ipynb
+      - tutorials/**/*.ipynb
 
 jobs:
   build:
@@ -24,7 +28,7 @@ jobs:
         python-version: '3.x'
 
     - name: Install dependencies
-      run: pip install jupyter-repo2docker nbformat
+      run: pip install jupyter-repo2docker nbformat pyyaml
 
     - name: Build Binder image
       run: jupyter-repo2docker --no-run .
@@ -34,6 +38,4 @@ jobs:
       run: exit 1
 
     - name: Check imported packages in notebooks
-      run: |
-        pip install pyyaml
-        python check_imports.p
+      run: python check_imports.py
