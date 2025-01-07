@@ -20,7 +20,15 @@ def get_imports_from_notebook(notebook_path):
 def get_packages_from_environment_yml(env_path):
     with open(env_path, "r") as f:
         env = yaml.safe_load(f)
-    return set(env.get("dependencies", []))
+    dependencies = env.get("dependencies", [])
+    packages = set()
+    for dep in dependencies:
+        if isinstance(dep, str):
+            packages.add(dep.split("=")[0])
+        elif isinstance(dep, dict):
+            for key in dep:
+                packages.add(key.split("=")[0])
+    return packages
 
 
 def main():
