@@ -37,7 +37,18 @@ def main():
     missing_packages = set()
 
     env_packages = get_packages_from_environment_yml(env_path)
-    ignored_packages = {"warnings", "uuid", "sys", "os", "copy"}
+    ignored_packages = {
+        "warnings",
+        "uuid",
+        "sys",
+        "os",
+        "copy",
+        "dask_geopandas",
+        "stac_geoparquet",
+        "pystac_client",
+        "dotenv",
+        "coclico",
+    }
     for directory in directories:
         for root, _, files in os.walk(directory):
             for file in files:

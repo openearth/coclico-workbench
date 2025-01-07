@@ -32,6 +32,5 @@ dependencies:
   - geopandas
   - colorcet
   - stac-geoparquet 
-  - pip:
-    - damagescanner
+  # - pip:
   #     - coclico
