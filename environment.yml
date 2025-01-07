@@ -1,11 +1,12 @@
-name: example-environment
+name: coclico_binder
+
 channels:
   - conda-forge
+
 dependencies:
   - python
   - numpy
   - matplotlib
-  - dill
   - pandas
   - bokeh
   - dask
