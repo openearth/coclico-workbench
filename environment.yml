@@ -19,22 +19,22 @@ dependencies:
   - dask-geopandas
   - xarray
   - holoviews
-  # - pystac_client
-  # - copy
-  # - python-dotenv
-  # - rasterio
-  # - spatialpandas
-  # - os
-  # - pystac
-  # - typing
-  # - fsspec
-  # - shapely
-  # - sys
-  # - geoviews
-  # - geopandas
-  # - colorcet
-  # - uuid
-  # - warnings
-  # - pip:
-  #     - stac_geoparquet 
-      #- coclico
+  - pystac_client
+  - copy
+  - python-dotenv
+  - rasterio
+  - spatialpandas
+  - os
+  - pystac
+  - typing
+  - fsspec
+  - shapely
+  - sys
+  - geoviews
+  - geopandas
+  - colorcet
+  - uuid
+  - warnings
+  - pip:
+      - stac_geoparquet 
+      - coclico
