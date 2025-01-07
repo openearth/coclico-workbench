@@ -2,11 +2,12 @@
 
 CoCliCo workbench prototype repository with tutorials & exploratory tools for Coastal Climate Core Services
 
-## Coding online in Google Colab
+## Coding online in Google Colab or Binder
 
-Notebooks can be opened in Google Colab. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://colab.research.google.com/github/openearth/coclico-workbench)
+Notebooks can be opened in Google Colab [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://colab.research.google.com/github/openearth/coclico-workbench) or in Binder [![Open in Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/openearth/coclico-workbench/update_repo_readme).
 
-## Coding offline in the Workbench Environment  
+
+## Coding offline (locally) in the Workbench Environment  
 
 Please follow the instructions below to install the CoCliCo Workbench environment:
 
