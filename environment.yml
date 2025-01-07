@@ -31,6 +31,6 @@ dependencies:
   - geoviews
   - geopandas
   - colorcet
+  - stac-geoparquet 
   - pip:
-      - stac-geoparquet 
       - coclico
