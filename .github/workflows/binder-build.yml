@@ -30,12 +30,22 @@ jobs:
     - name: Install dependencies
       run: pip install jupyter-repo2docker nbformat pyyaml
 
-    - name: Build Binder image
-      run: jupyter-repo2docker --no-run --image-name=mybinder.org-image .
+    - name: Build and Tag Binder image
+      run: |
+        TAG="mybinder.org-image:latest"
+        jupyter-repo2docker \
+        --no-run \
+        --image-name=$TAG .
 
-    - name: Check Binder build status
-      if: failure()
-      run: exit 1
+    - name: Verify Tagged Binder Image
+      run: |
+        TAG="mybinder.org-image:latest"
+        if docker inspect $TAG; then
+          echo "Binder image with tag '$TAG' built successfully"
+        else
+          echo "Binder image build failed"
+          exit 1
+        fi
 
     - name: Add Binder badge
       run: |

@@ -23,6 +23,7 @@ dependencies:
   - python-dotenv
   - pip
   - rasterio
+  - rioxarray
   - spatialpandas
   - pystac
   - typing
@@ -31,6 +32,6 @@ dependencies:
   - geoviews
   - geopandas
   - colorcet
-  - stac-geoparquet 
+  - stac-geoparquet
   # - pip:
   #     - coclico
