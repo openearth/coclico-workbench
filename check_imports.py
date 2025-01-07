@@ -37,12 +37,14 @@ def main():
     missing_packages = set()
 
     env_packages = get_packages_from_environment_yml(env_path)
+    ignored_packages = {"warnings", "uuid", "sys", "os", "copy"}
     for directory in directories:
         for root, _, files in os.walk(directory):
             for file in files:
                 if file.endswith(".ipynb"):
                     notebook_path = os.path.join(root, file)
                     imports = get_imports_from_notebook(notebook_path)
+                    imports -= ignored_packages
                     missing_packages.update(imports - env_packages)
 
     if missing_packages:
