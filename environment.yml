@@ -33,4 +33,5 @@ dependencies:
   - colorcet
   - stac-geoparquet 
   - pip:
-      - coclico
+    - damagescanner
+  #     - coclico
