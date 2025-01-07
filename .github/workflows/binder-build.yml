@@ -31,11 +31,19 @@ jobs:
       run: pip install jupyter-repo2docker nbformat pyyaml
 
     - name: Build Binder image
-      run: jupyter-repo2docker --no-run .
+      run: jupyter-repo2docker --no-run --image-name=mybinder.org-image .
 
     - name: Check Binder build status
       if: failure()
       run: exit 1
+
+    - name: Add Binder badge
+      run: |
+        REPO_URL=$(git config --get remote.origin.url)
+        BRANCH=$(git rev-parse --abbrev-ref HEAD)
+        BADGE_URL="https://mybinder.org/v2/gh/${REPO_URL#https://github.com/}/${BRANCH}"
+        echo "Binder Badge: [![Binder](${BADGE_URL}/badge.svg)](${BADGE_URL})"
+        echo "Visit your Binder environment here: ${BADGE_URL}"
 
     - name: Check imported packages in notebooks
       run: python check_imports.py
