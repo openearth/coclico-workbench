@@ -5,58 +5,58 @@ channels:
 
 dependencies:
     - aiohttp
-    - black
-    - bokeh
+    #- black
+    #- bokeh
     - cartopy
     - cdsapi
-    - cfchecker
-    - colormaps
+    #- cfchecker
+    #- colormaps
     - contextily
     - dask
     - distributed
-    - folium
-    - fsspec
+    #- folium
+    #- fsspec
     - gdal
-    - geojson
+    #- geojson
     - geopandas
     - ipykernel
-    - ipyleaflet
-    - ipympl
-    - jupyter
-    - jupyter_bokeh
+    #- ipyleaflet
+    #- ipympl
+    #- jupyter
+    #- jupyter_bokeh
     - jupyterlab-myst
     - jupyterlab
     - matplotlib
     - netcdf4
     - notebook
     - numpy
-    - odc-stac
-    - opencv
+    #- odc-stac
+    #- opencv
     - openpyxl
     - osmnx
-    - pathlib
+    #- pathlib
     - pandas
     - pip
     - planetary-computer
     - pooch
-    - pyarrow
+    #- pyarrow
     - pyogrio
     - pyproj
     - pystac-client
     - python
-    - python-dotenv
+    #- python-dotenv
     - rasterio
     - rasterstats
     - requests
     - rioxarray
-    - scikit-learn
-    - scipy
-    - setuptools
+    #- scikit-learn
+    #- scipy
+    #- setuptools
     - shapely
     - xarray
     - zarr
     - pip:
         - damagescanner
-        - duckdb
-        - stac-geoparquet
-        - xstac
+        #- duckdb
+        #- stac-geoparquet
+        #- xstac
