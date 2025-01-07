@@ -21,6 +21,7 @@ dependencies:
   - holoviews
   - pystac-client
   - python-dotenv
+  - pip
   - rasterio
   - spatialpandas
   - pystac
@@ -31,5 +32,5 @@ dependencies:
   - geopandas
   - colorcet
   - pip:
-      - stac_geoparquet 
+      - stac-geoparquet 
       - coclico
