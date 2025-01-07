@@ -27,6 +27,7 @@ dependencies:
     - pooch
     - pyogrio
     - pyproj
+    - pystac
     - pystac-client
     - python
     - rasterio
