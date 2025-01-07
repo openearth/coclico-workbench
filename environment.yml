@@ -36,5 +36,3 @@ dependencies:
     - shapely
     - xarray
     - zarr
-    - pip:
-        - damagescanner
