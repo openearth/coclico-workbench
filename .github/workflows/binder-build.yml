@@ -15,9 +15,9 @@ jobs:
     - name: Cache Binder Build on MyBinder.org
       uses: jupyterhub/repo2docker-action@master
       with:
-        ref: ${{ github.sha }}
-        binder-url: https://mybinder.org
-        no-push: true
+        NO_PUSH: true
+        REPO2DOCKER_EXTRA_ARGS: "--no-run"
+        MYBINDERORG_TAG: ${{ github.sha }}
 
     - name: Generate Binder Link for Commit
       run: |
