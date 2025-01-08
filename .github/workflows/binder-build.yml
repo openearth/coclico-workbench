@@ -1,59 +1,31 @@
-name: Build Binder Image
+name: Pre-Build Binder Image
 
 on:
   push:
+    branches:
+      - main
+    tags:
+      - '*'
     paths:
-      - environment.yml
-      - notebooks/**/*.ipynb
-      - exploratory_tools/**/*.ipynb
-      - tutorials/**/*.ipynb
-  pull_request:
-    paths:
-      - environment.yml
-      - notebooks/**/*.ipynb
-      - exploratory_tools/**/*.ipynb
-      - tutorials/**/*.ipynb
+      - '**/*'
 
 jobs:
-  build:
+  prebuild-binder:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+    - name: Checkout Repository
+      uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
+    - name: Cache Binder Build on MyBinder.org
+      uses: jupyterhub/repo2docker-action@master
       with:
-        python-version: '3.x'
+        ref: ${{ github.sha }}
+        binder-url: https://mybinder.org
+        no-push: true
 
-    - name: Install dependencies
-      run: pip install jupyter-repo2docker nbformat pyyaml
-
-    - name: Build and Tag Binder image
+    - name: Generate Binder Link for Commit
       run: |
-        TAG="mybinder.org-image:latest"
-        jupyter-repo2docker \
-        --no-run \
-        --image-name=$TAG .
-
-    - name: Verify Tagged Binder Image
-      run: |
-        TAG="mybinder.org-image:latest"
-        if docker inspect $TAG; then
-          echo "Binder image with tag '$TAG' built successfully"
-        else
-          echo "Binder image build failed"
-          exit 1
-        fi
-
-    - name: Add Binder badge
-      run: |
-        REPO_URL=$(git config --get remote.origin.url)
-        BRANCH=$(git rev-parse --abbrev-ref HEAD)
-        BADGE_URL="https://mybinder.org/v2/gh/${REPO_URL#https://github.com/}/${BRANCH}"
-        echo "Binder Badge: [![Binder](${BADGE_URL}/badge.svg)](${BADGE_URL})"
-        echo "Visit your Binder environment here: ${BADGE_URL}"
-
-    - name: Check imported packages in notebooks
-      run: python check_imports.py
+        REPO_URL=$(git config --get remote.origin.url | sed 's/https:\/\/github.com\///')
+        COMMIT_HASH=${GITHUB_SHA}
+        echo "Your Binder link for this commit is:"
+        echo "https://mybinder.org/v2/gh/$REPO_URL/$COMMIT_HASH"
