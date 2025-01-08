@@ -2,8 +2,6 @@ name: Pre-Build Binder Image
 
 on:
   push:
-    tags:
-      - '*'
     paths:
       - '**/*'
 
