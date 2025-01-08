@@ -4,7 +4,7 @@ CoCliCo workbench prototype repository with tutorials & exploratory tools for Co
 
 ## Coding online in Google Colab or Binder
 
-Notebooks can be opened in Google Colab [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://colab.research.google.com/github/openearth/coclico-workbench) or in Binder [![Open in Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/openearth/coclico-workbench/update_repo_readme).
+Notebooks can be opened in Google Colab [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://colab.research.google.com/github/openearth/coclico-workbench) or in Binder [![Open in Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/openearth/coclico-workbench/update_repo_readme). The latter uses the `environment.yml` file in the m
 
 
 ## Coding offline (locally) in the Workbench Environment  
@@ -15,7 +15,7 @@ Please follow the instructions below to install the CoCliCo Workbench environmen
 2. Install the Mamba Package Manager (miniforge3) for your OS: https://github.com/conda-forge/miniforge#mambaforge 
 3. Open a miniforge prompt (by searching "miniforge" in the task bar) and run `mamba –-version` to check if the installation was complete. 
 4. Clone the `coclico-workbench` repo by adding ("Add" --> "clone repository" --> "URL") the URL in GitHub Desktop, you can find the URL under the green "code" button in this `coclico-workbench` repo. Please change the local path to something like: `C:\Users\***\Documents\GitHub` (where you create the GitHub folder yourself). The repo will be cloned here. 
-5. In the miniforge prompt, change the directory to the cloned repo by running `cd C:\Users\***\Documents\GitHub\coclicodata`, where *** needs to be replaced to your system variables.
+5. In the miniforge prompt, change the directory to the cloned repo by running `cd C:\Users\***\Documents\GitHub\coclico-workbench\coclicodata_env`, where *** needs to be replaced to your system variables.
 6. This directory contains an `environment.yml` file with all the necessary packages describing the software dependencies. Create the software environment (called `coclico`) by running the following command in the miniforge prompt (note, this will take about 10-15 minutes to run): 
 
    ``` bash
@@ -47,8 +47,6 @@ Please follow the instructions below to install the CoCliCo Workbench environmen
 - **notebooks**: (DEPRECATION WARNING) various scripts that were developed in the first two years of the CoCliCo project. These scripts will be redistributed over exploratory tools and tutorials soon.
 
 - **tutorials**: short notebooks describing how to use the CoCliCo Data repository (STAC)
-
-- **src/coclicodata**: (OUTDATED) various scripts with basic functionalities that can be used for the tutorials & exploratory tools 
 
 ## Contributing
 

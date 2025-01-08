@@ -1,67 +1,67 @@
 name: coclico
 channels:
   - conda-forge
-  #- defaults
+  - defaults
 
 dependencies:
   # Basic tools
   - python=3.12
   - pip>=20
   - setuptools
-  #- conda-libmamba-solver
-  #- ca-certificates
-  #- certifi
-  #- openssl
-  #- boltons
-  #- ciso8601
-  #- cattrs
+  - conda-libmamba-solver
+  - ca-certificates
+  - certifi
+  - openssl
+  - boltons
+  - ciso8601
+  - cattrs
 
   # Development Tools
-  #- bandit
+  - bandit
   - black
-  #- click
-  #- codespell
-  #- flake8
-  #- isort
-  #- mypy
-  #- nbsphinx
-  #- poetry
-  #- pre-commit
-  #- pydantic
-  #- pytest
-  #- pytest-cov
-  #- recommonmark
-  #- ruff
-  #- sphinx
-  #- sphinx-autodoc-typehints
-  #- sphinx-rtd-theme
-  #- sphinx_rtd_theme
+  - click
+  - codespell
+  - flake8
+  - isort
+  - mypy
+  - nbsphinx
+  - poetry
+  - pre-commit
+  - pydantic
+  - pytest
+  - pytest-cov
+  - recommonmark
+  - ruff
+  - sphinx
+  - sphinx-autodoc-typehints
+  - sphinx-rtd-theme
+  - sphinx_rtd_theme
   - python-dotenv
 
   # Jupyter and extensions
-  #- ipython
+  - ipython
   - ipykernel
-  #- ipywidgets
+  - ipywidgets
   - jupyter
-  #- jupyterlab>=4
-  #- jupyter-panel-proxy
-  #- jupyter-resource-usage
-  #- jupyterlab_code_formatter
-  #- jupyterlab_execute_time
-  #- jupyterlab_widgets
-  #- jupyterlab-git
-  #- jupyterlab-lsp
-  #- jupyterlab-spellchecker
-  #- nb_conda_kernels
-  #- nbgitpuller
-  #- nbstripout
-  #- nodejs
-  #- python-lsp-server
-  #- voila
-  #- jupyter-book
-  #- nbformat
-  #- dask-labextension
-  # - gh-scoped-creds # check if useful
+  - jupyterlab>=4
+  - jupyter-panel-proxy
+  - jupyter-resource-usage
+  - jupyterlab_code_formatter
+  - jupyterlab_execute_time
+  - jupyterlab_widgets
+  - jupyterlab-git
+  - jupyterlab-lsp
+  - jupyterlab-spellchecker
+  - nb_conda_kernels
+  - nbgitpuller
+  - nbstripout
+  - nodejs
+  - python-lsp-server
+  - voila
+  - jupyter-book
+  - nbformat
+  - dask-labextension
+  - gh-scoped-creds # check if useful
   # - lckr-jupyterlab-variableinspector  # doesn't work on my machine yet
 
   # Interactive visualization libraries
@@ -69,7 +69,7 @@ dependencies:
   - datashader
   - firefox
   - folium
-  #- geckodriver
+  - geckodriver
   - geoviews
   - holoviews
   - hvplot
@@ -77,47 +77,47 @@ dependencies:
   - ipympl
   - jupyter_bokeh
   - panel
-  #- param
-  #- selenium
+  - param
+  - selenium
 
   # Standard sci-data analytics libs
-  #- bottleneck
-  #- cchardet
-  #- numexpr
+  - bottleneck
+  - cchardet
+  - numexpr
   - fsspec
-  #- intake
+  - intake
   - jsonschema
   - netcdf4
-  #- numcodecs
+  - numcodecs
   - numpy
   - opencv
   - pandas
-  #- pint
-  #- polars
+  - pint
+  - polars
   - pyarrow
   - pyproj
-  #- pyyaml
+  - pyyaml
   - scikit-image
   - scikit-learn
   - scipy
-  #- toml
+  - toml
   - xarray
 
   # Cloud-related libraries
-  # - adlfs
-  # - awscli
-  # - azure-data-tables
-  # - azure-identity
-  # - boto3
-  # - gcsfs
-  # - google-cloud-storage
-  # - s3fs
+  - adlfs
+  - awscli
+  - azure-data-tables
+  - azure-identity
+  - boto3
+  - gcsfs
+  - google-cloud-storage
+  - s3fs
 
   # Plotting libraries
-  #- descartes
+  - descartes
   - matplotlib
-  #- pillow
-  #- seaborn
+  - pillow
+  - seaborn
 
   # Web-related libraries
   - beautifulsoup4
@@ -127,7 +127,7 @@ dependencies:
   # Spatial libraries
   - astropy
   - cartopy
-  #- cfgrib
+  - cfgrib
   - shapely
   - contextily
   - dask[complete]
@@ -135,7 +135,7 @@ dependencies:
   - dask-image
   - dask-jobqueue
   - datacube
-  # - distributed
+  - distributed
   - earthengine-api
   - eccodes>=2.24.2
   - esda
@@ -143,29 +143,29 @@ dependencies:
   - geodatasets
   - geojson
   - geopandas>=0.11.0
-  #- h3-py
-  #- h3pandas
-  #- h5netcdf
-  #- h5py
-  #- imbalanced-learn
-  #- intake-esm
-  #- intake-geopandas
-  #- intake-stac
-  #- intake-xarray
-  #- libpysal
-  #- lmdb
-  #- mapclassify
-  #- mercantile
-  #- odc-algo
-  #- odc-geo
+  - h3-py
+  - h3pandas
+  - h5netcdf
+  - h5py
+  - imbalanced-learn
+  - intake-esm
+  - intake-geopandas
+  - intake-stac
+  - intake-xarray
+  - libpysal
+  - lmdb
+  - mapclassify
+  - mercantile
+  - odc-algo
+  - odc-geo
   - odc-stac
-  #- openpyxl
-  #- pims
+  - openpyxl
+  - pims
   - planetary-computer
   - pooch
   - pyarrow
-  #- pyod
-  #- pyogrio
+  - pyod
+  - pyogrio
   - rasterio
   - rio-cogeo
   - rio-tiler
@@ -178,7 +178,7 @@ dependencies:
   - tqdm
   - xarray
   - xarray-spatial
-  #- xvec
+  - xvec
   - zarr
   - zstandard
 
@@ -187,16 +187,16 @@ dependencies:
   - colormaps
   - pystac-client
   - pathlib
-  #- defusedxml
-  #- jupyter-ui-poll
-  #- lmdb
-  #- slicerator
-  #- structlog
-  #- python-rapidjson
-  #- python-graphviz
-  #- pyrsistent
+  - defusedxml
+  - jupyter-ui-poll
+  - lmdb
+  - slicerator
+  - structlog
+  - python-rapidjson
+  - python-graphviz
+  - pyrsistent
   - pyam
-  #- eodatasets3
+  - eodatasets3
 
   - pip:
       - antimeridian
@@ -208,7 +208,7 @@ dependencies:
       # - coclico  # probably better to install in dev mode (pip install -e .)
       - xstac
       # Some useful odc libraries
-      # - dea-tools
-      # - odc-ui
-      # - odc-stats
+      - dea-tools
+      - odc-ui
+      - odc-stats
 
