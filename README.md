@@ -4,7 +4,7 @@ CoCliCo workbench prototype repository with tutorials & exploratory tools for Co
 
 ## Coding online in Google Colab or Binder
 
-Notebooks can be opened in Google Colab [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://colab.research.google.com/github/openearth/coclico-workbench) or in Binder [![Open in Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/openearth/coclico-workbench/update_repo_readme). The latter uses the `environment.yml` file in the m
+Notebooks can be opened in Google Colab [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://colab.research.google.com/github/openearth/coclico-workbench) or in Binder [![Open in Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/openearth/coclico-workbench/update_repo_readme). The latter uses the `environment.yml` file in the main directory. 
 
 
 ## Coding offline (locally) in the Workbench Environment  
