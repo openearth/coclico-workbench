@@ -1,0 +1,1725 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="This tool provides access to high-resolution coastal climate data,  helping users explore sea level rise projections, coastal hazards, exposure, and adaptation strategies.  Designed for researchers, policymakers, and coastal managers, CoCliCo enables interactive data visualization,  scenario analysis, and decision support.">
+      
+      
+      
+      
+        <link rel="prev" href="../target_users/">
+      
+      
+        <link rel="next" href="../further_analysis/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>Understanding the Data - Coastal Climate Core Services</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../overrides/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="white" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Coastal Climate Core Services" class="md-header__button md-logo" aria-label="Coastal Climate Core Services" data-md-component="logo">
+      
+  <img src="../assets/logo1.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Coastal Climate Core Services
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Understanding the Data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="white" data-md-color-accent="deep-purple"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/openearth/coclico-workbench" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    openearth/coclico-workbench
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../getting_started/" class="md-tabs__link">
+        
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../target_users/" class="md-tabs__link">
+        
+  
+    
+  
+  Target Users
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Understanding the Data
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../further_analysis/" class="md-tabs__link">
+        
+  
+    
+  
+  Further Analysis
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Coastal Climate Core Services" class="md-nav__button md-logo" aria-label="Coastal Climate Core Services" data-md-component="logo">
+      
+  <img src="../assets/logo1.png" alt="logo">
+
+    </a>
+    Coastal Climate Core Services
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/openearth/coclico-workbench" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    openearth/coclico-workbench
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../target_users/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Target Users
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Understanding the Data
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Understanding the Data
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#coclico-spatiotemporal-asset-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      CoCliCo SpatioTemporal Asset Catalog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-layers-in-the-coclico-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Layers in the CoCliCo platform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sea-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sea Levels
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sea Levels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sea-level-rise-projections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sea Level Rise Projections
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sea Level Rise Projections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-the-sea-level-rise-projections" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Use the Sea Level Rise Projections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-are-these-projections-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Are These Projections Important?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extreme-surge-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extreme Surge Level
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extreme Surge Level">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-the-extreme-surge-level-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Use the Extreme Surge Level Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-this-data-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Is This Data Important?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extreme-sea-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extreme Sea Level
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extreme Sea Level">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-the-extreme-sea-level-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Use the Extreme Sea Level Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-this-data-important_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Is This Data Important?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#natural-hazards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Natural Hazards
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Natural Hazards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inundation-distribution-during-flood-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inundation Distribution During Flood Events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inundation Distribution During Flood Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flood-mapping-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flood Mapping Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Use the Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-this-data-important_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Is This Data Important?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shoreline-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shoreline Change
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shoreline Change">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-the-data_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Use the Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-this-data-important_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Is This Data Important?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exposure-and-vulnerability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exposure and Vulnerability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risk-and-adaptation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk and Adaptation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Risk and Adaptation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cost-benefit-analysis-of-coastal-adaptation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cost-Benefit Analysis of Coastal Adaptation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cost-Benefit Analysis of Coastal Adaptation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-the-data_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Use the Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-this-data-important_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Is This Data Important?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further_analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Further Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#coclico-spatiotemporal-asset-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      CoCliCo SpatioTemporal Asset Catalog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-layers-in-the-coclico-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Layers in the CoCliCo platform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sea-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sea Levels
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sea Levels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sea-level-rise-projections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sea Level Rise Projections
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sea Level Rise Projections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-the-sea-level-rise-projections" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Use the Sea Level Rise Projections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-are-these-projections-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Are These Projections Important?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extreme-surge-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extreme Surge Level
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extreme Surge Level">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-the-extreme-surge-level-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Use the Extreme Surge Level Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-this-data-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Is This Data Important?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extreme-sea-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extreme Sea Level
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extreme Sea Level">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-the-extreme-sea-level-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Use the Extreme Sea Level Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-this-data-important_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Is This Data Important?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#natural-hazards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Natural Hazards
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Natural Hazards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inundation-distribution-during-flood-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inundation Distribution During Flood Events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inundation Distribution During Flood Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flood-mapping-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flood Mapping Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Use the Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-this-data-important_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Is This Data Important?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shoreline-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shoreline Change
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shoreline Change">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-the-data_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Use the Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-this-data-important_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Is This Data Important?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exposure-and-vulnerability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exposure and Vulnerability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risk-and-adaptation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk and Adaptation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Risk and Adaptation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cost-benefit-analysis-of-coastal-adaptation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cost-Benefit Analysis of Coastal Adaptation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cost-Benefit Analysis of Coastal Adaptation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-the-data_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Use the Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-this-data-important_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Is This Data Important?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="_1"></h1>
+<h2 id="coclico-spatiotemporal-asset-catalog"><strong>CoCliCo SpatioTemporal Asset Catalog</strong></h2>
+<p>The CoCliCo platform offers structured access to datasets on coastal climate risks, sea level rise, extreme weather events, and adaptation strategies. These datasets are managed within a <a href="https://radiantearth.github.io/stac-browser/#/external/storage.googleapis.com/coclico-data-public/coclico/coclico-stac-4oct/catalog.json">SpatioTemporal Asset Catalog (STAC)</a>, facilitating efficient search and retrieval of geospatial data.</p>
+<p>CoCliCo leverages STAC to provide structured access to geospatial datasets. The table below outlines key dataset categories available in the platform.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Category</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sea Level Rise Projections</strong></td>
+<td>Regional and global sea level rise forecasts based on AR5 &amp; AR6 climate models, including high-end scenarios.</td>
+</tr>
+<tr>
+<td><strong>Flood and Surge Risk Assessments</strong></td>
+<td>Storm surge levels, flood extents, expected damages, and total water levels under RCP4.5 &amp; RCP8.5 scenarios.</td>
+</tr>
+<tr>
+<td><strong>Coastal Vulnerability Data</strong></td>
+<td>Erosion risk classifications, asset mapping, infrastructure exposure, and coastal hazard projections.</td>
+</tr>
+<tr>
+<td><strong>Shoreline Dynamics</strong></td>
+<td>Long-term shoreline evolution, coastal transects, and future shoreline change predictions.</td>
+</tr>
+<tr>
+<td><strong>Wave and Surge Climate Data</strong></td>
+<td>Storm surge projections, wave energy flux, and total water level estimates for coastal target points.</td>
+</tr>
+<tr>
+<td><strong>Adaptation Cost-Benefit Analyses</strong></td>
+<td>Cost-benefit analyses of raising coastal defenses at the NUTS2 level under different climate and socio-economic scenarios.</td>
+</tr>
+<tr>
+<td><strong>Population &amp; Infrastructure Projections</strong></td>
+<td>SSP-based population growth, critical infrastructure mapping, and building footprints.</td>
+</tr>
+<tr>
+<td><strong>Coastal Geomorphology</strong></td>
+<td>Global coastal digital terrain models (DeltaDTM) and shoreline morphodynamics.</td>
+</tr>
+<tr>
+<td><strong>Administrative and Statistical Units</strong></td>
+<td>Local administrative units (LAUs), NUTS regions, and flood statistics aggregated by administrative boundaries.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="data-layers-in-the-coclico-platform"><strong>Data Layers in the CoCliCo platform</strong></h2>
+<p>In the CoCliCo Platform, each data layer is the result of modeling and transforming various datasets from the STAC (SpatioTemporal Asset Catalog) to generate the final geospatial data layers. The platform is organized into five main categories: Sea Levels, Natural Hazards, Exposure and Vulnerability, Risk and Adaptation, and Background Layers, each containing its own specific data layers. Keep reading to discover which datasets are used to create the data layers in the platform.</p>
+<hr />
+<h2 id="sea-levels"><strong>Sea Levels</strong></h2>
+<p>The <strong>CoCliCo Platform</strong> provides access to <strong>sea-level rise (SLR) projections</strong> based on the latest scientific assessments from the <strong>Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6)</strong>. These projections are essential for understanding how sea levels may change in the future and for planning coastal adaptation strategies. The platform focuses on <strong>AR6-based projections</strong>, which are considered the most up-to-date and comprehensive estimates of future sea-level rise.</p>
+<hr />
+<h3 id="sea-level-rise-projections"><strong>Sea Level Rise Projections</strong></h3>
+<p><strong>1. Scenarios</strong></p>
+<p>The platform offers sea-level rise projections for three <strong>Shared Socioeconomic Pathways (SSPs)</strong> and a <strong>high-end scenario</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SSP1-2.6</strong></td>
+<td>A low-emission scenario where global temperatures are limited to 1.5°C above pre-industrial levels, reflecting a sustainable future with rapid decarbonization.</td>
+</tr>
+<tr>
+<td><strong>SSP2-4.5</strong></td>
+<td>A medium-emission scenario where global temperatures rise moderately, reflecting a future with some efforts to mitigate climate change.</td>
+</tr>
+<tr>
+<td><strong>SSP5-8.5</strong></td>
+<td>A high-emission scenario where global temperatures rise significantly, reflecting a future with continued high greenhouse gas emissions and limited mitigation efforts.</td>
+</tr>
+<tr>
+<td><strong>High-End</strong></td>
+<td>Represents more extreme but plausible outcomes of sea-level rise, useful for risk assessment and worst-case planning.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>2. Ensembles</strong></p>
+<p>The projections are provided in three <strong>ensemble ranges</strong> to reflect the uncertainty in future sea-level rise:</p>
+<table>
+<thead>
+<tr>
+<th>Ensemble</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MSL_h</strong></td>
+<td>Represents the <strong>upper range</strong> of projected sea-level rise, reflecting higher uncertainty and more extreme outcomes.</td>
+</tr>
+<tr>
+<td><strong>MSL_m</strong></td>
+<td>Represents the <strong>median projection</strong> of sea-level rise, based on the central estimates from the IPCC AR6.</td>
+</tr>
+<tr>
+<td><strong>MSL_l</strong></td>
+<td>Represents the <strong>lower range</strong> of projected sea-level rise, reflecting more optimistic outcomes with lower uncertainty.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>3. Time Horizon</strong></p>
+<p>The projections are available for <strong>decadal time steps</strong> from <strong>2031 to 2151</strong>, allowing users to explore how sea levels may change over the coming decades and into the next century.</p>
+<table>
+<thead>
+<tr>
+<th>Time Period</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>2031–2151</strong></td>
+<td>Projections are provided for every decade (e.g., 2031, 2041, 2051, etc.), enabling long-term planning.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>4. Regional and Global Coverage</strong></p>
+<p>The projections are provided at both <strong>regional</strong> and <strong>global scales</strong>:</p>
+<ul>
+<li><strong>Regional Scale</strong>: Users can explore how sea-level rise may vary across different parts of the world, accounting for local factors such as land subsidence, ocean currents, and glacial isostatic adjustment.</li>
+<li><strong>Global Scale</strong>: The platform also provides <strong>global mean sea-level (GMSL) projections</strong>, which represent the average rise in sea levels worldwide.</li>
+</ul>
+<hr />
+<p><strong>5. Baseline Period</strong></p>
+<p>All projections are relative to a <strong>1995–2014 baseline period</strong>, consistent with the IPCC AR6 methodology. This baseline provides a common reference point for comparing future sea-level rise scenarios.</p>
+<hr />
+<h4 id="how-to-use-the-sea-level-rise-projections">How to Use the Sea Level Rise Projections</h4>
+<ol>
+<li><strong>Scenario Selection</strong>: Choose from the available scenarios (SSP1-2.6, SSP2-4.5, SSP5-8.5, and high-end) to explore different future pathways of sea-level rise.</li>
+<li><strong>Ensemble Selection</strong>: Select between the high (MSL_h), median (MSL_m), and low (MSL_l) ensembles to understand the range of possible outcomes.</li>
+<li><strong>Time Horizon</strong>: View projections for specific decades (e.g., 2031, 2041, 2051, etc.) to assess how sea levels may change over time.</li>
+<li><strong>Regional Analysis</strong>: Zoom in on specific regions to see how sea-level rise may impact local coastlines.</li>
+</ol>
+<hr />
+<h4 id="why-are-these-projections-important">Why Are These Projections Important?</h4>
+<ul>
+<li><strong>Coastal Risk Assessment</strong>: The sea-level rise projections are critical for assessing the risks of coastal flooding, erosion, and other hazards. They help identify areas that may be most vulnerable to future sea-level rise.</li>
+<li><strong>Adaptation Planning</strong>: By understanding how sea levels may change in the future, coastal planners and policymakers can develop strategies to protect communities, infrastructure, and ecosystems.</li>
+<li><strong>Scientific Consistency</strong>: The projections are based on the latest IPCC AR6 report, ensuring that users have access to the most reliable and up-to-date scientific information.</li>
+</ul>
+<hr />
+<h3 id="extreme-surge-level"><strong>Extreme Surge Level</strong></h3>
+<p>The <strong>Extreme Surge Level (SSL) data layer</strong> provides projections of storm surge levels along the European coastline under different climate scenarios. Storm surges are a critical component of coastal hazards, and understanding how they may evolve in the future is essential for coastal risk assessment and adaptation planning. This dataset is part of the <strong>LISCOAST project</strong> and is based on hydrodynamic modeling and climate projections.</p>
+<p><strong>Key Features of the Extreme Surge Level Data</strong></p>
+<p><strong>1. Climate Scenarios</strong></p>
+<p>The dataset includes projections for three climate scenarios:</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Historical</strong></td>
+<td>Represents the baseline period (1970–2000) for validating the model.</td>
+</tr>
+<tr>
+<td><strong>RCP4.5</strong></td>
+<td>A medium-emission scenario where global temperatures rise moderately.</td>
+</tr>
+<tr>
+<td><strong>RCP8.5</strong></td>
+<td>A high-emission scenario where global temperatures rise significantly.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>2. Return Periods</strong></p>
+<p>The dataset provides SSL estimates for <strong>eight return periods</strong>, which represent the frequency of extreme events:</p>
+<table>
+<thead>
+<tr>
+<th>Return Period (Years)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>5</strong></td>
+<td>Events expected to occur once every 5 years.</td>
+</tr>
+<tr>
+<td><strong>10</strong></td>
+<td>Events expected to occur once every 10 years.</td>
+</tr>
+<tr>
+<td><strong>20</strong></td>
+<td>Events expected to occur once every 20 years.</td>
+</tr>
+<tr>
+<td><strong>50</strong></td>
+<td>Events expected to occur once every 50 years.</td>
+</tr>
+<tr>
+<td><strong>100</strong></td>
+<td>Events expected to occur once every 100 years.</td>
+</tr>
+<tr>
+<td><strong>200</strong></td>
+<td>Events expected to occur once every 200 years.</td>
+</tr>
+<tr>
+<td><strong>500</strong></td>
+<td>Events expected to occur once every 500 years.</td>
+</tr>
+<tr>
+<td><strong>1000</strong></td>
+<td>Events expected to occur once every 1000 years.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>3. Geographic Coverage</strong>
+The dataset covers the <strong>European coastline</strong>, with detailed projections for:</p>
+<ul>
+<li><strong>Northern Europe</strong>: Areas north of 50°N, where significant increases in SSL are projected, especially under RCP8.5.</li>
+<li><strong>Southern Europe</strong>: Areas south of 50°N, where minimal changes or small decreases in SSL are projected, except under RCP8.5 towards the end of the century.</li>
+</ul>
+<hr />
+<p><strong>4. Methodology</strong>
+The SSL projections are based on:</p>
+<ul>
+<li><strong>Hydrodynamic Modeling</strong>: The <strong>Delft3D-Flow</strong> model was used to simulate storm surge dynamics.</li>
+<li><strong>Climate Forcing</strong>: The model was forced by surface wind and atmospheric pressure fields from an <strong>8-member climate model ensemble</strong>.</li>
+<li><strong>Validation</strong>: The model was validated using data from <strong>110 tidal gauge stations</strong> across Europe, showing good predictive skill (RMSE: 0.06 m to 0.29 m).</li>
+<li><strong>Extreme Value Analysis</strong>: The <strong>Peak-Over-Threshold (POT) method</strong> was applied to estimate SSL values for different return periods.</li>
+</ul>
+<hr />
+<h4 id="how-to-use-the-extreme-surge-level-data">How to Use the Extreme Surge Level Data</h4>
+<ol>
+<li><strong>Scenario Selection</strong>: Choose from the available scenarios (Historical, RCP4.5, RCP8.5) to explore how storm surge levels may change under different climate futures.</li>
+<li><strong>Return Period Selection</strong>: Select a return period (e.g., 5, 10, 20, 50, 100, 200, 500, or 1000 years) to assess the frequency and magnitude of extreme storm surge events.</li>
+<li><strong>Geographic Analysis</strong>: Zoom in on specific regions (e.g., Northern or Southern Europe) to see how storm surge levels may vary across the coastline.</li>
+</ol>
+<hr />
+<h4 id="why-is-this-data-important">Why Is This Data Important?</h4>
+<ul>
+<li><strong>Coastal Risk Assessment</strong>: The SSL data is critical for assessing the risks of coastal flooding and erosion, especially in areas prone to extreme storm surges.</li>
+<li><strong>Adaptation Planning</strong>: By understanding how storm surge levels may change in the future, coastal planners and policymakers can develop strategies to protect communities, infrastructure, and ecosystems.</li>
+<li><strong>Combined Effects</strong>: The dataset highlights the combined effects of <strong>relative sea-level rise (RSLR)</strong> and <strong>storm surge levels</strong>, which can significantly increase coastal hazards, particularly under high-emission scenarios like RCP8.5.</li>
+</ul>
+<h3 id="extreme-sea-level"><strong>Extreme Sea Level</strong></h3>
+<p>The <strong>Extreme Sea Level (ESL) data layer</strong> provides projections of total water levels (TWL) along European coastlines under climate change. This dataset combines <strong>mean sea level rise</strong>, <strong>tides</strong>, <strong>storm surges</strong>, and <strong>wave heights</strong> to assess future coastal flood risks. It is part of the <strong>LISCOAST project</strong> and is critical for understanding how climate change will impact coastal hazards.</p>
+<hr />
+<p><strong>Key Features of the Extreme Sea Level Data</strong></p>
+<p><strong>1. Climate Scenarios</strong>
+The dataset includes projections for two climate scenarios:</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RCP4.5</strong></td>
+<td>Medium-emission scenario with moderate warming.</td>
+</tr>
+<tr>
+<td><strong>RCP8.5</strong></td>
+<td>High-emission scenario with significant warming.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>2. Return Periods</strong>
+The dataset estimates extreme sea levels for <strong>eight return periods</strong>, representing the frequency of extreme events:</p>
+<table>
+<thead>
+<tr>
+<th>Return Period (Years)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>5</strong></td>
+<td>Events expected once every 5 years.</td>
+</tr>
+<tr>
+<td><strong>10</strong></td>
+<td>Events expected once every 10 years.</td>
+</tr>
+<tr>
+<td><strong>20</strong></td>
+<td>Events expected once every 20 years.</td>
+</tr>
+<tr>
+<td><strong>50</strong></td>
+<td>Events expected once every 50 years.</td>
+</tr>
+<tr>
+<td><strong>100</strong></td>
+<td>Events expected once every 100 years.</td>
+</tr>
+<tr>
+<td><strong>200</strong></td>
+<td>Events expected once every 200 years.</td>
+</tr>
+<tr>
+<td><strong>500</strong></td>
+<td>Events expected once every 500 years.</td>
+</tr>
+<tr>
+<td><strong>1000</strong></td>
+<td>Events expected once every 1000 years.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>3. Components of Extreme Sea Levels</strong></p>
+<p><strong>- Total Water Level (TWL)</strong>: Combines mean sea level (MSL), tides, storm surges, and wave setup.</p>
+<p><strong>- Episodic Extreme Water Level (EEWL)</strong>: Includes extreme storm surge levels and wave heights during episodic events (e.g., storms).</p>
+<hr />
+<p><strong>4. Geographic Coverage</strong>
+The dataset covers <strong>Europe’s coastline</strong>, with regional projections highlighting:
+- <strong>North Sea</strong>: Highest projected increase in ESLs (up to 1 m under RCP8.5 by 2100).
+- <strong>Baltic Sea &amp; UK/Ireland Atlantic Coasts</strong>: Significant increases in ESLs.
+- <strong>Southern Europe</strong>: Stable or decreasing extremes, except for Portugal and the Gulf of Cadiz.</p>
+<hr />
+<h4 id="how-to-use-the-extreme-sea-level-data">How to Use the Extreme Sea Level Data</h4>
+<ol>
+<li><strong>Scenario Selection</strong>: Choose between <strong>RCP4.5</strong> (moderate warming) and <strong>RCP8.5</strong> (high warming) to explore future risks.</li>
+<li><strong>Return Period Selection</strong>: Select a return period (e.g., 100-year event) to assess the magnitude and frequency of extreme sea levels.</li>
+<li><strong>Regional Analysis</strong>: Focus on specific regions (e.g., North Sea, Southern Europe) to understand local impacts.</li>
+</ol>
+<hr />
+<h4 id="why-is-this-data-important_1">Why Is This Data Important?</h4>
+<ul>
+<li><strong>Coastal Flood Risk</strong>: ESL projections help identify areas most vulnerable to flooding, particularly under high-emission scenarios.</li>
+<li><strong>Adaptation Planning</strong>: Supports decision-making for coastal defenses, land-use planning, and emergency preparedness.</li>
+<li><strong>Combined Effects</strong>: Highlights how <strong>relative sea level rise (RSLR)</strong>, storm surges, and waves interact to amplify risks.</li>
+</ul>
+<hr />
+<hr />
+<h2 id="natural-hazards"><strong>Natural Hazards</strong></h2>
+<h3 id="inundation-distribution-during-flood-events">Inundation Distribution During Flood Events</h3>
+<p>The <strong>Inundation Distribution During Flood Events</strong> data layer provides flood extent projections under various scenarios, including different coastal defense levels, return periods, and future climate conditions. These projections are essential for understanding the impact of extreme coastal flooding and aiding in risk assessment and adaptation planning.</p>
+<h4 id="flood-mapping-methods">Flood Mapping Methods</h4>
+<p>This dataset is generated using advanced flood modeling techniques:</p>
+<ul>
+<li><strong>Two-dimensional inundation models</strong>: More realistic than simple bathtub methods, as they account for flood defense failure and wave propagation.</li>
+<li><strong>2D hydraulic storage-cell models</strong>: Used at the pan-European scale, incorporating projected total water levels, land use-based roughness, and multiple flood sources.</li>
+<li><strong>Bathtub method</strong>: Applied as an initial assessment tool, though it may overestimate flood extent.</li>
+<li><strong>Hydrodynamic modeling</strong>: Acknowledged for its accuracy but not widely applied due to computational constraints.</li>
+</ul>
+<p><strong>Consideration of Defenses and Scenarios</strong></p>
+<ul>
+<li><strong>Coastal defenses</strong>: Both natural (e.g., dunes) and artificial (e.g., dikes) structures are considered.</li>
+<li><strong>Failure mechanisms</strong>: Flood maps account for defense failures due to overtopping, overflow, and breaching.</li>
+</ul>
+<p><strong>Protection Levels:</strong></p>
+<ul>
+<li><strong>High Defended</strong>: Areas with robust, well-maintained protection.</li>
+<li><strong>Low Defended</strong>: Areas with some protection but vulnerable to failure.</li>
+<li><strong>Undefended</strong>: Areas without significant coastal protection.</li>
+</ul>
+<p><strong>Future Scenarios:</strong></p>
+<p>Projections include present-day (2020) and future conditions (2050, 2100) under different climate models:</p>
+<ul>
+<li><strong>SSP126</strong></li>
+<li><strong>SSP245</strong></li>
+<li><strong>SSP585</strong></li>
+</ul>
+<p><strong>Flood Drivers:</strong></p>
+<ul>
+<li><strong>High tides</strong></li>
+<li><strong>Frequent storms</strong></li>
+<li><strong>Extreme “perfect storm” scenarios</strong></li>
+<li><strong>Erosion</strong>: The compounded impact of coastal erosion and flooding is considered.</li>
+</ul>
+<h4 id="how-to-use-the-data">How to Use the Data</h4>
+<p><strong>Filtering the Data</strong></p>
+<p>Users can filter the inundation distribution dataset based on:</p>
+<ul>
+<li><strong>Defense level</strong>: High, low, or no protection.</li>
+<li><strong>Return periods</strong>: 1-year, 100-year, 1000-year events.</li>
+<li><strong>Scenarios</strong>: Climate projections under different Shared Socioeconomic Pathways (SSP126, SSP245, SSP585, High-End).</li>
+<li><strong>Timeframes</strong>: Available for 2010, 2030, 2050, 2100, and 2150.</li>
+</ul>
+<p><strong>Data Format and Access</strong></p>
+<ul>
+<li>The flood extent maps are provided as <strong>GeoTIFF (.tif) files</strong>.</li>
+<li>These can be visualized using <strong>Geographic Information Systems (GIS)</strong> such as QGIS or ArcGIS.</li>
+<li>Layers are structured under folders corresponding to defense level, return period, scenario, and time (e.g., <code>HIGH_DEFENDED_MAPS/SLR/SSP585/2050.tif</code>).</li>
+</ul>
+<p><strong>Integration with Other Datasets</strong></p>
+<ul>
+<li>The dataset can be combined with <strong>Digital Elevation Models (DEMs)</strong> and <strong>bathymetric data</strong> for enhanced analysis.</li>
+<li>It aligns with <strong>coastal typology classifications</strong>, enabling better decision-making for flood management.</li>
+</ul>
+<h4 id="why-is-this-data-important_2">Why Is This Data Important?</h4>
+<p>The <strong>Inundation Distribution During Flood Events</strong> dataset is crucial for coastal risk assessment and adaptation planning by:</p>
+<ul>
+<li><strong>Supporting flood risk management</strong>: Helps identify vulnerable areas and evaluate different protection strategies.</li>
+<li><strong>Informing coastal adaptation</strong>: Aids in designing climate-resilient infrastructure and nature-based solutions.</li>
+<li><strong>Enhancing emergency preparedness</strong>: Allows authorities to plan for extreme events and mitigate disaster impacts.</li>
+<li><strong>Improving scientific research</strong>: Provides a consistent, large-scale dataset for studying climate change effects on coastal flooding.</li>
+<li><strong>Assisting policymakers</strong>: Supports data-driven decision-making for long-term coastal management.</li>
+</ul>
+<p>By leveraging this dataset, stakeholders can enhance <strong>coastal resilience</strong>, optimize <strong>flood defense investments</strong>, and safeguard <strong>communities from future climate-induced flooding</strong>.</p>
+<h3 id="shoreline-change"><strong>Shoreline Change</strong></h3>
+<p><strong>Understanding Shoreline Change</strong></p>
+<p>The <strong>Shoreline Change</strong> dataset provides projections of global shoreline evolution under climate change. This assessment considers the combined effects of:</p>
+<ul>
+<li><strong>Ambient change</strong>: Historical shoreline trends.</li>
+<li><strong>Sea level rise (SLR)</strong>: Based on RCP4.5 and RCP8.5 climate scenarios.</li>
+<li><strong>Storm-driven erosion</strong>: Instantaneous shoreline changes due to extreme events.</li>
+</ul>
+<p>Data is computed for seven statistical ensembles (1st, 5th, 17th, 50th, 83rd, 95th, and 99th percentiles) at two key timeframes: <strong>2050 and 2100</strong>. The projections stem from the <strong>LISCOAST project</strong>, a comprehensive study of coastal dynamics under climate change.</p>
+<h4 id="how-to-use-the-data_1"><strong>How to Use the Data</strong></h4>
+<p>Users can filter the dataset based on:</p>
+<ul>
+<li><strong>Climate scenarios</strong>: RCP4.5 (moderate emissions) and RCP8.5 (high emissions).</li>
+<li><strong>Statistical ensembles</strong>: Different confidence levels (e.g., 1st percentile for extreme retreat, 99th for conservative estimates).</li>
+<li><strong>Timeframes</strong>: Future projections for <strong>2050 and 2100</strong>.</li>
+</ul>
+<p>Each dataset is structured as follows:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sc-mapbox-ensemble-{ENSEMBLE}-scenarios-RCP{SCENARIO}
+</span></code></pre></div>
+<p>For example:</p>
+<ul>
+<li><code>sc-mapbox-ensemble-50-scenarios-RCP85</code> → Median shoreline change under RCP8.5.</li>
+<li><code>sc-mapbox-ensemble-99-scenarios-RCP45</code> → Extreme retreat case under RCP4.5.</li>
+</ul>
+<p>These datasets can be integrated into GIS platforms to analyze shoreline retreat risks and assess adaptation strategies.</p>
+<h4 id="why-is-this-data-important_3"><strong>Why Is This Data Important?</strong></h4>
+<p>The <strong>Shoreline Change</strong> dataset is critical for:</p>
+<ul>
+<li><strong>Coastal risk management</strong>: Identifying areas vulnerable to erosion and planning protective measures.</li>
+<li><strong>Infrastructure planning</strong>: Supporting long-term decision-making for sustainable coastal development.</li>
+<li><strong>Climate adaptation</strong>: Evaluating potential impacts of sea level rise and storm events.</li>
+<li><strong>Scientific research</strong>: Providing a robust dataset for studying coastal responses to climate change.</li>
+</ul>
+<p>By leveraging this dataset, stakeholders can develop data-driven strategies to <strong>enhance coastal resilience and mitigate climate-induced shoreline retreat</strong>.</p>
+<h2 id="exposure-and-vulnerability">Exposure and Vulnerability</h2>
+<p>While dedicated layers for exposure and vulnerability are still in development, CoCliCo combines <strong>land-use data</strong> from <strong>Copernicus Coastal Zones 2018</strong> with <strong>Digital Terrain Models (DTMs)</strong> to estimate exposure levels. </p>
+<p>Future improvements will include datasets on <strong>critical infrastructure assets</strong> and <strong>population exposure scenarios</strong> for better risk evaluation.</p>
+<hr />
+<h2 id="risk-and-adaptation">Risk and Adaptation</h2>
+<h3 id="cost-benefit-analysis-of-coastal-adaptation">Cost-Benefit Analysis of Coastal Adaptation</h3>
+<p>The <strong>Cost-Benefit Analysis (CBA) of Coastal Adaptation per Floodplain</strong> dataset provides insights into efficient coastal adaptation pathways along the European coastline. It evaluates different adaptation strategies based on a dynamic, inter-temporal cost-benefit analysis. The dataset includes projections up to the years <strong>2050, 2100, and 2150</strong>, offering key metrics to inform decision-making for coastal resilience.</p>
+<p><strong>Adaptation Strategies Considered:</strong>
+- <strong>Protection</strong> – Raising coastal defenses.
+- <strong>Retreat</strong> – Managed withdrawal from vulnerable areas.
+- <strong>Accommodation</strong> – Implementing flood-proofing measures.
+- <strong>Protection &amp; Retreat</strong> – A combined strategy where both approaches are efficient.
+- <strong>No Adaptation</strong> – Areas where adaptation measures are deemed inefficient.</p>
+<p>The analysis accounts for adaptation costs, residual flood damages, and the most cost-efficient adaptation strategies for each floodplain.</p>
+<hr />
+<h4 id="how-to-use-the-data_2"><strong>How to Use the Data</strong></h4>
+<p>This dataset is structured to support <strong>policymakers, coastal managers, and researchers</strong> in evaluating adaptation strategies at multiple spatial and temporal scales. The data is organized under three primary filters:</p>
+<p><strong>Filters:</strong></p>
+<p><strong>Adaptation Strategy:</strong>
+- Protection
+- Retreat
+- Accommodation
+- Protection &amp; Retreat
+- No Adaptation</p>
+<p><strong>Climate &amp; Socioeconomic Scenarios:</strong>
+- <strong>SSP126</strong> (Sustainability Pathway)
+- <strong>SSP245</strong> (Middle of the Road Pathway)
+- <strong>SSP585</strong> (Fossil-Fueled Development Pathway)</p>
+<p><strong>Time Periods:</strong>
+- 2050
+- 2100
+- 2150</p>
+<p><strong>Dataset Variables:</strong></p>
+<p><strong>Floodplain-Specific Data:</strong>
+- Efficient protection height <em>(m)</em>
+- Return period of protection level
+- Retreat height triggering full retreat
+- Accommodation feasibility <em>(binary indicator)</em>
+- Adaptation costs <em>(€)</em> &amp; residual flood damages <em>(€)</em></p>
+<p><strong>Country-Level Aggregates:</strong>
+- Percentage of coastline where each adaptation strategy is efficient
+- Total adaptation and damage costs over time</p>
+<hr />
+<h4 id="why-is-this-data-important_4"><strong>Why Is This Data Important?</strong></h4>
+<p>This dataset is crucial for guiding <strong>cost-effective and sustainable coastal adaptation strategies</strong> under different climate change and socioeconomic scenarios. It helps:</p>
+<ul>
+<li><strong>Coastal decision-makers</strong> initiate proactive adaptation planning.</li>
+<li><strong>Global institutions</strong> estimate future adaptation costs at regional and national scales.</li>
+<li><strong>Researchers and policymakers</strong> assess the effectiveness of adaptation pathways over time.</li>
+</ul>
+<p>By leveraging this data, stakeholders can make <strong>informed decisions</strong> to mitigate flood risks while optimizing economic investments in coastal adaptation strategies.</p>
+<hr />
+<div align="center">
+    <img src="../assets/logo1.png" width="150" alt="CoCliCo Logo">
+    <p><small>Copyright &copy; 2025 CoCliCo Services</small></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../target_users/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Target Users">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Target Users
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../further_analysis/" class="md-footer__link md-footer__link--next" aria-label="Next: Further Analysis">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Further Analysis
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 CoCliCo Services
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/openearth/coclico-workbench" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "navigation.tabs", "navigation.indexes", "navigation.expand", "navigation.top", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.code.select", "content.footnote.tooltips", "content.tabs.link", "content.tooltips", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tabs.sticky", null], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+    
+  </body>
+</html>

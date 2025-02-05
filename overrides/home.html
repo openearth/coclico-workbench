@@ -1,0 +1,68 @@
+{% extends "main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %}
+{{ super() }}
+
+<style>
+    .md-main__inner {
+        margin: 0;
+    }
+
+    .md-content {
+        display: none;
+    }
+
+    @media screen and (min-width: 60em) {
+        .md-sidebar--secondary {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 76.25em) {
+        .md-sidebar--primary {
+            display: none;
+        }
+    }
+</style>
+
+<section class="mdx-container">
+    <div class="md-grid md-typeset">
+        <div class="mdx-hero">
+            <div class="mdx-hero__image">
+                <img src="assets/Main.png" alt="" width="800" height="800" draggable="false">
+            </div>
+            <div class="mdx-hero__content">
+                <h1>Welcome to the CoCliCo User Guide!</h1>
+                <p>{{ config.site_description }} </p>
+                <a href="{{ 'getting_started/' | url }}" class="md-button md-button--primary">Getting Started</a>
+                <a href="{{ 'Datasets/' | url }}" class="md-button md-button--secondary">Understanding the Data</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Features Section -->
+    <div class="md-grid md-typeset">
+        <div class="mdx-features">
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong><a href="{{ 'Datasets/#sea-level-data' | url }}">Sea Level and Hazard
+                            Projections</a></strong> – Access datasets on sea level rise, extreme surge levels, and
+                    coastal flooding.</li>
+                <li><strong><a href="{{ 'Datasets/#exposure-vulnerability' | url }}">Exposure and Vulnerability
+                            Assessments</a></strong> – Understand how populations and infrastructure are affected.</li>
+                <li><strong><a href="{{ 'Datasets/#risk-adaptation' | url }}">Risk and Adaptation
+                            Strategies</a></strong> – Explore cost-benefit analyses of coastal adaptation measures.</li>
+                <li><strong>Interactive Map Interface</strong> – Pan, zoom, and activate data layers for a detailed
+                    spatial analysis.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
+
+<!-- Application footer -->
+{% block footer %}{% endblock %}

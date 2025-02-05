@@ -1,0 +1,87 @@
+.mdx-hero h1 {
+    margin-bottom: 1.25rem;
+    font-weight: 700;
+    color: currentcolor;
+}
+
+@media screen and (max-width: 30em) {
+    .mdx-hero h1 {
+        font-size: 1.75rem;
+    }
+}
+
+.mdx-hero__content {
+    padding-bottom: 7.5rem;
+}
+
+@media screen and (min-width: 60em) {
+    .mdx-hero {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .mdx-hero__content {
+        max-width: 23.75rem;
+        padding-bottom: 14vw;
+        margin-top: 4.375rem;
+    }
+
+    .mdx-hero__image {
+        order: 1;
+        width: 47.5rem;
+        transform: translateX(5rem);
+        margin-left: -50px;
+        margin-top: 50px;
+    }
+
+}
+
+@media screen and (min-width: 76.25em) {
+    .mdx-hero__image {
+        transform: translateX(10rem);
+    }
+}
+
+/* Hide primary sidebar (left navigation) */
+.md-sidebar--primary {
+    display: none;
+}
+
+.mdx-features {
+    text-align: left;
+    background: rgba(0, 0, 0, 0.0);
+    /* Light background */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: -230px;
+    max-width: 1000px;
+    margin-left: -25px;
+}
+
+.mdx-features h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+.mdx-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mdx-features li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.mdx-features a {
+    color: #0057b8;
+    /* Adjust to match your theme */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mdx-features a:hover {
+    text-decoration: underline;
+}
