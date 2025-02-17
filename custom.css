@@ -161,3 +161,27 @@ a:hover,
 .mdx-features a:hover {
     text-decoration: underline;
 }
+
+.md-typeset [type=checkbox]:checked+.task-list-indicator:before {
+    background-color: #008390;
+}
+
+iframe {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #008390;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #00a5b0;
+}
