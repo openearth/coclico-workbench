@@ -185,3 +185,9 @@ iframe {
 .btn:hover {
     background-color: #00a5b0;
 }
+
+.center {
+    display: block;
+    margin: auto;
+    text-align: center;
+}

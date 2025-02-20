@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="This tool provides access to high-resolution coastal climate data,  helping users explore sea level rise projections, coastal hazards, exposure, and adaptation strategies.  Designed for researchers, policymakers, and coastal managers, CoCliCo enables interactive data visualization,  scenario analysis, and decision support.">
+        <meta name="description" content="This tool provides access to high-resolution coastal climate data,  helping users explore sea level rise projections, coastal hazards, exposure, and adaptation strategies.  Designed for policymakers, local authorities, coastal managers and researchers, CoCliCo enables interactive data visualization,  scenario analysis, and decision support.">
       
       
       
@@ -497,20 +497,14 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Data Layers in the CoCliCo platform">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sea-levels" class="md-nav__link">
     <span class="md-ellipsis">
       Sea Levels
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -602,20 +596,14 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Data Layers in the CoCliCo platform">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sea-levels" class="md-nav__link">
     <span class="md-ellipsis">
       Sea Levels
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -669,14 +657,25 @@
 <h2 id="data-layers-in-the-coclico-platform"><strong>Data Layers in the CoCliCo platform</strong></h2>
 <p>In the CoCliCo Platform, each data layer is the result of modeling and transforming various datasets from the STAC (SpatioTemporal Asset Catalog) to generate the final geospatial data layers. The platform is organized into five main categories: Sea Levels, Natural Hazards, Exposure and Vulnerability, Risk and Adaptation, and Background Layers, each containing its own specific data layers. Keep reading to discover which datasets are used to create the data layers in the platform.</p>
 <hr />
-<h3 id="sea-levels"><strong>Sea Levels</strong></h3>
-<p>The <strong>CoCliCo Platform</strong> provides access to <strong>sea-level rise (SLR) projections</strong> based on the latest scientific assessments from the <strong>Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6)</strong>. These projections are essential for understanding how sea levels may change in the future and for planning coastal adaptation strategies. The platform focuses on <strong>AR6-based projections</strong>, which are considered the most up-to-date and comprehensive estimates of future sea-level rise.</p>
+<h2 id="sea-levels"><strong>Sea Levels</strong></h2>
 <details open="open">
-<summary>Data Layers</summary>
+<summary>Data Layers &amp; User Stories</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Sea Level Rise Projections</label><label for="__tabbed_1_2">Extreme Surge Level</label><label for="__tabbed_1_3">Extreme Sea Level</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><strong>1. Climate Scenarios</strong></p>
+<p>The <strong>CoCliCo Platform</strong> provides access to <strong>sea-level rise (SLR) projections</strong> based on the latest scientific assessments from the <strong>Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6)</strong>. These projections are essential for understanding how sea levels may change in the future and for planning coastal adaptation strategies. The platform focuses on <strong>AR6-based projections</strong>, which are considered the most up-to-date and comprehensive estimates of future sea-level rise. It is vital for assessing risks related to coastal flooding, infrastructure planning, and long-term adaptation strategies. As sea levels are projected to rise 0.3 to 1 meter by 2100, with continued increases thereafter, this regional sea level rise projection layer is a critical tool for policymakers, planners, and coastal managers​​. While global sea level rise projections provide an overarching estimate of future changes, regional projections account for local factors offering more precise insights for specific locations, such as ocean density and circulation changes, ice-sheet and glacier mass loss, land water storage shifts, and post-glacial rebound. This geospatial sea level rise layer stands at the basis for our flood models and hence is a valuable input to all results presented in the other User Stories</p>
+<blockquote>
+<p><em>"I need to see mean sea-level rise information now and in the future for different climate change scenarios so I can do broad-scale preliminary evaluation of risks.”</em></p>
+</blockquote>
+<hr />
+<p><strong>Data Sources</strong></p>
+<p>Regional mean sea-level projections for CoCliCo are based essentially on the sea level authoritative dataset produced for the 6th assessment report (AR6) of the Intergovernmental Panel on Climate Change (IPCC) (Fox-Kemper et al., 2021). The AR6 dataset is described and displayed at <a href="https://sealevel.nasa.gov/ipcc-ar6-sea-level-projection-tool">Sea Level Projection Tool – NASA Sea Level Change Portal</a> and is publicly distributed at <a href="https://zenodo.org/records/6382554">IPCC AR6 Sea Level Projections</a> (Garner et al., 2022). From the AR6 dataset, the CoCliCo mean sea-level projections consider all sea-level components (i.e. sterodynamic, glaciers, ice-sheets and landwater) except the vertical land motions (VLMs). Instead, CoCliCo relies on the Glacial Isostatic Adjustment (GIA) model outputs from Caron et al. (2018), which uses advanced statistical methods and a vast range of simulations to estimate how the Earth responds to the melting of ancient ice sheets. This approach enhances regional analysis by providing more accurate and uncertainty-aware corrections for GIA.</p>
+<p><img alt="" class="center" src="../assets/Tool/SLR_DATA.png" width="900" /></p>
+<hr />
+<p><strong>Methods</strong></p>
+<p>CoCliCo regional mean sea-level projections are constructed by combining the IPCC AR6 sea-level change dataset and the GIA model outputs of Caron et al. (2018), and propagating uncertainty following a Monte Carlo approach. The regional sea-level changes therefore include the changes in ocean density and circulation, the changes due to continental glaciers and ice-sheet mass loss and their respective regional spatial distribution, changes in landwater and groundwater, and the post-glacial rebound. 
+For three SSPs scenarios (i.e. SSP1-2.6, SSP2-4.5 and SSP5-8.5), the percentiles can be displayed, corresponding to the lower (17th), median (50th) and upper (83rd) bounds of the likely-range. One high-end scenario is also constructed from the 83rd percentile of the low-confidence SSP5-8.5 scenario of the IPCC AR6. High-end scenarios explore plausible – although unlikely – upper-tail sea-level scenarios beyond the likely range: i.e. when uncertainty tolerance is low and robust decision-making is preferable.  </p>
+<p><strong>Climate Scenarios</strong></p>
 <p>The platform offers sea-level rise projections for three <strong>Shared Socioeconomic Pathways (SSPs)</strong> and a <strong>high-end scenario</strong>:</p>
 <div class="grid cards" markdown>
 <ul>
@@ -699,45 +698,43 @@
 </ul>
 </div>
 <hr />
-<p><strong>2. Ensembles</strong></p>
+<p><strong>Ensembles</strong></p>
 <p>The projections are provided in three <strong>ensemble ranges</strong> to reflect the uncertainty in future sea-level rise:</p>
-<div class="grid cards" markdown>
 <ul>
 <li>
-<p><strong>MSL_h</strong><br />
-<em>Represents the </em><em>upper range</em><em> of projected sea-level rise, reflecting higher uncertainty and more extreme outcomes.</em></p>
+<p><strong>MSL_h:</strong> Represents the <strong>upper range</strong> of projected sea-level rise, reflecting higher uncertainty and more extreme outcomes.</p>
 </li>
 <li>
-<p><strong>MSL_m</strong><br />
-<em>Represents the </em><em>median projection</em><em> of sea-level rise, based on the central estimates from the IPCC AR6.</em></p>
+<p><strong>MSL_m:</strong> Represents the <strong>median projection</strong> of sea-level rise, based on the central estimates from the IPCC AR6.</p>
 </li>
 <li>
-<p><strong>MSL_l</strong><br />
-<em>Represents the </em><em>lower range</em><em> of projected sea-level rise, reflecting more optimistic outcomes with lower uncertainty.</em></p>
+<p><strong>MSL_l:</strong> Represents the <strong>lower range</strong> of projected sea-level rise, reflecting more optimistic outcomes with lower uncertainty.</p>
 </li>
 </ul>
-</div>
 <hr />
-<p><strong>3. Time Horizon</strong></p>
-<p>The projections are available for <strong>decadal time steps</strong> from <strong>2031 to 2151</strong>, allowing users to explore how sea levels may change over the coming decades and into the next century.</p>
+<p><strong>Time Horizon</strong></p>
+<p>The projections are available for <strong>decadal time steps</strong> from <strong>2030 to 2150</strong>, allowing users to explore how sea levels may change over the coming decades and into the next century.</p>
 <hr />
-<p><strong>4. Regional and Global Coverage</strong></p>
+<p><strong>Regional and Global Coverage</strong></p>
 <p>The projections are provided at both <strong>regional</strong> and <strong>global scales</strong>:</p>
 <ul>
 <li><strong>Regional Scale</strong>: Users can explore how sea-level rise may vary across different parts of the world, accounting for local factors such as land subsidence, ocean currents, and glacial isostatic adjustment.</li>
 <li><strong>Global Scale</strong>: The platform also provides <strong>global mean sea-level (GMSL) projections</strong>, which represent the average rise in sea levels worldwide.</li>
 </ul>
 <hr />
-<p><strong>5. Baseline Period</strong></p>
+<p><strong>Baseline Period</strong></p>
 <p>All projections are relative to a <strong>1995–2014 baseline period</strong>, consistent with the IPCC AR6 methodology. This baseline provides a common reference point for comparing future sea-level rise scenarios.</p>
 <hr />
 <p><strong>How to Use the Sea Level Rise Projections</strong></p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Scenario Selection</strong>: Choose from the available scenarios (SSP1-2.6, SSP2-4.5, SSP5-8.5, and high-end) to explore different future pathways of sea-level rise.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Ensemble Selection</strong>: Select between the high (MSL_h), median (MSL_m), and low (MSL_l) ensembles to understand the range of possible outcomes.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Time Horizon</strong>: View projections for specific decades (e.g., 2031, 2041, 2051, etc.) to assess how sea levels may change over time.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Regional Analysis</strong>: Zoom in on specific regions to see how sea-level rise may impact local coastlines.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Time Horizon</strong>: View projections for specific decades (e.g., 2030, 2040, 2050, etc.) to assess how sea levels may change over time.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Specific Analysis</strong>: Zoom in on specific regions to see how sea-level rise may impact local coastlines.</li>
 </ul>
+<hr />
+<p><strong>Model Outputs</strong></p>
+<p><img alt="" class="center" src="../assets/Tool/SLR_outputs.png" width="800" /></p>
 <hr />
 <p><strong>Why Are These Projections Important?</strong></p>
 <ul class="task-list">
@@ -746,6 +743,13 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Scientific Consistency</strong>: The projections are based on the latest IPCC AR6 report, ensuring that users have access to the most reliable and up-to-date scientific information.</li>
 </ul>
 <hr />
+<p><strong>Example of use</strong></p>
+<blockquote>
+<p><em>"Using the Sea Level Rise projections User Stories, city planners identified their neighbourhoods as having a higher risk of permanent flooding related to sea level rise by 2050 under high-emission scenarios high-emission scenarios compared to other neighbourhoods in the country. This analysis informed their decisions to prioritize green infrastructure development in those areas, reducing potential damage costs by 30%."</em></p>
+</blockquote>
+<hr />
+<p><strong>Further Analysis</strong></p>
+<p>Beside GIA, coastal regions in Europe can experience significant vertical land motion (VLM) which can be strong, robust and that can be assessed locally. There is for instance well known subsidence along the Italian Adriatic, the Netherlands or even in more localized shorelines such as the Aksiou delta next to Thessaloniki in Greece. This subsidence context can strongly inflate coastal hazards locally and should therefore be accounted for. The CoCliCo project explored local VLMs using the land vertical velocity estimates from the Copernicus European Ground Motion Service (EGMS) derived over the period 2016-2021 (​​Thiéblemont et al., 2024). While these estimates are not implemented in the regional sea-level projections of CoCliCo, they have been considered for the coastal hazard assessment and can be explored as an exploratory tool using the <a href="../further_analysis/">Workbench</a>.  </p>
 </div>
 <div class="tabbed-block">
 <p>The <strong>Extreme Surge Level (SSL) data layer</strong> provides projections of storm surge levels along the European coastline under different climate scenarios. Storm surges are a critical component of coastal hazards, and understanding how they may evolve in the future is essential for coastal risk assessment and adaptation planning. This dataset is part of the <strong>LISCOAST project</strong> and is based on hydrodynamic modeling and climate projections.</p>
@@ -974,7 +978,10 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 </div>
 </div>
 </details>
+<hr />
 <h2 id="natural-hazards"><strong>Natural Hazards</strong></h2>
+<details open="open">
+<summary>Data Layers &amp; User Stories</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Inundation Distribution During Flood Events</label><label for="__tabbed_2_2">Shoreline Change</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1127,15 +1134,58 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 </div>
 </div>
 </div>
-<h2 id="exposure-and-vulnerability">Exposure and Vulnerability</h2>
-<p>Future improvements will include datasets on <strong>critical infrastructure assets</strong> and <strong>population exposure scenarios</strong> for better risk evaluation.</p>
+</details>
+<hr />
+<h2 id="exposure-and-vulnerability"><strong>Exposure and Vulnerability</strong></h2>
+<details open="open">
+<summary>Data Layers &amp; User Stories</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Damage Costs of Exposed Infraestructures</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<p>The Damage Costs of Exposed Infrastructures User Story in the CoCliCo allows a quantitative assessment of damages caused by flooding under different climate change scenarios and related sea-sevel rise. Although most coastal infrastructures and assets are protected from flooding today, flood damages are expected to drastically grow with rising sea levels due to increasing flood extent and flood depth. This results in increased damages costs to coastal infrastructures. Assessing these costs is needed to tailor adaptation measures and inform decision-making at the national, regional but also local scale. The Damage Costs of Exposed Infrastructures User Story relies on the most up-to-date (i) regional sea-level projections, (ii) pan-European flood hazard assessment and (iii) current infrastructures inventory to provide coastal flood damage costs and their evolution at the scale of Local Administrative Units (LAUs); i.e. city scale.</p>
+<blockquote>
+<p><em>"I need to quantify damage costs of infrastructures exposed to flooding and assess how it evolves under different climate change scenarios"</em></p>
+</blockquote>
+<p><strong>Data Sources</strong></p>
+<p><strong>Methods</strong></p>
+<p><strong>How to Use the Data</strong></p>
+<hr />
+<p><strong>Model Outputs</strong></p>
+<hr />
+<p><strong>Why Is This Data Important?</strong></p>
+<hr />
+<p><strong>Example of use</strong></p>
+<hr />
+<p><strong>Limitations</strong></p>
+<hr />
+<p><strong>Further Analysis</strong></p>
+</details>
 <hr />
 <h2 id="risk-and-adaptation"><strong>Risk and Adaptation</strong></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Cost-Benefit Analysis of Coastal Adaptation</label></div>
+<details open="open">
+<summary>Data Layers &amp; User Stories</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Cost-Benefit Analysis of Coastal Adaptation</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>The <strong>Cost-Benefit Analysis (CBA) of Coastal Adaptation per Floodplain</strong> dataset provides insights into efficient coastal adaptation pathways along the European coastline. It evaluates different adaptation strategies based on a dynamic, inter-temporal cost-benefit analysis.</p>
-<p><strong>Key Features of the Cos-Benefit Analysis of Coastal Adaptation</strong></p>
+<p>The adaptation based on <strong>Cost-Benefit Analysis (CBA) of Coastal Adaptation per Floodplain</strong> dataset provides insights into economically optimal adaptation options under various climate change scenarios. The cost-benefit analysis considers protection, retreat, and accommodation as potential adaptation options to address current and future flood risks. Protection involves constructing hard defensive infrastructure along the coast at an appropriate height. Retreat focuses on relocating people and assets from floodplains, while accommodation entails flood-proofing buildings within floodplains to endure extreme events without damage. The economically optimal mix of adaptation options is presented at an aggregated country level through the web viewer. Additionally, detailed information on local coastal floodplains, their economically optimal adaptation options, and the timing of implementation can be accessed via the workbench. </p>
+<blockquote>
+<p><em>"I want to see economically optimal coastal adaptation options both today and, in the future, as well as the expected investments in coastal adaptation and the potential costs of flood damages"</em></p>
+</blockquote>
+<p><strong>Data Sources</strong></p>
+<p>The data flow of the cost-benefit model can be seen in this workflow chart. The output of the model (efficient adaptation pathways in the middle of the Figure) then feed onto the CoCliCo platform. Several parts or even components of this detailed Figure can be excluded to simplify it, e.g. dynamic programming, implementation of adaptation options, etc. The SSP/RCP scenarios inform the sea level rise (SLR) and vertical land motion (VLM) data.</p>
+<p><img alt="" class="center" src="../assets/Tool/CBA_DATA.png" width="900" /></p>
+<p><strong>Methods</strong></p>
+<p>The cost-benefit optimisation integrates several components:  </p>
+<ul>
+<li>A hazard component to model extreme sea level </li>
+<li>An exposure component to assess population and assets at risk </li>
+<li>A vulnerability component to assess the susceptibility of assets to hazards </li>
+<li>An adaptation state space to outline potential adaptation pathways </li>
+<li>Cost functions to estimate the costs associated with adaptation actions </li>
+</ul>
+<p>The multi-stage cost-benefit optimisation is conducted for each of the 41,327 coastal floodplains individually. We consider a time horizon from 2020 to 2150 with 10-year time steps, a discount rate of 3% and three greenhouse gas emission scenarios: low emissions (SSP1-2.6), high emissions (SSP2-4.5) and very high emissions (SSP5-8.5).  </p>
 <p><strong>1. Climate Scenario</strong></p>
 <p>The dataset includes projections for three climate scenarios:</p>
 <div class="grid cards" markdown>
@@ -1180,6 +1230,16 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Projection</strong>: Choose between 2050, 2100, or 2150, depending on the timeframe for the adaptation strategy.</li>
 </ul>
 <hr />
+<p><strong>Model Outputs</strong></p>
+<ul>
+<li>
+<p>For each coastal floodplain, the model determines the economically optimal adaptation pathway, which is a sequence of adaptation options over time. These adaptation pathways can be explored through the workbench. </p>
+</li>
+<li>
+<p>The web viewer illustrates the proportion of the coastline where each adaptation option is economically optimal by 2150 for each country, based on the economically optimal coastal adaptation pathways for all 41,327 floodplains. </p>
+</li>
+</ul>
+<hr />
 <p><strong>Why Is This Data Important?</strong></p>
 <p>This dataset is crucial for guiding <strong>cost-effective and sustainable coastal adaptation strategies</strong> under different climate change and socioeconomic scenarios. It helps:</p>
 <ul class="task-list">
@@ -1188,9 +1248,19 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Researchers and policymakers</strong> assess the effectiveness of adaptation pathways over time.</li>
 </ul>
 <hr />
+<p><strong>Example of use</strong></p>
+<blockquote>
+<p><em>"Using the Adaptation Based on Cost-Benefit Analysis User Story, city planners identified their neighbourhoods as requiring immediate adaptation actions from an economic perspective. Flood-proofing buildings to withstand a one-meter flood was identified as the economically optimal solution, providing a strong rationale for incorporating flood-proofing requirements for new buildings into local spatial planning guidelines."</em></p>
+</blockquote>
+<hr />
+<p><strong>Limitations</strong></p>
+<p>This cost-benefit model uses highly aggregated data to manage computational constraints. As a result, it does not incorporate detailed information on properties, land-use planning, or infrastructure, which may lead to inaccuracies at the individual floodplain level. For example, retreat may be identified as the economically optimal adaptation option for a floodplain containing a nuclear power plant, but in reality, such a decision could present unaffordable challenges that the model does not account for. Additionally, only the median sea-level rise (SLR) is considered, excluding high-end SLR scenarios from all calculations. A sensitivity analysis revealed that uncertainties in time-independent socioeconomic factors — such as the discount rate, protection costs, retreat costs, and protection levels — have a greater impact on the choice of adaptation options, the timing of initial adaptation actions, and total discounted costs than climate change scenarios. </p>
+<hr />
+<p><strong>Further Analysis</strong></p>
 </div>
 </div>
 </div>
+</details>
 <div align="center">
     <a href="https://www.openearth.nl/coclico-workbench/">
         <img src="/assets/logo1.png" width="150" alt="CoCliCo Logo">
