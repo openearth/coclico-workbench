@@ -663,18 +663,24 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Sea Level Rise Projections</label><label for="__tabbed_1_2">Extreme Surge Level</label><label for="__tabbed_1_3">Extreme Sea Level</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>The <strong>CoCliCo Platform</strong> provides access to <strong>sea-level rise (SLR) projections</strong> based on the latest scientific assessments from the <strong>Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6)</strong>. These projections are essential for understanding how sea levels may change in the future and for planning coastal adaptation strategies. The platform focuses on <strong>AR6-based projections</strong>, which are considered the most up-to-date and comprehensive estimates of future sea-level rise. It is vital for assessing risks related to coastal flooding, infrastructure planning, and long-term adaptation strategies. As sea levels are projected to rise 0.3 to 1 meter by 2100, with continued increases thereafter, this regional sea level rise projection layer is a critical tool for policymakers, planners, and coastal managers​​. While global sea level rise projections provide an overarching estimate of future changes, regional projections account for local factors offering more precise insights for specific locations, such as ocean density and circulation changes, ice-sheet and glacier mass loss, land water storage shifts, and post-glacial rebound. This geospatial sea level rise layer stands at the basis for our flood models and hence is a valuable input to all results presented in the other User Stories</p>
+<p>The <strong>CoCliCo Platform</strong> provides access to <strong>sea-level rise (SLR) projections</strong> based on the latest scientific assessments from the <strong>Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6)</strong>, essential for understanding future changes and planning coastal adaptation. </p>
+<p>Use the <strong>Sea Level Rise Projections User Story</strong> for detailed insights into how sea levels may change under different climate scenarios. With projections ranging from 0.3 to 1 meter by 2100—and continuing to rise—this data is crucial for assessing coastal flood risks, infrastructure planning, and long-term adaptation.  </p>
+<p>Unlike global estimates, these regional projections account for local factors like ocean circulation, ice melt, and land shifts, offering more precise insights for specific locations. This layer is a key foundation for flood models and supports all other User Stories in the platform. </p>
 <blockquote>
-<p><em>"I need to see mean sea-level rise information now and in the future for different climate change scenarios so I can do broad-scale preliminary evaluation of risks.”</em></p>
+<p><em>"I need to see mean sea-level rise information now and in the future for different climate change scenarios, so I can do a broad-scale preliminary evaluation of risks.”</em></p>
 </blockquote>
 <hr />
 <p><strong>Data Sources</strong></p>
-<p>Regional mean sea-level projections for CoCliCo are based essentially on the sea level authoritative dataset produced for the 6th assessment report (AR6) of the Intergovernmental Panel on Climate Change (IPCC) (Fox-Kemper et al., 2021). The AR6 dataset is described and displayed at <a href="https://sealevel.nasa.gov/ipcc-ar6-sea-level-projection-tool">Sea Level Projection Tool – NASA Sea Level Change Portal</a> and is publicly distributed at <a href="https://zenodo.org/records/6382554">IPCC AR6 Sea Level Projections</a> (Garner et al., 2022). From the AR6 dataset, the CoCliCo mean sea-level projections consider all sea-level components (i.e. sterodynamic, glaciers, ice-sheets and landwater) except the vertical land motions (VLMs). Instead, CoCliCo relies on the Glacial Isostatic Adjustment (GIA) model outputs from Caron et al. (2018), which uses advanced statistical methods and a vast range of simulations to estimate how the Earth responds to the melting of ancient ice sheets. This approach enhances regional analysis by providing more accurate and uncertainty-aware corrections for GIA.</p>
+<p>CoCliCo's regional sea-level projections are based on the IPCC AR6 dataset, incorporating all sea-level components except vertical land motions, which are corrected using GIA model outputs for improved regional accuracy.  </p>
+<ul>
+<li>IPCC AR6 (Fox-Kemper et al., 2021)  </li>
+<li>AR6 dataset is described and displayed at <a href="https://sealevel.nasa.gov/ipcc-ar6-sea-level-projection-tool">Sea Level Projection Tool – NASA Sea Level Change Portal</a> and is publicly distributed at <a href="https://zenodo.org/records/6382554">IPCC AR6 Sea Level Projections</a> (Garner et al., 2022).  </li>
+<li>Glacial Isostatic Adjustment (GIA) model outputs (Caron et al., 2018) </li>
+</ul>
 <p><img alt="" class="center" src="../assets/Tool/SLR_DATA.png" width="900" /></p>
 <hr />
 <p><strong>Methods</strong></p>
-<p>CoCliCo regional mean sea-level projections are constructed by combining the IPCC AR6 sea-level change dataset and the GIA model outputs of Caron et al. (2018), and propagating uncertainty following a Monte Carlo approach. The regional sea-level changes therefore include the changes in ocean density and circulation, the changes due to continental glaciers and ice-sheet mass loss and their respective regional spatial distribution, changes in landwater and groundwater, and the post-glacial rebound. 
-For three SSPs scenarios (i.e. SSP1-2.6, SSP2-4.5 and SSP5-8.5), the percentiles can be displayed, corresponding to the lower (17th), median (50th) and upper (83rd) bounds of the likely-range. One high-end scenario is also constructed from the 83rd percentile of the low-confidence SSP5-8.5 scenario of the IPCC AR6. High-end scenarios explore plausible – although unlikely – upper-tail sea-level scenarios beyond the likely range: i.e. when uncertainty tolerance is low and robust decision-making is preferable.  </p>
+<p>CoCliCo regional mean sea-level projections are constructed by combining the IPCC AR6 sea-level change dataset and the GIA model outputs of Caron et al. (2018), and propagating uncertainty following a Monte Carlo approach. The regional sea-level changes therefore include the changes in ocean density and circulation, the changes due to continental glaciers and ice-sheet mass loss and their respective regional spatial distribution, changes in land water and groundwater, and the post-glacial rebound.    </p>
 <p><strong>Climate Scenarios</strong></p>
 <p>The platform offers sea-level rise projections for three <strong>Shared Socioeconomic Pathways (SSPs)</strong> and a <strong>high-end scenario</strong>:</p>
 <div class="grid cards" markdown>
@@ -753,8 +759,37 @@ For three SSPs scenarios (i.e. SSP1-2.6, SSP2-4.5 and SSP5-8.5), the percentiles
 </div>
 <div class="tabbed-block">
 <p>The <strong>Extreme Surge Level (SSL) data layer</strong> provides projections of storm surge levels along the European coastline under different climate scenarios. Storm surges are a critical component of coastal hazards, and understanding how they may evolve in the future is essential for coastal risk assessment and adaptation planning. This dataset is part of the <strong>LISCOAST project</strong> and is based on hydrodynamic modeling and climate projections.</p>
-<p><strong>Key Features of the Extreme Surge Level Data</strong></p>
-<p><strong>1. Climate Scenarios</strong></p>
+<blockquote>
+<p><em>"Example"</em></p>
+</blockquote>
+<p><strong>Data Sources</strong></p>
+<p><strong>Methods</strong></p>
+<p>The SSL projections are based on:</p>
+<div class="grid cards" markdown>
+<ul>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg></span> <strong>Hydrodynamic Modeling</strong></p>
+<hr />
+<p>The <strong>Delft3D-Flow</strong> model was used to simulate storm surge dynamics.</p>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg></span> <strong>Climate Forcing</strong></p>
+<hr />
+<p>The model was forced by surface wind and atmospheric pressure fields from an <strong>8-member climate model ensemble</strong>.</p>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg></span> <strong>Validation</strong></p>
+<hr />
+<p>The model was validated using data from <strong>110 tidal gauge stations</strong> across Europe, showing good predictive skill (RMSE: 0.06 m to 0.29 m).</p>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg></span> <strong>Extreme Value Analysis</strong></p>
+<hr />
+<p>The <strong>Peak-Over-Threshold (POT) method</strong> was applied to estimate SSL values for different return periods.</p>
+</li>
+</ul>
+</div>
+<p><strong>Climate Scenarios</strong></p>
 <p>The dataset includes projections for three climate scenarios:
 <div class="grid cards" markdown></p>
 <ul>
@@ -773,7 +808,7 @@ For three SSPs scenarios (i.e. SSP1-2.6, SSP2-4.5 and SSP5-8.5), the percentiles
 </ul>
 </div>
 <hr />
-<p><strong>2. Return Periods</strong></p>
+<p><strong>Return Periods</strong></p>
 <p>The dataset provides SSL estimates for <strong>eight return periods</strong>, which represent the frequency of extreme events:</p>
 <table>
 <thead>
@@ -818,7 +853,7 @@ For three SSPs scenarios (i.e. SSP1-2.6, SSP2-4.5 and SSP5-8.5), the percentiles
 </tbody>
 </table>
 <hr />
-<p><strong>3. Geographic Coverage</strong>
+<p><strong>Geographic Coverage</strong>
 The dataset covers the <strong>European coastline</strong>, with detailed projections for:</p>
 <div class="grid cards" markdown>
 <ul>
@@ -833,33 +868,6 @@ The dataset covers the <strong>European coastline</strong>, with detailed projec
 </ul>
 </div>
 <hr />
-<p><strong>4. Methodology</strong>
-The SSL projections are based on:</p>
-<div class="grid cards" markdown>
-<ul>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg></span> <strong>Hydrodynamic Modeling</strong></p>
-<hr />
-<p>The <strong>Delft3D-Flow</strong> model was used to simulate storm surge dynamics.</p>
-</li>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg></span> <strong>Climate Forcing</strong></p>
-<hr />
-<p>The model was forced by surface wind and atmospheric pressure fields from an <strong>8-member climate model ensemble</strong>.</p>
-</li>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg></span> <strong>Validation</strong></p>
-<hr />
-<p>The model was validated using data from <strong>110 tidal gauge stations</strong> across Europe, showing good predictive skill (RMSE: 0.06 m to 0.29 m).</p>
-</li>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg></span> <strong>Extreme Value Analysis</strong></p>
-<hr />
-<p>The <strong>Peak-Over-Threshold (POT) method</strong> was applied to estimate SSL values for different return periods.</p>
-</li>
-</ul>
-</div>
-<hr />
 <p><strong>How to Use the Extreme Surge Level Data</strong></p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Scenario Selection</strong>: Choose from the available scenarios (Historical, RCP4.5, RCP8.5) to explore how storm surge levels may change under different climate futures.</li>
@@ -867,18 +875,32 @@ The SSL projections are based on:</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Geographic Analysis</strong>: Zoom in on specific regions (e.g., Northern or Southern Europe) to see how storm surge levels may vary across the coastline.</li>
 </ul>
 <hr />
+<p><strong>Model Outputs</strong></p>
+<hr />
 <p><strong>Why Is This Data Important?</strong></p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Coastal Risk Assessment</strong>: The SSL data is critical for assessing the risks of coastal flooding and erosion, especially in areas prone to extreme storm surges.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Adaptation Planning</strong>: By understanding how storm surge levels may change in the future, coastal planners and policymakers can develop strategies to protect communities, infrastructure, and ecosystems.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Combined Effects</strong>: The dataset highlights the combined effects of <strong>relative sea-level rise (RSLR)</strong> and <strong>storm surge levels</strong>, which can significantly increase coastal hazards, particularly under high-emission scenarios like RCP8.5.</li>
 </ul>
+<hr />
+<p><strong>Example of use</strong></p>
+<blockquote>
+<p><em>"Example"</em></p>
+</blockquote>
+<hr />
+<p><strong>Further Analysis</strong></p>
 </div>
 <div class="tabbed-block">
 <p>The <strong>Extreme Sea Level (ESL) data layer</strong> provides projections of total water levels (TWL) along European coastlines under climate change. This dataset combines <strong>mean sea level rise</strong>, <strong>tides</strong>, <strong>storm surges</strong>, and <strong>wave heights</strong> to assess future coastal flood risks. It is part of the <strong>LISCOAST project</strong> and is critical for understanding how climate change will impact coastal hazards.</p>
+<blockquote>
+<p><em>"Example"</em></p>
+</blockquote>
 <hr />
-<p><strong>Key Features of the Extreme Sea Level Data</strong></p>
-<p><strong>1. Climate Scenarios</strong>
+<p><strong>Data Sources</strong></p>
+<hr />
+<p><strong>Methods</strong></p>
+<p><strong>Climate Scenarios</strong>
 The dataset includes projections for two climate scenarios:</p>
 <div class="grid cards" markdown>
 <ul>
@@ -893,7 +915,7 @@ The dataset includes projections for two climate scenarios:</p>
 </ul>
 </div>
 <hr />
-<p><strong>2. Return Periods</strong>
+<p><strong>Return Periods</strong>
 The dataset estimates extreme sea levels for <strong>eight return periods</strong>, representing the frequency of extreme events:</p>
 <table>
 <thead>
@@ -938,7 +960,7 @@ The dataset estimates extreme sea levels for <strong>eight return periods</stron
 </tbody>
 </table>
 <hr />
-<p><strong>3. Components of Extreme Sea Levels</strong></p>
+<p><strong>Components of Extreme Sea Levels</strong></p>
 <div class="grid cards" markdown>
 <ul>
 <li>
@@ -952,7 +974,7 @@ The dataset estimates extreme sea levels for <strong>eight return periods</stron
 </ul>
 </div>
 <hr />
-<p><strong>4. Geographic Coverage</strong>
+<p><strong>Geographic Coverage</strong>
 The dataset covers <strong>Europe’s coastline</strong>, with regional projections highlighting:</p>
 <ul>
 <li><strong>North Sea</strong>: Highest projected increase in ESLs (up to 1 m under RCP8.5 by 2100).</li>
@@ -967,6 +989,8 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Regional Analysis</strong>: Focus on specific regions (e.g., North Sea, Southern Europe) to understand local impacts.</li>
 </ul>
 <hr />
+<p><strong>Model Outputs</strong></p>
+<hr />
 <p><strong>Why Is This Data Important?</strong></p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Coastal Flood Risk</strong>: ESL projections help identify areas most vulnerable to flooding, particularly under high-emission scenarios.</li>
@@ -974,6 +998,12 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Combined Effects</strong>: Highlights how <strong>relative sea level rise (RSLR)</strong>, storm surges, and waves interact to amplify risks.</li>
 </ul>
 <hr />
+<p><strong>Example of use</strong></p>
+<blockquote>
+<p><em>"Example"</em> </p>
+</blockquote>
+<hr />
+<p><strong>Further Analysis</strong></p>
 </div>
 </div>
 </div>
@@ -986,7 +1016,39 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The <strong>Inundation Distribution During Flood Events</strong> data layer provides flood extent projections under various scenarios, including different coastal defense levels, return periods, and future climate conditions. These projections are essential for understanding the impact of extreme coastal flooding and aiding in risk assessment and adaptation planning.</p>
-<p><strong>1. Climate Scenarios</strong></p>
+<blockquote>
+<p><em>"Example"</em></p>
+</blockquote>
+<hr />
+<p><strong>Data Sources</strong></p>
+<hr />
+<p><strong>Methods</strong></p>
+<p>This dataset is generated using advanced flood modeling techniques:</p>
+<div class="grid cards" markdown>
+<ul>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg></span> <strong>Two-dimensional inundation models</strong></p>
+<hr />
+<p>More realistic than simple bathtub methods, as they account for flood defense failure and wave propagation.</p>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg></span> <strong>2D hydraulic storage-cell models</strong></p>
+<hr />
+<p>Used at the pan-European scale, incorporating projected total water levels, land use-based roughness, and multiple flood sources.</p>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg></span> <strong>Bathtub method</strong></p>
+<hr />
+<p>Applied as an initial assessment tool, though it may overestimate flood extent.</p>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg></span> <strong>Hydrodynamic modeling</strong></p>
+<hr />
+<p>Acknowledged for its accuracy but not widely applied due to computational constraints.</p>
+</li>
+</ul>
+</div>
+<p><strong>Climate Scenarios</strong></p>
 <p>The dataset includes projections for three climate scenarios:</p>
 <div class="grid cards" markdown>
 <ul>
@@ -1004,7 +1066,7 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 </li>
 </ul>
 </div>
-<p><strong>2. Consideration of Defenses and Scenarios</strong></p>
+<p><strong>Consideration of Defenses and Scenarios</strong></p>
 <ul>
 <li><strong>Coastal defenses</strong>: Both natural (e.g., dunes) and artificial (e.g., dikes) structures are considered.</li>
 <li><strong>Failure mechanisms</strong>: Flood maps account for defense failures due to overtopping, overflow, and breaching.</li>
@@ -1044,32 +1106,6 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 </li>
 </ul>
 </div>
-<p><strong>3. Methodology The Inundation Distribution During Flood Events dataset is based on:</strong></p>
-<p>This dataset is generated using advanced flood modeling techniques:</p>
-<div class="grid cards" markdown>
-<ul>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg></span> <strong>Two-dimensional inundation models</strong></p>
-<hr />
-<p>More realistic than simple bathtub methods, as they account for flood defense failure and wave propagation.</p>
-</li>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg></span> <strong>2D hydraulic storage-cell models</strong></p>
-<hr />
-<p>Used at the pan-European scale, incorporating projected total water levels, land use-based roughness, and multiple flood sources.</p>
-</li>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg></span> <strong>Bathtub method</strong></p>
-<hr />
-<p>Applied as an initial assessment tool, though it may overestimate flood extent.</p>
-</li>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg></span> <strong>Hydrodynamic modeling</strong></p>
-<hr />
-<p>Acknowledged for its accuracy but not widely applied due to computational constraints.</p>
-</li>
-</ul>
-</div>
 <hr />
 <p><strong>How to Use the Inundation Distribution During Flood Events Data</strong></p>
 <ul class="task-list">
@@ -1078,6 +1114,8 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Scenario Selection</strong>: Choose between the different climate projections under different Shared Socioeconomic Pathways (SSP126, SSP245, SSP585, High-End).</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Timeframe selection</strong>: Available for 2010, 2030, 2050, 2100, and 2150.</li>
 </ul>
+<hr />
+<p><strong>Model Outputs</strong></p>
 <hr />
 <p><strong>Why Is This Data Important?</strong></p>
 <p>The <strong>Inundation Distribution During Flood Events</strong> dataset is crucial for coastal risk assessment and adaptation planning by:</p>
@@ -1089,6 +1127,12 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Assisting policymakers</strong>: Supports data-driven decision-making for long-term coastal management.</li>
 </ul>
 <hr />
+<p><strong>Example of use</strong></p>
+<blockquote>
+<p><em>"Example"</em></p>
+</blockquote>
+<hr />
+<p><strong>Further Analysis</strong></p>
 </div>
 <div class="tabbed-block">
 <p>The <strong>Shoreline Change</strong> dataset provides projections of global shoreline evolution under climate change. This assessment considers the combined effects of:</p>
@@ -1097,8 +1141,14 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 <li><strong>Sea level rise (SLR)</strong>: Based on RCP4.5 and RCP8.5 climate scenarios.</li>
 <li><strong>Storm-driven erosion</strong>: Instantaneous shoreline changes due to extreme events.</li>
 </ul>
-<p><strong>Key Features of the Shoreline Change Data</strong></p>
-<p><strong>1. Climate Scenarios</strong></p>
+<blockquote>
+<p><em>"Example"</em></p>
+</blockquote>
+<hr />
+<p><strong>Data Sources</strong></p>
+<hr />
+<p><strong>Methods</strong></p>
+<p><strong>Climate Scenarios</strong></p>
 <p>The dataset includes projections for two climate scenarios</p>
 <div class="grid cards" markdown>
 <ul>
@@ -1112,7 +1162,7 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 </li>
 </ul>
 </div>
-<p><strong>2. Ensembles</strong></p>
+<p><strong>Ensembles</strong></p>
 <p>Data is computed for seven statistical ensembles (1st, 5th, 17th, 50th, 83rd, 95th, and 99th percentiles) at two key timeframes: <strong>2050 and 2100</strong>. The projections stem from the <strong>LISCOAST project</strong>, a comprehensive study of coastal dynamics under climate change.</p>
 <hr />
 <p><strong>How to Use the Shoreline Change Data</strong></p>
@@ -1123,6 +1173,8 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Timeframes</strong>: Select a future projections between <strong>2050 and 2100</strong>.</li>
 </ul>
 <hr />
+<p><strong>Model Outputs</strong></p>
+<hr />
 <p><strong>Why Is This Data Important?</strong></p>
 <p>The <strong>Shoreline Change</strong> dataset is critical for:</p>
 <ul class="task-list">
@@ -1131,6 +1183,12 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Climate adaptation</strong>: Evaluating potential impacts of sea level rise and storm events.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Scientific research</strong>: Providing a robust dataset for studying coastal responses to climate change.</li>
 </ul>
+<p><strong>Example of use</strong></p>
+<blockquote>
+<p><em>"Example"</em></p>
+</blockquote>
+<hr />
+<p><strong>Further Analysis</strong></p>
 </div>
 </div>
 </div>
@@ -1139,11 +1197,93 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 <h2 id="exposure-and-vulnerability"><strong>Exposure and Vulnerability</strong></h2>
 <details open="open">
 <summary>Data Layers &amp; User Stories</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Damage Costs of Exposed Infraestructures</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Building Exposure</label><label for="__tabbed_3_2">Projections of Exposed People</label><label for="__tabbed_3_3">Damage Costs of Exposed Infrastructures</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>The Building Exposure User Story in the CoCliCo platform maps the risk of coastal flooding to buildings in low-lying coastal areas under different climate scenarios. As sea levels rise and extreme weather events become more frequent, understanding which areas are most at risk is crucial for resilience planning and adaptation. </p>
+<p>This tool combines building data from OpenStreetMap with advanced flood maps, providing policymakers, urban planners, and coastal managers with detailed insights on flood vulnerability. By highlighting localized risks, it supports evidence-based decision-making for long-term coastal adaptation. </p>
+<blockquote>
+<p><em>"I need to see building exposure now and in the future for different climate change scenarios, so I can better understand the potential risk hotspots."</em></p>
+</blockquote>
+<hr />
+<p><strong>Data Sources</strong></p>
+<p>The building exposure is based on the latest building information extracted from OpenStreetMap. OpenStreetMap provides a consistent data layer across Europe, with standardized information on building type and location. The building footprints extracted from OpenStreetMap are combined with CoCliCo’s state-of-the-art inundation maps.</p>
+<hr />
+<p><strong>Methods</strong></p>
+<hr />
+<p><strong>How to Use the Building Exposure data</strong></p>
+<hr />
+<p><strong>Model Outputs</strong></p>
+<hr />
+<p><strong>Why Are This Data Important?</strong></p>
+<hr />
+<p><strong>Example of use</strong></p>
+<blockquote>
+<p><em>"Using the Building Exposure User Stories, city planners identified their neighbourhoods as having a higher risk of flooding related to sea level rise by 2050 under high-emission scenarios high-emission scenarios compared to other neighbourhoods in the country"</em></p>
+</blockquote>
+<p><strong>Limitations</strong></p>
+<p>While OpenStreetMap provides a consistent coverage across Europe, it does not provide a complete coverage. Across Europe, the average completeness is estimated to be roughly 70%. Some countries have integrated national-scale databases within OpenStreetMap (e.g. The Netherlands, France &amp; Italy) and are therefore almost complete, other countries have very active user communities that aim for a near-complete data (e.g., Germany). However, some countries still experience several gaps (e.g., Ireland and the United Kingdom). Given the potential of missed buildings, we advise local authorities to careful check, and if possible to re-run the analysis with local information before any decisions are made.</p>
+<p><strong>Further Analysis</strong></p>
+<p>The building exposure layer is the starting point for the coastal risk assessment. Moreover, within the <a href="../further_analysis/">Workbench</a> one can extract exposure data for their area of preference, allowing to better understand how sea-level rise will increase future coastal flood risk within any coastal area across Europe. </p>
 </div>
+<div class="tabbed-block">
+<p>The Projections of Exposed People User Story in the CoCliCo platform shows how many people may be affected by coastal flooding in the future. It combines high-resolution flood and population data to provide clear insights under different climate and socioeconomic scenarios. </p>
+<p>Since future population growth and movement are uncertain, this tool considers multiple scenarios to improve flood risk assessments. By mapping projected exposure to coastal flooding, it helps policymakers, urban planners, and resilience experts make informed decisions for adaptation and risk reduction.    </p>
+<blockquote>
+<p><em>"I need information of the development of exposed population in the future for different combinations of climate and socioeconomic scenarios on a regional to national scale, so I can preliminary assess exposure to coastal flooding."</em></p>
+</blockquote>
+<hr />
+<p><strong>Data Sources</strong></p>
+<p>CoCliCo's population projections use IIASA data, downscaled with historical trends and spatial factors like roads, urban areas, and coastline proximity. Areas unsuitable for development, such as steep slopes, water-covered regions, and protected areas, are excluded. These projections are combined with CoCliCo flood data to assess population exposure to coastal flooding. </p>
+<ul>
+<li>Based on national population and urbanization projections from IIASA </li>
+<li>Downscaled and spatially distributed using historic population data (GHS-POP) </li>
+</ul>
+<p>Projections account for key geographic and infrastructural influences. Distance to: </p>
+<ul>
+<li>Roads (OSM data) </li>
+<li>Urban areas (defined by population density, Degree of Urbanization method) </li>
+<li>Coastline (MERIT DEM coastal mask) </li>
+<li>Urban centers (travel time model by Weiss et al., 2018) </li>
+</ul>
+<p>Excluded from future population growth </p>
+<ul>
+<li>High elevation or steep slopes (MERIT DEM) </li>
+<li>Permanently flooded areas (Corine Land Cover) </li>
+<li>Protected areas (World Database on Protected Areas) </li>
+</ul>
+<p><a class="center" href="../assets/Tool/EXP_POP_DATA.png" withd="700px"></a></p>
+<hr />
+<p><strong>Methods</strong></p>
+<p>CoCliCo’s population projections are created by using a model (Reimann et al. (2021)) that helps distribute updated national population data from IIASA (2010–2100) in 10-year intervals. The data is broken down at a 1 km resolution for EU countries and the UK, for different Shared Socioeconomic Pathways (SSPs). </p>
+<p>The model works by first calculating the "potential" or attractiveness of each area (or grid cell). It then distributes population changes over time based on this potential. The "potential" of an area is influenced by factors like how close it is to nearby areas, population density, and distance from the coastline. The model also considers past patterns of people moving between coastal/inland and urban/rural areas, adjusting for two time periods. In addition, urbanization projections are used to account for the different ways urban and rural areas develop over time in each SSP. </p>
+<p>These population projections are combined with flood projections based on the integrated climate and socioeconomic scenarios to assess how many people are exposed to coastal flooding. The population and flood projections are aligned to ensure they match in both projection and resolution, allowing for accurate calculation of exposed populations at the Local Administrative Units (LAUs) level in coastal areas. These results are then summarized at smaller spatial levels. </p>
+<hr />
+<p><strong>How to Use the Exposed People data</strong></p>
+<hr />
+<p><strong>Model Outputs</strong></p>
+<hr />
+<p><strong>Why Are This Data Important?</strong></p>
+<hr />
+<p><strong>Example of use</strong></p>
+<blockquote>
+<p><em>"Using the exposed population projections User Story, local authorities identified a concentration of population exposure in a specific area by 2050 under a high sea level scenario and low defence level. This analysis initiated a systematic and targeted adaptation planning process in this area, focusing on enhancing defences to eliminate the population exposure."</em></p>
+</blockquote>
+<p><strong>Limitations</strong></p>
+<p>Limitations of the population projections: </p>
+<ul>
+<li><strong>Population Decline:</strong> In areas with population decline, the model treats cell potential differently. In urban areas, higher cell potential is linked to population loss due to suburbanization. In rural areas, lower cell potential is associated with higher population loss. This is a general assumption and might not apply to all EU regions. </li>
+<li><strong>Urban and Rural Definitions:</strong> Urban and rural areas are redefined after each timestep based on urbanization share. However, this measure only reflects the fraction of the population living in urban areas and doesn’t capture the complex structure of urban regions. </li>
+</ul>
+<p>Limitations of the exposed population: </p>
+<ul>
+<li><strong>Data Alignment:</strong> To combine flood and population projections, both need to have the same resolution and projection. We adjust the population data to match the flood projections, but this can affect population counts. </li>
+<li><strong>Coastline Differences:</strong> The population and flood projections use different coastlines, so some people living near the coast might not be considered at risk, even if they are on the ocean side of the coastline.   </li>
+</ul>
+<p><strong>Further Analysis</strong></p>
+<p>To account for the full range of uncertainty in population development and its impact on coastal flooding, it’s useful to explore other socioeconomic scenarios beyond the integrated ones. While these additional estimates aren’t included directly in the platform, they can be explored in the <a href="../further_analysis/">Workbench</a> by combining various climate and socioeconomic scenarios at different spatial scales.  </p>
 </div>
+<div class="tabbed-block">
 <p>The Damage Costs of Exposed Infrastructures User Story in the CoCliCo allows a quantitative assessment of damages caused by flooding under different climate change scenarios and related sea-sevel rise. Although most coastal infrastructures and assets are protected from flooding today, flood damages are expected to drastically grow with rising sea levels due to increasing flood extent and flood depth. This results in increased damages costs to coastal infrastructures. Assessing these costs is needed to tailor adaptation measures and inform decision-making at the national, regional but also local scale. The Damage Costs of Exposed Infrastructures User Story relies on the most up-to-date (i) regional sea-level projections, (ii) pan-European flood hazard assessment and (iii) current infrastructures inventory to provide coastal flood damage costs and their evolution at the scale of Local Administrative Units (LAUs); i.e. city scale.</p>
 <blockquote>
 <p><em>"I need to quantify damage costs of infrastructures exposed to flooding and assess how it evolves under different climate change scenarios"</em></p>
@@ -1161,6 +1301,9 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 <p><strong>Limitations</strong></p>
 <hr />
 <p><strong>Further Analysis</strong></p>
+</div>
+</div>
+</div>
 </details>
 <hr />
 <h2 id="risk-and-adaptation"><strong>Risk and Adaptation</strong></h2>
@@ -1169,7 +1312,13 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 <div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Cost-Benefit Analysis of Coastal Adaptation</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>The adaptation based on <strong>Cost-Benefit Analysis (CBA) of Coastal Adaptation per Floodplain</strong> dataset provides insights into economically optimal adaptation options under various climate change scenarios. The cost-benefit analysis considers protection, retreat, and accommodation as potential adaptation options to address current and future flood risks. Protection involves constructing hard defensive infrastructure along the coast at an appropriate height. Retreat focuses on relocating people and assets from floodplains, while accommodation entails flood-proofing buildings within floodplains to endure extreme events without damage. The economically optimal mix of adaptation options is presented at an aggregated country level through the web viewer. Additionally, detailed information on local coastal floodplains, their economically optimal adaptation options, and the timing of implementation can be accessed via the workbench. </p>
+<p>The Adaptation based on Cost-Benefit Analysis User Story in the CoCliCo platform helps identify the most cost-effective ways to manage coastal flood risks under different climate scenarios. It evaluates three key adaptation strategies: </p>
+<ul>
+<li>Protection – Building coastal defences like seawalls. </li>
+<li>Retreat – Relocating people and assets away from flood zones. </li>
+<li>Accommodation – Flood-proofing buildings to withstand extreme events. </li>
+</ul>
+<p>The platform provides country-level insights on the best mix of these strategies, with more detailed local assessments available through the workbench. This helps policymakers and planners make informed, cost-effective adaptation decisions. </p>
 <blockquote>
 <p><em>"I want to see economically optimal coastal adaptation options both today and, in the future, as well as the expected investments in coastal adaptation and the potential costs of flood damages"</em></p>
 </blockquote>
@@ -1186,7 +1335,7 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 <li>Cost functions to estimate the costs associated with adaptation actions </li>
 </ul>
 <p>The multi-stage cost-benefit optimisation is conducted for each of the 41,327 coastal floodplains individually. We consider a time horizon from 2020 to 2150 with 10-year time steps, a discount rate of 3% and three greenhouse gas emission scenarios: low emissions (SSP1-2.6), high emissions (SSP2-4.5) and very high emissions (SSP5-8.5).  </p>
-<p><strong>1. Climate Scenario</strong></p>
+<p><strong>Climate Scenario</strong></p>
 <p>The dataset includes projections for three climate scenarios:</p>
 <div class="grid cards" markdown>
 <ul>
@@ -1204,9 +1353,9 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 </li>
 </ul>
 </div>
-<p><strong>2. Projections</strong></p>
+<p><strong>Projections</strong></p>
 <p>The dataset includes projections up to the years <strong>2050, 2100, and 2150</strong>, offering key metrics to inform decision-making for coastal resilience.</p>
-<p><strong>3. Adaptation Strategy</strong></p>
+<p><strong>Adaptation Strategy</strong></p>
 <div class="grid cards" markdown>
 <ul>
 <li><strong>Protection</strong><br />
@@ -1250,20 +1399,23 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 <hr />
 <p><strong>Example of use</strong></p>
 <blockquote>
-<p><em>"Using the Adaptation Based on Cost-Benefit Analysis User Story, city planners identified their neighbourhoods as requiring immediate adaptation actions from an economic perspective. Flood-proofing buildings to withstand a one-meter flood was identified as the economically optimal solution, providing a strong rationale for incorporating flood-proofing requirements for new buildings into local spatial planning guidelines."</em></p>
+<p><em>"National policymakers identified that significant funding would be required to address coastal flood risks in various regions. They allocated funding for coastal adaptation, encouraging local authorities to conduct their own research. This approach allowed local governments to assess specific risks and develop tailored solutions, ensuring more effective, region-specific adaptation strategies."</em></p>
 </blockquote>
 <hr />
 <p><strong>Limitations</strong></p>
-<p>This cost-benefit model uses highly aggregated data to manage computational constraints. As a result, it does not incorporate detailed information on properties, land-use planning, or infrastructure, which may lead to inaccuracies at the individual floodplain level. For example, retreat may be identified as the economically optimal adaptation option for a floodplain containing a nuclear power plant, but in reality, such a decision could present unaffordable challenges that the model does not account for. Additionally, only the median sea-level rise (SLR) is considered, excluding high-end SLR scenarios from all calculations. A sensitivity analysis revealed that uncertainties in time-independent socioeconomic factors — such as the discount rate, protection costs, retreat costs, and protection levels — have a greater impact on the choice of adaptation options, the timing of initial adaptation actions, and total discounted costs than climate change scenarios. </p>
+<p>This cost-benefit model uses broad data to manage computational limits, which means it doesn't include detailed information about properties, land use, or infrastructure. As a result, the model may be less accurate for specific floodplains. For example, it might suggest retreat as the best adaptation option for an area with a nuclear power plant, but this could present major challenges that the model doesn’t account for. </p>
+<p>The model also only considers the median sea-level rise (SLR), leaving out high-end SLR scenarios. A sensitivity analysis showed that uncertainties in factors like the discount rate, protection and retreat costs, and protection levels have a bigger impact on the choice of adaptation options, the timing of actions, and total costs than the climate change scenarios themselves.  </p>
 <hr />
 <p><strong>Further Analysis</strong></p>
+<p>Technical users can use the <a href="../further_analysis/">Workbench</a> to perform detailed, localized analyses by adjusting variables like flood risks, cost factors, and adaptation options. This allows for tailored assessments of the most cost-effective strategies and the timing of actions at the local scale. </p>
+<p>Users can explore different sea-level rise scenarios, test adaptation measures, and incorporate local data such as infrastructure details to refine their analysis. The Workbench enables deeper insights, helping inform more precise local adaptation strategies.</p>
 </div>
 </div>
 </div>
 </details>
 <div align="center">
     <a href="https://www.openearth.nl/coclico-workbench/">
-        <img src="./assets/logo1.png" width="150" alt="CoCliCo Logo">
+        <img src="../assets/Logo1.png" width="150" alt="CoCliCo Logo">
     </a>
     <p><small>Copyright &copy; 2025 CoCliCo Services</small></p>
 </div>
