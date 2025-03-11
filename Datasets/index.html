@@ -536,6 +536,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#risk-and-adaptation" class="md-nav__link">
     <span class="md-ellipsis">
       Risk and Adaptation
@@ -638,6 +647,15 @@
   <a href="#exposure-and-vulnerability" class="md-nav__link">
     <span class="md-ellipsis">
       Exposure and Vulnerability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
     </span>
   </a>
   
@@ -782,6 +800,10 @@
 <blockquote>
 <p><em>"Using the Sea Level Rise projections User Stories, city planners identified their neighbourhoods as having a higher risk of permanent flooding related to sea level rise by 2050 under high-emission scenarios high-emission scenarios compared to other neighbourhoods in the country. This analysis informed their decisions to prioritize green infrastructure development in those areas, reducing potential damage costs by 30%."</em></p>
 </blockquote>
+<hr />
+<p><strong>Limitations</strong></p>
+<p>Limitations are twofold: first, vertical ground motions unrelated to the glacial isostatic adjustment are not integrated. Yet CoCliCo’s research has shown that urban areas and populations located in coastal flood plains in Europe (excluding Fennoscandia) are affected by subsidence of approximately 1mm/year in average. </p>
+<p>Second, sea level projections shown here have a resolution of 1°x1°, therefore not taking into account mesoscale ocean processes acting on the continental shelf and within semi-enclosed bassins such as the Mediterranean. Research undertaken by CoCliCo by ENEA and Mercator Ocean (D3.3, soon to be published) suggest that the order of magnitude of the error due to neglecting these processes can reach +/-10cm in Europe. </p>
 <hr />
 <p><strong>Further Analysis</strong></p>
 <p>Beside GIA, coastal regions in Europe can experience significant vertical land motion (VLM) which can be strong, robust and that can be assessed locally. There is for instance well known subsidence along the Italian Adriatic, the Netherlands or even in more localized shorelines such as the Aksiou delta next to Thessaloniki in Greece. This subsidence context can strongly inflate coastal hazards locally and should therefore be accounted for. The CoCliCo project explored local VLMs using the land vertical velocity estimates from the Copernicus European Ground Motion Service (EGMS) derived over the period 2016-2021 (​​Thiéblemont et al., 2024). While these estimates are not implemented in the regional sea-level projections of CoCliCo, they have been considered for the coastal hazard assessment and can be explored as an exploratory tool using the <a href="../further_analysis/">Workbench</a>.  </p>
@@ -1044,36 +1066,48 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Inundation Distribution During Flood Events</label><label for="__tabbed_2_2">Shoreline Change</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>The <strong>Inundation Distribution During Flood Events</strong> data layer provides flood extent projections under various scenarios, including different coastal defense levels, return periods, and future climate conditions. These projections are essential for understanding the impact of extreme coastal flooding and aiding in risk assessment and adaptation planning.</p>
+<p>The <strong>Inundation Distribution During Flood Events</strong> User Story in the CoCliCo platform helps users understand and prepare for coastal flooding. They are essential for assessing vulnerability, informing risk management strategies, and supporting decision-making for coastal planning, infrastructure protection, and emergency preparedness. These maps show areas at risk of flooding due to rising sea levels, coastal storms, or both. They combine data on land elevation, water movement, and climate predictions to estimate how floods might impact different coastal areas in Europe. This collection of flood maps serves as the basis for other User Stories. </p>
 <blockquote>
-<p><em>"Example"</em></p>
+<p><em>"I need to see flood extent and depth maps for different relative sea-level rise and storm scenarios so I can assess coastal flood risks and identify vulnerable areas across Europe."</em></p>
 </blockquote>
 <hr />
 <p><strong>Data Sources</strong></p>
+<p>To map flood risks across Europe, we used detailed topographic data to represent the land. This included a high-resolution (25-meter) digital elevation model (DEM) from Copernicus (2019), a defined coastline to set boundary conditions from the European Environment Agency (EEA, 2017), and land-use data from Witjes et al. (2022), which was translated into Manning’s roughness coefficients to estimate how water moves across different surfaces. </p>
+<p>To understand how ocean forces contribute to flooding, we analyzed water levels at 1 km intervals along the European coast using two approaches. For permanent flooding scenarios, we used data from the CoCliCo Regional Sea Level Rise (SLR) Projections. For temporary flood events, we used extreme total water level (TWL) scenarios based on a reconstructed TWL hindcast. This hindcast included tidal data from the TPXO database, storm surge simulations from the ROMS model (Shchepetkin &amp; McWilliams, 2005), and wave setup estimates based on downscaled wave conditions modeled with WaveWatch III (Tolman, 2009). </p>
+<p>Finally, we incorporated data on coastal flood protection measures developed by Vrije Universiteit Amsterdam (van Maanen et al., 2024) to improve the accuracy of the flood maps, ensuring they reflect existing defenses along Europe’s coasts. </p>
+<p><img alt="" class="center" src="../assets/Tool/FLOOD_DATA.png" width="900" /></p>
 <hr />
 <p><strong>Methods</strong></p>
-<p>This dataset is generated using advanced flood modeling techniques:</p>
+<p>The methodology for mapping coastal flood risks followed three main steps: </p>
 <div class="grid cards" markdown>
 <ul>
 <li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg></span> <strong>Two-dimensional inundation models</strong></p>
+<p><strong>1. Defining the Coastal Floodplain</strong></p>
 <hr />
-<p>More realistic than simple bathtub methods, as they account for flood defense failure and wave propagation.</p>
+<p>We identified flood-prone areas as coastal regions between 0 and 15 meters in elevation, hydraulically connected to the sea. These areas were divided into 22 flood units, each with detailed topographic meshes. The meshes consisted of irregular impact zones that followed natural terrain features, with smaller 25-meter impact cells (based on the DEM). Each impact zone was assigned a Manning roughness coefficient based on dominant land use. </p>
 </li>
 <li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg></span> <strong>2D hydraulic storage-cell models</strong></p>
+<p><strong>2. Constructing Flood Scenarios</strong></p>
 <hr />
-<p>Used at the pan-European scale, incorporating projected total water levels, land use-based roughness, and multiple flood sources.</p>
+<p>For permanent flooding, hydrographs were created by combining sea level rise (SLR) projections with the mean spring high tide at each location. For episodic flooding, hydrographs were based on extreme total water level (TWL) analysis and storm duration estimates. The TWL hindcast was reconstructed by summing: </p>
+<ul>
+<li>
+<p>Astronomical tide (TPXO database) </p>
 </li>
 <li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg></span> <strong>Bathtub method</strong></p>
-<hr />
-<p>Applied as an initial assessment tool, though it may overestimate flood extent.</p>
+<p>Storm surge (ROMS model) </p>
 </li>
 <li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg></span> <strong>Hydrodynamic modeling</strong></p>
+<p>Wave setup (Stockdon et al., 2006; foreshore slopes from Sunamura, 1984) </p>
+</li>
+</ul>
+<p>The peak over threshold (POT) method was used to identify extreme TWL events, estimating return levels with an exponential model. Future flood scenarios combined relative SLR with TWL returns values. </p>
+</li>
+<li>
+<p><strong>3. Running Coastal Flood Simulations</strong></p>
 <hr />
-<p>Acknowledged for its accuracy but not widely applied due to computational constraints.</p>
+<p>We used the RFSM-EDA 2D flood model (Jamieson et al., 2012) for large-scale flood simulations, incorporating terrain details. The Saint-Venant equations were applied to compute water flow between impact zones, and flood depth was calculated for each 25-meter impact cell. </p>
+<p>Final flood maps showed depth and extent for different scenarios along the European coast. These maps were post-processed to account for existing coastal defences, considering policy-based protection levels at the provincial level (NUTS 2). </p>
 </li>
 </ul>
 </div>
@@ -1100,20 +1134,20 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 <li><strong>Coastal defenses</strong>: Both natural (e.g., dunes) and artificial (e.g., dikes) structures are considered.</li>
 <li><strong>Failure mechanisms</strong>: Flood maps account for defense failures due to overtopping, overflow, and breaching.</li>
 </ul>
-<p><strong>Protection Levels:</strong>
-<div class="grid cards" markdown></p>
+<p><strong>Protection Levels:</strong></p>
+<div class="grid cards" markdown>
 <ul>
 <li>
-<p><strong>High Defended</strong><br />
-<em>Areas with robust, well-maintained protection.</em></p>
+<p><strong>High Defended</strong>  </p>
+<p>Areas with robust, well-maintained protection.</p>
 </li>
 <li>
 <p><strong>Low Defended</strong><br />
-<em>Areas with some protection but vulnerable to failure.</em></p>
+    Areas with some protection but vulnerable to failure.</p>
 </li>
 <li>
 <p><strong>Undefended</strong><br />
-<em>Areas without significant coastal protection.</em></p>
+    Areas without significant coastal protection.</p>
 </li>
 </ul>
 </div>
@@ -1145,6 +1179,8 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 </ul>
 <hr />
 <p><strong>Model Outputs</strong></p>
+<p>Flood maps showing the maximum flood extent and depth for different extreme scenarios (1-year, 100-year, and 1000-year return period TWL events), various relative SLR projections (decadal time steps from 2030 to 2150 relative to the reference period 1995–2014 for three SSP scenarios and one high-end scenario), and the combination of each extreme scenario with every sea level rise scenario.</p>
+<p><img alt="" class="center" src="../assets/Tool/FLOOD_outputs.png" width="800" /></p>
 <hr />
 <p><strong>Why Is This Data Important?</strong></p>
 <p>The <strong>Inundation Distribution During Flood Events</strong> dataset is crucial for coastal risk assessment and adaptation planning by:</p>
@@ -1158,9 +1194,12 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 <hr />
 <p><strong>Example of use</strong></p>
 <blockquote>
-<p><em>"Example"</em></p>
+<p><em>Using the Coastal Flood Maps, a marine conservation group identified several critical wetland areas at risk of being flooded due to storms combined with relative sea-level rise. The group used the flood extent and depth maps for different scenarios to prioritize restoration projects. By focusing on these vulnerable areas, they were able to implement targeted conservation efforts that helped protect the wetlands, preserving biodiversity and improving water quality for the surrounding community.</em></p>
 </blockquote>
 <hr />
+<p><strong>Limitations</strong></p>
+<p>The flood maps provided in the platform offer a robust and homogeneous distribution of flood extent and depth under different scenarios for the coast of Europe considering the spatial variability of its marine dynamics and floodplain characteristics. However, working with large-scale studies entails assumptions and simplifications in order to achieve a homogeneous analysis. As such, the resulting maps provided serve as guidance and should not be used for local-scale interventions and adaptation planning. </p>
+<p>The maps without defences (undefended maps) provide the upper limit of coastal flooding. The maps with defences (defended maps) provide the lower limit of coastal flooding. Importantly, defended maps should be treated with caution as they assume that the whole province is protected with the same level of protection. </p>
 <p><strong>Further Analysis</strong></p>
 </div>
 <div class="tabbed-block">
@@ -1236,9 +1275,10 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 </blockquote>
 <hr />
 <p><strong>Data Sources</strong></p>
-<p>The building exposure is based on the latest building information extracted from OpenStreetMap. OpenStreetMap provides a consistent data layer across Europe, with standardized information on building type and location. The building footprints extracted from OpenStreetMap are combined with CoCliCo’s state-of-the-art inundation maps.</p>
-<hr />
+<p>The building exposure is based on the latest building information extracted from OpenStreetMap. OpenStreetMap provides a consistent data layer across Europe, with standardized information on building type and location. </p>
+<h2 id="_1"><img alt="" class="center" src="../assets/Tool/EXP_DATA.png" width="900" /></h2>
 <p><strong>Methods</strong></p>
+<p>The building footprints extracted from OpenStreetMap are combined with CoCliCo’s state-of-the-art inundation maps.</p>
 <hr />
 <p><strong>How to Use the Building Exposure data</strong></p>
 <hr />
@@ -1281,7 +1321,7 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 <li>Permanently flooded areas (Corine Land Cover) </li>
 <li>Protected areas (World Database on Protected Areas) </li>
 </ul>
-<p><a class="center" href="../assets/Tool/EXP_POP_DATA.png" withd="700px"></a></p>
+<p><img alt="" class="center" src="../assets/Tool/EXP_POP_DATA_2.png" width="800px" /></p>
 <hr />
 <p><strong>Methods</strong></p>
 <p>CoCliCo’s population projections are created by using a model (Reimann et al. (2021)) that helps distribute updated national population data from IIASA (2010–2100) in 10-year intervals. The data is broken down at a 1 km resolution for EU countries and the UK, for different Shared Socioeconomic Pathways (SSPs). </p>
@@ -1313,12 +1353,20 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 <p>To account for the full range of uncertainty in population development and its impact on coastal flooding, it’s useful to explore other socioeconomic scenarios beyond the integrated ones. While these additional estimates aren’t included directly in the platform, they can be explored in the <a href="../further_analysis/">Workbench</a> by combining various climate and socioeconomic scenarios at different spatial scales.  </p>
 </div>
 <div class="tabbed-block">
-<p>The Damage Costs of Exposed Infrastructures User Story in the CoCliCo allows a quantitative assessment of damages caused by flooding under different climate change scenarios and related sea-sevel rise. Although most coastal infrastructures and assets are protected from flooding today, flood damages are expected to drastically grow with rising sea levels due to increasing flood extent and flood depth. This results in increased damages costs to coastal infrastructures. Assessing these costs is needed to tailor adaptation measures and inform decision-making at the national, regional but also local scale. The Damage Costs of Exposed Infrastructures User Story relies on the most up-to-date (i) regional sea-level projections, (ii) pan-European flood hazard assessment and (iii) current infrastructures inventory to provide coastal flood damage costs and their evolution at the scale of Local Administrative Units (LAUs); i.e. city scale.</p>
+<p>The Damage Costs of Exposed Infrastructures User Story in the CoCliCo aim at presenting the direct economical impacts of coastal flooding under different climate scenarios. While many coastal infrastructures are protected today, rising sea levels will increase flood extent and depth, leading to higher damage costs without further adaptation. </p>
+<p>This tool helps policymakers and planners assess these costs at national, regional, and local levels in order to inform adaptation strategies. It combines the latest sea level projections, European flood hazard data, and infrastructure inventories to provide city-scale estimates of future flood damage. </p>
 <blockquote>
 <p><em>"I need to quantify damage costs of infrastructures exposed to flooding and assess how it evolves under different climate change scenarios"</em></p>
 </blockquote>
 <p><strong>Data Sources</strong></p>
+<p>Damage costs on infrastructures are calculated by crossing hazard, buildings and vulnerability curves.  </p>
+<p>Hazards: Flood maps (water depth) calculated either with or without defences from the CoCliCo project (data producer: IH-Cantabria; available on the CoCliCo STAC Catalog). Flood maps are provided for hindcast, 2030, 2050, 2100 and 2150 for permanent flooding, 1-yr, 100-yr and 1000-yr return period with various SLR scenarios. </p>
+<p>Exposure: Coastal European Exposure Database (data producer: Institute for Environmental Studies, Vrije Universiteit Amsterdam, available on the CoCliCo STAC Catalog). 11 classes of infrastructures are considered: Building, Power, Wastewater, Telecom, Oil, Gaz, Education, Healthcare, Rail, Road and Water. Infrastructures can be represented as points, lines, polygons or multipolygons. </p>
+<p>Vulnerability curves: Physical Vulnerability Database for Critical Infrastructure Hazard Risk Assessments. (data producer: Institute for Environmental Studies, Vrije Universiteit Amsterdam, Dataset: Physical Vulnerability Database for Critical Infrastructure Hazard Risk Assessments).The data comes from a study that compiles most of the existing vulnerability curves found in the literature, along with the associated cost. It consists of 102 different vulnerability curves, which depend on the type of infrastructure, and 179 different cost values. The vulnerability curves are used to characterize the percentage of damage to infrastructure based on water height. </p>
+<p><img alt="" class="center" src="../assets/Tool/DAM_DATA.png" width="900px" /></p>
 <p><strong>Methods</strong></p>
+<p>The damage costs are calculated by intersecting hazard (raster) and exposure (polygons) data layers, and vulnerability curves. First, we overlay the coastal flood hazard map with infrastructure data to obtain an average water height for each infrastructure. Then, based on the category of the infrastructure, we apply the corresponding vulnerability curves (e.g. healthcare, education, railway, etc).  </p>
+<p>For the CoCliCo project, we used 18 different vulnerability curves. Once the damage is determined, the associated cost calculation is carried out: the damage cost is the product of the building's surface area, the percentage of damage, and the maximum damage, based on construction costs. </p>
 <p><strong>How to Use the Data</strong></p>
 <hr />
 <p><strong>Model Outputs</strong></p>
@@ -1326,8 +1374,13 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 <p><strong>Why Is This Data Important?</strong></p>
 <hr />
 <p><strong>Example of use</strong></p>
+<blockquote>
+<p>“National policy makers used the damage costs estimates to get a first order estimate of costs in regions and municipalities and prioritize on adaptation actions and investments in order to maximize the efficiency of public investments in adaptation. While this information can not be used as a single source of information to guide adaptation investments, it provides an element that can be considered together with additional evidence and selection criteria of decision makers”  </p>
+<p>“The damage costs estimates at municipal level have been used to identify the potential damage costs in a particular flood plain, allowing to anticipate to what extent existing compensation mechanisms (e.g. insurance) are adequately designed to address loss and damages a now and in the future” </p>
+</blockquote>
 <hr />
 <p><strong>Limitations</strong></p>
+<p>One of the main limitations of this method lies in the assumption that infrastructures remain unchanged over time, without considering any construction or destruction of infrastructure. Additionally, the lack of detailed information on certain infrastructures can affect the accuracy of selecting the vulnerability curve, which may lead to variations in the estimated cost. Similarly, the price used is an average price that does not account for specific factors such as the location of the damage or the current local construction costs.  </p>
 <hr />
 <p><strong>Further Analysis</strong></p>
 </div>
