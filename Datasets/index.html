@@ -787,7 +787,7 @@
 </ul>
 <hr />
 <p><strong>Model Outputs</strong></p>
-<p><img alt="" class="center" src="../assets/Tool/SLR_outputs.png" width="800" /></p>
+<p><img alt="" class="center" src="../assets/Tool/SLR_outputs.jpg" width="800" /></p>
 <hr />
 <p><strong>Why Are These Projections Important?</strong></p>
 <ul class="task-list">
@@ -1256,7 +1256,7 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 <h2 id="exposure-and-vulnerability"><strong>Exposure and Vulnerability</strong></h2>
 <details open="open">
 <summary>Data Layers &amp; User Stories</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Building Exposure</label><label for="__tabbed_3_2">Projections of Exposed People</label><label for="__tabbed_3_3">Damage Costs of Exposed Infrastructures</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:4"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Building Exposure</label><label for="__tabbed_3_2">Projections of Exposed People</label><label for="__tabbed_3_3">Population Projections</label><label for="__tabbed_3_4">Damage Costs of Exposed Infrastructures</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The Building Exposure User Story in the CoCliCo platform maps the risk of coastal flooding to buildings in low-lying coastal areas under different climate scenarios. As sea levels rise and extreme weather events become more frequent, understanding which areas are most at risk is crucial for resilience planning and adaptation. </p>
@@ -1342,6 +1342,70 @@ The dataset covers <strong>Europe’s coastline</strong>, with regional projecti
 </ul>
 <p><strong>Further Analysis</strong></p>
 <p>To account for the full range of uncertainty in population development and its impact on coastal flooding, it’s useful to explore other socioeconomic scenarios beyond the integrated ones. While these additional estimates aren’t included directly in the platform, they can be explored in the <a href="../further_analysis/">Workbench</a> by combining various climate and socioeconomic scenarios at different spatial scales.  </p>
+</div>
+<div class="tabbed-block">
+<p>The Population Projections layer provides projections of population counts and their distribution, at a high spatial level, for different futures of socioeconomic development until 2100. The dataset has been developed based on historical population dynamics and projections of population development at national scale. The future distribution of population is important for assessing potential differences in spatial population development for a range of socioeconomic futures and to see changes in mobility patterns.    </p>
+<blockquote>
+<p><em>"I need information about the future distribution of population in my region to identify areas of high population concentration for demographic planning."</em></p>
+</blockquote>
+<hr />
+<p><strong>Data Sources</strong></p>
+<p>The population projections downscale the national IIASA population projections (Release 3.1) to a higher spatial level of ~1km resolution based on historical trends and factors such as road networks, urban areas, and coastal proximity. Areas unsuitable for development, such as steep slopes, water-covered regions, and protected areas, are excluded.  </p>
+<p>The national population and urbanization projections from IIASA are downscaled and spatially distributed using historic population data (GHS-POP). </p>
+<p>Projections account for key geographic and infrastructural influences. Distance to:</p>
+<ul>
+<li>Roads (OSM data)  </li>
+<li>Urban areas (defined by population density, Degree of Urbanization method)  </li>
+<li>Coastline (MERIT DEM coastal mask)  </li>
+<li>Urban centers (travel time model by Weiss et al., 2018)  </li>
+</ul>
+<p>Excluded from future population growth </p>
+<ul>
+<li>High elevation or steep slopes (MERIT DEM) </li>
+<li>Permanently flooded areas (Corine Land Cover) </li>
+<li>Protected areas (World Database on Protected Areas) </li>
+</ul>
+<hr />
+<p><strong>Methods</strong></p>
+<p>CoCliCo’s population projections are created by extending the model of Reimann et al. (2021) that helps distribute updated national population data from IIASA (2010–2100) in 10-year intervals. The data are resolved at a 1 km resolution for EU countries and the UK, for different Shared Socioeconomic Pathways (SSPs). </p>
+<p>The extended model first calculates the "potential" or attractiveness of each area (or grid cell). It then distributes population changes over time based on this potential. The "potential" of an area is influenced by factors such as how close it is to nearby areas, population density, and distance from the coast. The model also considers past patterns of people moving between coastal/inland and urban/rural areas, during two time periods. In addition, urbanization projections are used to account for the different ways urban and rural areas develop over time in each SSP. </p>
+<p>Socioeconomic scenarios:</p>
+<p>Shared Socioeconomic Pathways (SSP): Five different pathways describing potential socioeconomic futures and their challenges to adaptation and mitigation. Population, urbanization and GDP development have been quantified on a national level. </p>
+<p>The population dataset includes projections for three SSP: </p>
+<ul>
+<li>
+<p>SSP1: Focus on sustainable development and an open and globalized economy with rapid technological development. Population growth is low and urbanization is high as cities become more attractive. </p>
+</li>
+<li>
+<p>SSP2: Following recent development trends. Intermediate population growth and urbanization with considerable urban sprawl. </p>
+</li>
+<li>
+<p>SSP5: Focus on economic growth based on conventional development through fossil fuels. Strong population growth and high urbanization with urban sprawl. </p>
+</li>
+</ul>
+<hr />
+<p><strong>How to Use the Exposed People data</strong></p>
+<ul>
+<li>
+<p>Scenario Selection: Select a Shared Socioeconomic Pathway (SSP1, SSP2, SSP5) </p>
+</li>
+<li>
+<p>Timeframe selection: Available for 2010, 2030, 2050, 2100 </p>
+</li>
+</ul>
+<hr />
+<p><strong>Model Outputs</strong></p>
+<p>Maps of population distribution at ~1km resolution for different Shared Socioeconomic Pathways (SSP1, SSP2, SSP5) and timesteps (2010, 2030, 2050, 2100) for the EU countries and the United Kingdom.  </p>
+<hr />
+<p><strong>Why Are This Data Important?</strong></p>
+<p>The population projections are crucial for accounting for uncertainties in socioeconomic development by depicting a wide range of possible futures in terms of population development. Furthermore, the population projections can be combined with spatial data on hazards to assess exposure and inform adaptation planning.  </p>
+<hr />
+<p><strong>Example of use</strong></p>
+<blockquote>
+<p><em>"County authorities utilized spatial population projections based on different SSPs to anticipate future demographic trends. The projections revealed a consistent pattern across scenarios: population increasingly concentrated in the county town, while rural areas faced ongoing depopulation. Though the intensity of this trend varied by SSP, the insights enabled the county to take proactive, informed action. By leveraging these projections, decision-makers were able to adopt a balanced development strategy that promoted fair and sustainable urban growth without neglecting rural communities. This approach reduced socio-spatial inequalities and ensured that both urban and rural populations received equal protection from coastal hazards."</em></p>
+</blockquote>
+<p><strong>Further Analysis</strong></p>
+<p>To account for the full range of uncertainty in population development and associated future exposure to coastal flooding, it’s useful to explore other socioeconomic scenarios beyond the integrated ones. While these additional estimates aren’t included directly in the platform, they can be explored in the Workbench by combining various climate and socioeconomic scenarios at different spatial scales.</p>
 </div>
 <div class="tabbed-block">
 <p>The Damage Costs of Exposed Infrastructures User Story in the CoCliCo aim at presenting the direct economical impacts of coastal flooding under different climate scenarios. While many coastal infrastructures are protected today, rising sea levels will increase flood extent and depth, leading to higher damage costs without further adaptation. </p>
