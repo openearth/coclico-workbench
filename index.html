@@ -26,9 +26,6 @@
     
       <link rel="stylesheet" href="assets/stylesheets/main.a40c8224.min.css">
       
-        
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
-      
       
 
 
@@ -41,8 +38,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -58,14 +55,7 @@
   </head>
   
   
-    
-    
-      
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -110,22 +100,6 @@
         </div>
       </div>
     </div>
-    
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
-</form>
-      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -344,7 +318,7 @@
                 <img src="assets/Main.png" alt="" width="800" height="800" draggable="false">
             </div>
             <div class="mdx-hero__content">
-                <h1>Welcome to the CoCliCo User Guide!</h1>
+                <h1>Welcome to the CoCliCo Handbook!</h1>
                 <p>This tool provides access to high-resolution coastal climate data,  helping users explore sea level rise projections, coastal hazards, exposure, and adaptation strategies.  Designed for policymakers, local authorities, coastal managers and researchers, CoCliCo enables interactive data visualization,  scenario analysis, and decision support. </p>
                 <a href="getting_started/" class="md-button md-button--primary">Getting Started</a>
                 <a href="Datasets/" class="md-button md-button--secondary">Understanding the Data</a>
@@ -353,21 +327,91 @@
     </div>
 
     <!-- Key Features Section -->
+    <style>
+        .mdx-features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* 4 equal columns */
+            gap: 1rem;
+            margin-top: -1rem;
+        }
+
+        /* Optional: Adjust for smaller screens */
+        @media screen and (max-width: 1150px) {
+            .mdx-features {
+                grid-template-columns: repeat(2, 1fr);
+                /* 2 columns on medium screens */
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .mdx-features {
+                grid-template-columns: 1fr;
+                /* 1 column on smaller screens */
+            }
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-family: 'Material Design Icons';
+            font-size: 2.5rem;
+            color: var(--md-primary-fg-color);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-title {
+            font-family: 'Comfortaa', sans-serif;
+            font-size: 1.15rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-desc {
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+    </style>
+
     <div class="md-grid md-typeset">
+        <h2 style="font-family: 'Comfortaa', sans-serif;">Key Features</h2>
         <div class="mdx-features">
-            <h2>Key Features</h2>
-            <li><strong><a href="Datasets/#sea-level-data">Sea Level and Hazard
-                        Projections</a></strong> – Access datasets on sea level rise, extreme surge levels, and
-                coastal flooding.</li>
-            <li><strong><a href="Datasets/#exposure-vulnerability">Exposure and Vulnerability
-                        Assessments</a></strong> – Understand how populations and infrastructure are affected.</li>
-            <li><strong><a href="Datasets/#risk-adaptation">Risk and Adaptation
-                        Strategies</a></strong> – Explore cost-benefit analyses of coastal adaptation measures.</li>
-            <li><strong>Interactive Map Interface</strong> – Pan, zoom, and activate data layers for a detailed
-                spatial analysis.</li>
+
+            <div class="feature-item">
+                <i class="mdi mdi-map-search feature-icon"></i>
+                <div class="feature-title">Sea Level & Hazard Projections</div>
+                <div class="feature-desc">Access datasets on sea level rise, extreme surge levels, and coastal flooding.
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <i class="mdi mdi-account-alert-outline feature-icon"></i>
+                <div class="feature-title">Exposure & Vulnerability</div>
+                <div class="feature-desc">Understand how populations and infrastructure are affected.</div>
+            </div>
+
+            <div class="feature-item">
+                <i class="mdi mdi-shield-check feature-icon"></i>
+                <div class="feature-title">Risk & Adaptation</div>
+                <div class="feature-desc">Explore cost-benefit analyses of coastal adaptation measures.</div>
+            </div>
+
+            <div class="feature-item">
+                <i class="mdi mdi-map-outline feature-icon"></i>
+                <div class="feature-title">Interactive Map Interface</div>
+                <div class="feature-desc">Pan, zoom, and activate data layers for detailed spatial analysis.</div>
+            </div>
+
+
+
 
         </div>
     </div>
+
+
 </section>
 
       <main class="md-main" data-md-component="main">

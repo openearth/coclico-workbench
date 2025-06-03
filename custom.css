@@ -4,15 +4,35 @@
     --md-accent-fg-color: #008390;
 }
 
+.md-header__title {
+    visibility: hidden;
+    white-space: nowrap;
+    width: 12rem;
+    /* or however wide your title normally is */
+}
+
+.md-header__button.md-logo img {
+    filter: brightness(0) invert(1);
+    /* turns dark logo white */
+}
+
+.md-header__button.md-logo img {
+    height: 1.5rem;
+    /* or adjust to your preferred size */
+    max-height: none;
+    /* remove the default limit */
+}
+
 /* Change the color of navigation links */
 .md-header a {
     color: white !important;
-    /* Or any color you prefer */
+    font-size: 0.85rem
+        /* Or any color you prefer */
 }
 
 /* Change color on hover */
 .md-header a:hover {
-    color: #00B8A9 !important;
+    color: #ffffff !important;
     /* Slightly brighter */
 }
 
@@ -22,6 +42,9 @@
     background-color: #008390 !important;
     /* Custom accent */
     color: #ffffff !important;
+
+    border: 2px solid #008390 !important;
+    border-radius: 0.65rem !important;
     filter: brightness(1.1);
     /* Slight glow */
     transition: all 0.3s ease-in-out;
@@ -32,10 +55,16 @@
     background-color: #ffffff !important;
     /* Custom accent */
     color: #008390 !important;
+    /*round corners */
+    border-radius: 0.65rem !important;
+    border: 2px solid #008390 !important;
+
     filter: brightness(1.1);
     /* Slight glow */
     transition: all 0.3s ease-in-out;
 }
+
+
 
 /* Brighter on hover */
 .md-button:hover {
@@ -74,9 +103,38 @@ a:hover,
     /* Optional: Add underline on hover */
 }
 
+/* assets/custom.css */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#top .title_container .main-title,
+tr.pricing-row td,
+#top .portfolio-title,
+.callout .content-area,
+.avia-big-box .avia-innerbox,
+.av-special-font,
+.av-current-sort-title,
+.html_elegant-blog #top .minor-meta,
+#av-burger-menu-ul li {
+    font-family: 'Comfortaa', Helvetica, Arial, sans-serif !important;
+}
+
+
+
+.md-typeset h1 {
+    color: #000000;
+    /* Replace with your desired color */
+}
+
+
 .mdx-hero h1 {
-    margin-bottom: 1.25rem;
     font-weight: 700;
+    font-size: 2rem;
     color: currentcolor;
 }
 
@@ -86,9 +144,6 @@ a:hover,
     }
 }
 
-.mdx-hero__content {
-    padding-bottom: 7.5rem;
-}
 
 @media screen and (min-width: 60em) {
     .mdx-hero {
@@ -97,8 +152,8 @@ a:hover,
     }
 
     .mdx-hero__content {
-        max-width: 23.75rem;
-        padding-bottom: 14vw;
+        max-width: 35rem;
+
         margin-top: 4.375rem;
     }
 
@@ -106,7 +161,7 @@ a:hover,
         order: 1;
         width: 47.5rem;
         transform: translateX(5rem);
-        margin-left: -50px;
+        margin-left: -150px;
         margin-top: 50px;
     }
 
@@ -123,15 +178,18 @@ a:hover,
     display: none;
 }
 
+
+
 .mdx-features {
     text-align: left;
     background: rgba(0, 0, 0, 0.0);
     /* Light background */
-    padding: 20px;
+
     border-radius: 10px;
-    margin-top: -230px;
-    max-width: 1000px;
+    margin-top: -100px !important;
+    max-width: 1400px;
     margin-left: -25px;
+    margin-right: 10px;
 }
 
 .mdx-features h2 {
@@ -147,7 +205,7 @@ a:hover,
 }
 
 .mdx-features li {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     font-size: 18px;
 }
 
@@ -163,7 +221,7 @@ a:hover,
 }
 
 .md-typeset [type=checkbox]:checked+.task-list-indicator:before {
-    background-color: #008390;
+    background-color: #49a325;
 }
 
 iframe {
@@ -190,4 +248,46 @@ iframe {
     display: block;
     margin: auto;
     text-align: center;
+}
+
+
+.features-title {
+    font-size: 2rem;
+    font-family: 'Comfortaa', Helvetica, Arial, sans-serif;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 0.75rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.75rem;
+}
+
+.feature-heading {
+    font-family: 'Comfortaa', Helvetica, Arial, sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-item .md-icon {
+    display: inline-block;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--md-primary-fg-color);
+    /* match site theme */
 }
