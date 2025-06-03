@@ -11,14 +11,13 @@ In the CoCliCo Platform, each data layer is the result of modeling and transform
 
 User Stories are ready-made map datasets in the CoCliCo platform. They combine different types of important information to show scenarios for coastal risk resulting from sea-level rise,  floods and / or erosion. These layers make complex analyses easier and help users to quickly get a sense of coastal risks.  
 
-User research showed that policymakers need clear, actionable data for flood directives, while urban planners want tools to assess local risks, and where infrastructure managers focus on long-term resilience planning. These insights helped shape User Stories to provide accessible, scenario-driven visualizations for diverse decision-making needs. There are six User Stories: 
+User research showed that policymakers need clear, actionable data for flood directives, while urban planners want tools to assess local risks, and where infrastructure managers focus on long-term resilience planning. These insights helped shape User Stories to provide accessible, scenario-driven visualizations for diverse decision-making needs. There are five User Stories: 
 
-1. Sea level rise projections 
-2. Inundation distribution during a flood event 
-3. Building Exposure 
-4. Projections of Exposed People 
-5. Damage costs of exposed infrastructures   
-6. Adaptation based on cost-benefit analysis 
+1. Inundation distribution during a flood event 
+2. Building Exposure 
+3. Projections of Exposed People 
+4. Damage costs of exposed infrastructures   
+5. Adaptation based on cost-benefit analysis 
 
 ---
 
