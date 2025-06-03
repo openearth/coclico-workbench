@@ -384,7 +384,7 @@ User research showed that policymakers need clear, actionable data for flood dir
 
 ???+ "Data Layers & User Stories"
 
-    === "Inundation Distribution During Flood Events"
+    === "Flood statistics per LAUs"
 
         The **Inundation Distribution During Flood Events** User Story in the CoCliCo platform helps users understand and prepare for coastal flooding. They are essential for assessing vulnerability, informing risk management strategies, and supporting decision-making for coastal planning, infrastructure protection, and emergency preparedness. These maps show areas at risk of flooding due to rising sea levels, coastal storms, or both. They combine data on land elevation, water movement, and climate predictions to estimate how floods might impact different coastal areas in Europe. This collection of flood maps serves as the basis for other User Stories. 
 
