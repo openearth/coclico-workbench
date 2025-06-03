@@ -1,14 +1,4 @@
-#
-
-## **Key Features**
-
-- **[Sea Level and Hazard Projections](Datasets.md/#sea-levels)**  – Access datasets on sea level rise, extreme surge levels, and coastal flooding.
-- **[Exposure and Vulnerability Assessments](Datasets.md/#exposure-and-vulnerability)** – Understand how populations and infrastructure are affected.
-- **[Risk and Adaptation Strategies](Datasets.md/#risk-and-adaptation)** – Explore cost-benefit analyses of coastal adaptation measures.
-- **Interactive Map Interface** – Pan, zoom, and activate data layers for a detailed spatial analysis.
-
-
----
+# **How to Begin: A User-Friendly Walkthrough of the Platform**
 
 ## **First steps**
 
@@ -30,7 +20,7 @@ The main interface consists of the following elements:
 
 ### **2. Activate Data Layers**
 
-To start your analysis, activate relevant data layers from the Sidebar Menu. These layers include sea level rise projections, coastal hazards, exposure, and adaptation strategies.
+To bagin your analysis, activate relevant data layers from the Sidebar Menu. These layers include sea level rise projections, coastal hazards, exposure, adaptation strategies and more.
 
 1. Open a category from the **Sidebar Menu**
 **![Upload an image or GIF showing how to activate layers](assets/Tool/Sidebar.png)** 
@@ -42,10 +32,10 @@ To start your analysis, activate relevant data layers from the Sidebar Menu. The
 
 The platform allows you to refine your analysis using filters such as return periods, climate scenarios, and hazard thresholds.
 
-1. Click on the **Filters Panel**.
+1. Go to the **Active Data Layers** window.
 2. Choose a **Scenario** (e.g., low-end or high-end sea level rise).
 3. Select a **Return Period** (e.g., 10-year, 100-year).
-4. Apply the filters to update the map visualization.
+4. The Filters are applied automatically, so go to your **Map Window** and check the changes in the **Data Layer**.
 
 **![Upload a screenshot or video demonstrating filters](assets/Tool/Filters.png)**
 
@@ -59,7 +49,7 @@ The platform allows you to refine your analysis using filters such as return per
 
 ### **5. Compare**
 
-Users can save and compare results by exporting charts and datasets.
+Users can save and compare results by adding charts into the **Dashboard Window**.
 
 1. Click on a location to open the **insights Pop-up**.
 2. Select **Add to Dashboard** to save it for later.
@@ -76,7 +66,9 @@ Now that you're familiar with navigating the interface, continue to [Undestandin
 ---
 
 <div align="center">
-    <img src="/assets/logo1.png" width="150" alt="CoCliCo Logo">
+    <a href="https://www.openearth.nl/coclico-workbench/">
+        <img src="../assets/logo1.png" width="150" alt="CoCliCo Logo">
+    </a>
     <p><small>Copyright &copy; 2025 CoCliCo Services</small></p>
 </div>
 

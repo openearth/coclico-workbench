@@ -1,3 +1,24 @@
+[project]
+name = "coclico-workbench"
+version = "0.1.0"
+description = "Building examples on how to handle coclico data"
+readme = "README.md"
+requires-python = ">=3.11.0, <3.12"
+dependencies = [
+    "cartopy>=0.24.1",
+    "ipykernel>=6.29.5",
+    "matplotlib>=3.10.0",
+    "pip>=25.0.1",
+    "pkg-resources",
+    "pyam>=0.2.1a0",
+    "pycollocation>=0.6.0a0",
+    "pystac-client>=0.8.6",
+    "rasterio>=1.4.3",
+    "rioxarray>=0.18.2",
+    "xarray>=2025.1.2",
+    "zarr>=3.0.3",
+]
+
 [tool.black]
 line-length = 88
 

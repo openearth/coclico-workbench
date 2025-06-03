@@ -2,7 +2,7 @@ site_name: Coastal Climate Core Services
 site_description: >-
   This tool provides access to high-resolution coastal climate data, 
   helping users explore sea level rise projections, coastal hazards, exposure, and adaptation strategies. 
-  Designed for researchers, policymakers, and coastal managers, CoCliCo enables interactive data visualization, 
+  Designed for policymakers, local authorities, coastal managers and researchers, CoCliCo enables interactive data visualization, 
   scenario analysis, and decision support.
 
 # Repository
@@ -14,9 +14,9 @@ theme:
   name: material
   custom_dir: docs/overrides
   font:
-    text: Roboto
+    text: Inter
     code: Roboto Mono
-  logo: assets/logo1.png
+  logo: assets/logo-coclico-color.webp
   features:
     - navigation.footer
     - navigation.tabs
@@ -36,32 +36,36 @@ theme:
     - navigation.instant.progress
     - navigation.tabs.sticky
     - #header.autohide
-  palette:
-    # Dark theme
-    - scheme: slate
-      toggle:
-        icon: material/weather-sunny
-        name: Dark mode
-      primary: white
-      accent: deep purple
-
+  #palette:
     # Light theme
-    - scheme: default
-      toggle:
-        icon: material/weather-night
-        name: Light mode
-      primary: white
-      accent: pink
+    #- scheme: default
+    #  toggle:
+    #    icon: material/weather-night
+    #    name: Light mode
+    #  primary: custom
+    #  accent: custom
+    # Dark theme
+    #- scheme: slate
+    #  toggle:
+    #    icon: material/weather-sunny
+    #    name: Dark mode
+    #  primary: white
+    #  accent: deep purple
+
+    
 
 extra_css:
   - overrides/custom.css
+
+
 
 nav:
   - Home: index.md
   - Getting Started: getting_started.md
   - Target Users: target_users.md
+  - Data Catalog: data_catalog.md
   - Understanding the Data: Datasets.md
-  - Further Analysis: further_analysis.md
+  - Workbench: further_analysis.md
 
 markdown_extensions:
   - attr_list
@@ -85,6 +89,9 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - md_in_html
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
 
 extra:
   social:
