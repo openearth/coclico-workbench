@@ -97,5 +97,8 @@ extra:
   social:
     - icon: simple/github
       link: https://github.com/openearth/coclico-workbench
+  analytics:
+    provider: google
+    property: G-DEB4K3DPPM
 
 copyright: Copyright &copy; 2025 CoCliCo Services
