@@ -1,7 +1,7 @@
 # **Key Layers, Sources, and How to Interpret Them**
 
 
-## **Data Layers in the CoCliCo platform** 
+## **Data Layers in the CoCliCo platform** test
 
 In the CoCliCo Platform, each data layer is the result of modeling and transforming various datasets from the STAC (SpatioTemporal Asset Catalog) to generate the final geospatial data layers. The platform is organized into five main categories: Sea Levels, Natural Hazards, Exposure and Vulnerability, Risk and Adaptation, and Background Layers, each containing its own specific data layers. Keep reading to discover which datasets are used to create the data layers in the platform.
 
