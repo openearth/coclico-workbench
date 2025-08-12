@@ -1,6 +1,6 @@
 # coclico-workbench
 
-CoCliCo workbench prototype repository with tutorials & exploratory tools for Coastal Climate Core Services
+Welcome to the CoCliCo workbench! This is a prototype repository containing tutorials and exploratory tools for Coastal Climate Core Services. It enables expert users to conduct in-depth analyses using data available in the platform, either online or offline.
 
 ## Coding online in Google Colab or Binder
 
@@ -44,9 +44,13 @@ Please follow the instructions below to install the CoCliCo Workbench environmen
 
 - **exploratory_tools**: various notebooks that dive deep into user stories with very specific needs too detailed for the [CoCliCo web platform](https://coclico.netlify.app/#/data); i.e. comparisons to High-Resolution data, High-End sea level rise scenarios, etc.
 
-- **notebooks**: (DEPRECATION WARNING) various scripts that were developed in the first two years of the CoCliCo project. These scripts will be redistributed over exploratory tools and tutorials soon.
-
 - **tutorials**: short notebooks describing how to use the CoCliCo Data repository (STAC)
+
+- **src/coclico**: (OUTDATED) various scripts with basic functionalities that can be used for the tutorials & exploratory tools
+
+- **docs**: MkDocs documentations for the Handbook available here: https://www.openearth.nl/coclico-workbench/ 
+
+- **coclicodata_env**: Full .yml file for the offline (local) workbench environment, the other .yml file in the main directory will be used by Binder or Colab in the online environment. 
 
 ## Contributing
 
