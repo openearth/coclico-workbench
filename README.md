@@ -42,13 +42,13 @@ Please follow the instructions below to install the CoCliCo Workbench environmen
 
 ## Repository structure
 
-- **exploratory_tools**: various notebooks that dive deep into user stories with very specific needs too detailed for the [CoCliCo web platform](https://coclico.netlify.app/#/data); i.e. comparisons to High-Resolution data, High-End sea level rise scenarios, etc.
+- **exploratory_tools**: Various notebooks that dive deep into user stories with very specific needs too detailed for the [CoCliCo web platform](https://platform.coclicoservices.eu/); i.e. comparisons to High-Resolution data, High-End sea level rise scenarios, etc.
 
-- **tutorials**: short notebooks describing how to use the CoCliCo Data repository (STAC)
+- **tutorials**: Short notebooks describing how to use the CoCliCo Data repository (STAC)
 
-- **src/coclico**: (OUTDATED) various scripts with basic functionalities that can be used for the tutorials & exploratory tools
+- **src/coclico**: Various scripts with basic functionalities that can be used for the tutorials & exploratory tools
 
-- **docs**: MkDocs documentations for the Handbook available here: https://www.openearth.nl/coclico-workbench/ 
+- **docs**: MkDocs documentation for the [CoCliCo Handbook](https://www.openearth.nl/coclico-workbench/)
 
 - **coclicodata_env**: Full .yml file for the offline (local) workbench environment, the other .yml file in the main directory will be used by Binder or Colab in the online environment. 
 
