@@ -211,4 +211,5 @@ dependencies:
       - dea-tools
       - odc-ui
       - odc-stats
+      - exactextract
 
