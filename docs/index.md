@@ -1,13 +1,8 @@
-```{include} ../README.md
-```
+---
+template: home.html
+title: Material for MkDocs
+social:
+  cards_layout_options:
+    title: Documentation that simply works
+---
 
-```{toctree}
-:maxdepth: 1
-:hidden:
-
-example.ipynb
-changelog.md
-contributing.md
-conduct.md
-autoapi/index
-```
