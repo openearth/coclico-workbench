@@ -1,0 +1,94 @@
+site_name: Coastal Climate Core Services
+site_description: >-
+  This tool provides access to high-resolution coastal climate data,
+  helping users explore sea level rise projections, coastal hazards, exposure, and adaptation strategies.
+  Designed for researchers, policymakers, and coastal managers, CoCliCo enables interactive data visualization,
+  scenario analysis, and decision support.
+
+# Repository
+repo_name: openearth/coclico-workbench
+repo_url: https://github.com/openearth/coclico-workbench
+
+# Configuration
+theme:
+  name: material
+  custom_dir: docs/overrides
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo: assets/logo1.png
+  features:
+    - navigation.footer
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.copy
+    - content.code.select
+    - content.footnote.tooltips
+    - content.tabs.link
+    - content.tooltips
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tabs.sticky
+    - #header.autohide
+  palette:
+    # Dark theme
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: white
+      accent: deep purple
+
+    # Light theme
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: white
+      accent: pink
+
+extra_css:
+  - overrides/custom.css
+
+nav:
+  - Home: index.md
+  - Getting Started: getting_started.md
+  - Target Users: target_users.md
+  - Understanding the Data: Datasets.md
+  - Further Analysis: further_analysis.md
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+  - admonition
+  - pymdownx.details
+  - md_in_html
+
+extra:
+  social:
+    - icon: simple/github
+      link: https://github.com/openearth/coclico-workbench
+
+copyright: Copyright &copy; 2025 CoCliCo Services

@@ -1,10 +1,8 @@
-from typing import Dict, List
-
 import geopandas as gpd
 import shapely
 
 
-def bbox_to_geometry(bbox: List[float]) -> Dict:
+def bbox_to_geometry(bbox: list[float]) -> dict:
     """Use shapely.geometry.shape to cast to shapeley geom"""
     return {
         "type": "Polygon",
@@ -21,7 +19,7 @@ def bbox_to_geometry(bbox: List[float]) -> Dict:
 
 
 def geo_bbox(
-    bbox: List[float],
+    bbox: list[float],
     src_crs: str = "EPSG:4326",
     dst_crs: str = "EPSG:4326",
 ) -> gpd.GeoDataFrame:
