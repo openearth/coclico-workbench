@@ -1,8 +1,8 @@
 site_name: Coastal Climate Core Services
 site_description: >-
-  This tool provides access to high-resolution coastal climate data, 
-  helping users explore sea level rise projections, coastal hazards, exposure, and adaptation strategies. 
-  Designed for policymakers, local authorities, coastal managers and researchers, CoCliCo enables interactive data visualization, 
+  This tool provides access to high-resolution coastal climate data,
+  helping users explore sea level rise projections, coastal hazards, exposure, and adaptation strategies.
+  Designed for policymakers, local authorities, coastal managers and researchers, CoCliCo enables interactive data visualization,
   scenario analysis, and decision support.
 
 # Repository
@@ -52,7 +52,7 @@ theme:
     #  primary: white
     #  accent: deep purple
 
-    
+
 
 extra_css:
   - overrides/custom.css

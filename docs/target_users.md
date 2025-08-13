@@ -16,7 +16,7 @@ The platform provides clear, data-driven insights into coastal changes, helping 
 
     ---
 
-    Users in this group face significant risks but have strong existing capabilities. They have established knowledge infrastructures but need additional tools and information to enhance their coastal resilience efforts. 
+    Users in this group face significant risks but have strong existing capabilities. They have established knowledge infrastructures but need additional tools and information to enhance their coastal resilience efforts.
 
 -   :material-alert-circle-outline:{ .lg .middle } __High Risk - Low Capability__
 
