@@ -160,3 +160,6 @@ dist*
 
 # duckdb
 *:memory*
+
+src/coclico/_version.py
+*.vscode*

@@ -20,7 +20,7 @@ CoCliCo leverages STAC to provide structured access to geospatial datasets. The 
 
 ---
 
-## **Data Layers in the CoCliCo platform** 
+## **Data Layers in the CoCliCo platform**
 
 In the CoCliCo Platform, each data layer is the result of modeling and transforming various datasets from the STAC (SpatioTemporal Asset Catalog) to generate the final geospatial data layers. The platform is organized into five main categories: Sea Levels, Natural Hazards, Exposure and Vulnerability, Risk and Adaptation, and Background Layers, each containing its own specific data layers. Keep reading to discover which datasets are used to create the data layers in the platform.
 
@@ -360,7 +360,7 @@ By leveraging this dataset, stakeholders can develop data-driven strategies to *
 
 ## Exposure and Vulnerability
 
-While dedicated layers for exposure and vulnerability are still in development, CoCliCo combines **land-use data** from **Copernicus Coastal Zones 2018** with **Digital Terrain Models (DTMs)** to estimate exposure levels. 
+While dedicated layers for exposure and vulnerability are still in development, CoCliCo combines **land-use data** from **Copernicus Coastal Zones 2018** with **Digital Terrain Models (DTMs)** to estimate exposure levels.
 
 Future improvements will include datasets on **critical infrastructure assets** and **population exposure scenarios** for better risk evaluation.
 
