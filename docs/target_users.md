@@ -4,9 +4,9 @@
 ## **Intended Use**
 The platform provides clear, data-driven insights into coastal changes, helping users:
 
-- Identify areas at risk of erosion, flooding, and sea-level rise.  
-- Support early-stage decision-making and policy compliance.  
-- Prioritize investments in nature-based solutions and infrastructure resilience.  
+- Identify areas at risk of erosion, flooding, and sea-level rise.
+- Support early-stage decision-making and policy compliance.
+- Prioritize investments in nature-based solutions and infrastructure resilience.
 
 ## **Matrix of Needs**
 
