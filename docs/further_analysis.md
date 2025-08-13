@@ -1,4 +1,4 @@
-# 
+#
 
 ## CoCliCo Workbench
 The **CoCliCo Workbench** is a prototype repository containing tutorials and exploratory tools for **Coastal Climate Core Services**. It enables users to conduct in-depth analyses using platform data, either **online** via Google Colab and Binder or **offline** by running the workbench locally.
