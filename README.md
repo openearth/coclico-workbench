@@ -42,7 +42,7 @@ Please follow the instructions below to install the CoCliCo Workbench environmen
 
 ## Repository structure
 
-- **exploratory_tools**: Various notebooks that dive deep into user stories with very specific needs too detailed for the [CoCliCo web platform](https://platform.coclicoservices.eu/); i.e. comparisons to High-Resolution data, aggregation information on different levels, etc.
+- **exploratory_tools**: Various notebooks that dive deep into user stories with very specific needs too detailed for the [CoCliCo web platform](https://platform.coclicoservices.eu/); i.e. comparisons to High-Resolution data, aggregating information on different levels, etc.
 
 - **tutorials**: Short example notebooks describing how to configure and use the CoCliCo Data repository (STAC) for different data types (CoG, Zarr, Parquet).
 
