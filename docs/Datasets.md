@@ -384,7 +384,7 @@ User research showed that policymakers need clear, actionable data for flood dir
 
 ???+ "Data Layers & User Stories"
 
-    === "Flood statistics per LAUs"
+    === "Flood Perspectives"
 
         The **Inundation Distribution During Flood Events** User Story in the CoCliCo platform helps users understand and prepare for coastal flooding. They are essential for assessing vulnerability, informing risk management strategies, and supporting decision-making for coastal planning, infrastructure protection, and emergency preparedness. These maps show areas at risk of flooding due to rising sea levels, coastal storms, or both. They combine data on land elevation, water movement, and climate predictions to estimate how floods might impact different coastal areas in Europe. This collection of flood maps serves as the basis for other User Stories. 
 
@@ -408,7 +408,7 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         The methodology for mapping coastal flood risks followed three main steps: 
 
-        <div class="grid cards" markdown>
+        <div class="grid cards" markdown style="grid-template-columns: 1fr;">
 
         -    __1. Defining the Coastal Floodplain__
 
@@ -462,8 +462,6 @@ User research showed that policymakers need clear, actionable data for flood dir
         <div class="grid cards" markdown>
 
         - **High Defended**  
-            
-
             Maximum level of policy-based protection at the NUTS2 level.
         
 
@@ -478,16 +476,9 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         **Flood Drivers:**
 
-        <div class="grid cards" markdown>
-
         - **High tides**  
-
         - **Frequent storms**  
-
         - **Extreme “perfect storm” scenario**  
-
-
-        </div>
 
         ---
 
@@ -504,7 +495,7 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         Flood maps showing the maximum flood extent and depth for different extreme scenarios (1-year, 100-year, and 1000-year return period TWL events), various relative SLR projections (decadal time steps from 2030 to 2150 relative to the reference period 1995–2014 for three SSP scenarios and one high-end scenario), and the combination of each extreme scenario with every sea level rise scenario.
 
-        ![](./assets/Tool/FLOOD_outputs.png){ width=800 .center}
+        ![](./assets/Tool/flood_pers_output.png){ width=800 .center}
 
         ---
 
@@ -534,23 +525,238 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         **Further Analysis**
 
-    === "Shoreline Change"
+=== "Flood Maps"
 
-        The **Shoreline Change** dataset provides projections of global shoreline evolution under climate change. This assessment considers the combined effects of:
+        The Flood Maps Data Layer provides clear, reliable visualizations of flood maps for identifying coastal areas at risk from flooding due to extreme weather events and sea-level rise. Besides risk identification and planning, the spatial distribution of coastal flooding projections is key to guide well-informed decisions and enhance community and stakeholder preparedness.
+
+        > *"Example"*
+
+        > *“I need to see maps of flood extent and depth for different sea-level rise and storm scenarios so I can assess coastal flood risks and identify vulnerable areas across Europe.”*
+
+        **Data Sources**
+
+        Topographic data used to represent the European floodplain terrain included a 25-m resolution digital elevation model (DEM) (Copernicus, 2019), the corresponding coastline used to define boundary conditions (EEA, 2017), and land-use information (Witjes et al., 2022), which was translated into Manning's roughness coefficients.
+       
+        Marine dynamic forcing conditions were obtained using two approaches for 1 km-spaced coastal points along the European coastline. For permanent inundation scenarios, input data were derived from the CoCliCo Regional Sea-Level Rise (SLR) Projections. For episodic flood events, input data were obtained from extreme total water level (TWL) return level scenarios based on a reconstructed TWL hindcast. This hindcast consisted of the astronomical tide from the latest version of the TPXO database, storm surge simulated using the ROMS model (Shchepetkin & McWilliams, 2005), and wave setup estimated from wave conditions in a downscaled wave hindcast generated with the WaveWatch III model (Tolman, 2009).
+        
+        Additionally, the dataset on protection standards around Europe’s coast developed by Vrije Universiteit Amsterdam was incorporated into the flood maps in a post-processing step (van Maanen et al., 2024). 
+
+        ## **Methods**
+
+        The methodology followed can be divided into three steps:
+        # European Coastal Flood Modelling Process
+
+        ### (1) Definition of Floodplain and Meshes
+        - The European floodplain was defined as **coastal regions located between 0 and 15 m elevation** that are hydraulically connected to the sea.  
+        - This floodplain was segmented into **22 flood units**, from which **topographic meshes** were generated.  
+        - Each mesh is composed of **irregular cells (impact zones)** containing **sub-element topography** (impact cells with 25 m resolution inherited from the DEM).  
+        - Impact zones:
+        - Are flexible, following terrain features.  
+        - Boundaries adjust to topographic crests.  
+        - Each impact zone was assigned a **Manning roughness coefficient**, based on the majority land use present.  
+
+        ---
+
+        ### (2) Hydrograph Construction
+
+        **Permanent inundation scenarios**
+        - Hydrographs were created by combining **sea-level rise (SLR)** with the **mean spring high tide** at each coastal point.  
+
+        **Episodic flooding scenarios**
+        - Hydrographs were based on:
+        - **TWL (Total Water Level) extreme value analysis**.  
+        - A **storm duration function** for TWL storms.  
+        - TWL hindcast reconstructed by summing:
+        - Astronomical tide  
+        - Storm surge  
+        - Wave setup  
+        - Wave setup:
+        - Computed using the semi-empirical formulation of **Stockdon et al. (2006)**.  
+        - Foreshore slopes estimated via **Sunamura (1984)**.  
+
+        **Extreme event detection**
+        - **Peak Over Threshold (POT) method** applied to identify TWL extreme events.  
+        - Threshold chosen to yield ~**2 events per year**.  
+        - **Return values** of TWL estimated by fitting extremes to an **exponential model**.  
+        - **Storm durations** for return-period events estimated from individual POT events.  
+
+        **Combined scenarios**
+        - Future episodic flooding scenarios were obtained by **superimposing relative SLR** onto hydrographs generated from TWL return values (hindcast period).  
+
+        ---
+
+        ### (3) Coastal Flood Simulations
+
+        - Simulations conducted with the **RFSM-EDA 2D flood model**.  
+        - RFSM-EDA:
+        - Efficient hydraulic model for **large-scale, process-based flood modelling**.  
+        - Incorporates topography as a **sub-element of the computational mesh**.  
+        - References: *Sayers and Marti (2006); Jamieson et al. (2012)*.  
+        - During simulations:
+        - **Saint-Venant equations** solved between impact zones.  
+        - Flood depth computed at each impact cell.  
+        - Output:
+        - Flood maps showing **depth and extent** under different scenarios across the European coastline.  
+        - Post-processing:
+        - Maps adjusted to reflect the effect of **coastal defences**.  
+        - Considered both **minimum and maximum policy-based return periods** at the **NUTS 2 (province) level**.
+
+        ---  
+
+        **Defence Level**
+
+        Process-based flood maps were post-processed to incorporate the effect of existing coastal defences. The dataset of protection standards used (van Maanen et al., 2024) provides estimates of the minimum and maximum policy-based return periods at the province level (NUTS 2). For each scenario, three flood maps were provided: one undefended map (without defences) and two defended maps (with defences). Defended maps represent the low- or high-defended cases depending on whether the minimum or maximum level of protection is assumed in each province.  
+
+        | Defence Level  | Description                                                                 |
+        |----------------|-----------------------------------------------------------------------------|
+        | Undefended     | Without protection (beyond what may be included in the DEM).                |
+        | Low defended   | Maximum level of policy-based protection at the NUTS2 level                 |
+        | High defended  | Minimum level of policy-based protection at the NUTS2 level                 |
+
+
+        **Climate Scenarios**
+
+        The dataset includes projections for three climate scenarios with different levels of confidence of sea-level rise projections and time horizons:  
+
+        | Shared Socioeconomic Pathways (SSP) | Description                                               | Time Horizons      | SLR Confidence |
+        |-------------------------------------|-----------------------------------------------------------|--------------------|----------------|
+        | SSP1-2.6                            | A low-emission scenario where global temperatures rise slightly | 2100               | Medium         |
+        | SSP2-4.5                            | A medium-emission scenario where global temperatures rise moderately | 2050, 2100         | Medium, Medium |
+        | SSP5-8.5                            | A high-emission scenario where global temperatures rise significantly | 2030, 2050, 2100   | Medium, Medium, Medium |
+        | High-end                            | Represents high-end but plausible outcomes of sea-level rise under a high-emission scenario | 2100, 2150         | Low, Low       |
+
+
+        **Return Periods** 
+
+        The dataset estimates extreme sea levels for three return periods, representing the frequency of extreme events:  
+
+        | Return Period (Years) | Description                                 |
+        |------------------------|---------------------------------------------|
+        | 1                      | Events expected once every 1 year.          |
+        | 100                    | Events expected once every 100 years.       |
+        | 1000                   | Events expected once every 1000 years.      |
+
+
+        **Ensembles**
+
+        Data is computed for seven statistical ensembles (1st, 5th, 17th, 50th, 83rd, 95th, and 99th percentiles) at two key timeframes: **2050 and 2100**. The projections stem from the **LISCOAST project**, a comprehensive study of coastal dynamics under climate change.
+
+
+        **Components of Flood Maps**
+
+        To estimate flood extent and depth under various scenarios for the entire coast of Europe, these maps integrate:  
+        - [x] Elevation data  
+        - [x] Manning roughness information inferred from land cover data  
+        - [x] Hydrodynamic simulations  
+        - [x] Climate information (hindcast and projections)   
+
+        ---
+
+        **How to Use the Flood Maps Data**
+
+        - [x] **Scenario selection**: select between return periods of extreme events of total water level (i.e., 1-yr, 100-yr, and 1000-yr), sea-level rise scenarios (i.e., SSP1-2.6, SSP2-4.5, SSP5-8.5, and high-end), or a combination of both.
+        - [x] **Ensemble selection**: select between the high, median, and low ensembles to understand the range of possible sea-level rise outcomes.
+        - [x] **Time horizon**: view flood maps for specific time slices (i.e, 2010, 2030, 2050, 2100, 2150).
+        - [x] **Current coastal defence level considered in the flood maps**: undefended (no protection beyond which is included in the DEM), minimum level of protection, or maximum level of protection.
+
+        ---
+
+        **Model Outputs**
+
+        Pan-European flood maps covering different scenarios with their respective flood extent and depth.
+
+        ![](./assets/Tool/FLOOD_outputs.png){ width=800 .center}
+
+        ---
+
+        **Why Is This Data Important?**
+
+        TThe Flood Maps Data Layer in the CoCliCo platform allow assessment of risks, informing management strategies, and supporting decision-making for coastal planning, infrastructure protection, and emergency preparedness. Coastal flood maps provide a visual representation of potential areas at risk from flooding due to sea-level rise, extreme coastal storms, or both.
+
+        **Example of use**
+
+        > *"Using the Coastal Flood Maps, a marine conservation group identified several critical wetland areas at risk of being inundated due to storm surges combined with sea-level rise. The group used the flood extent and depth maps for different scenarios to prioritize restoration projects. By focusing on these vulnerable areas, they were able to implement targeted conservation efforts that helped protect the wetlands, preserving biodiversity and improving water quality for the surrounding community.”*
+
+        ---
+        
+        **Further Analysis**
+
+        The Flood Maps Data Layer in the CoCliCo platform provide a library of process-based flood simulations for the integrated scenarios. In the Workbench, these maps can be integrated with exposure information and vulnerability curves to estimate risks.
+
+        **References**
+
+        Copernicus. (2019). DEM - Global and European Digital Elevation Model. https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing- missions/collections-description/COP-DEM.
+        
+        EEA, C. E. E. A. (2017). EEA coastline for analysis. https://sdi.eea.europa.eu/catalogue/srv/api/records/af40333f-9e94-4926-a4f0-0a787f1d2b8f.
+        
+        Jamieson S, L’homme J, Wright G, Gouldby B (2012) Highly efficient 2D inundation modelling with enhanced diffusion-wave and sub-element topography. Proc. Inst. Wat. Man., 165(10): 581–595.
+        
+        Sayers, P.B and Marti, (2006) RFSM - Rapid Flood Spreading Method - Initial Development. Developed as part of Floodsite and TE2100 by Marti and Sayers, HR Wallingford report for the Environment Agency.
+        
+        Shchepetkin, A. F., & McWilliams, J. C. (2005). The regional oceanic modeling system (ROMS): A split-explicit, free-surface, topography-following-coordinate oceanic model. Ocean Modelling, 9(4), 347–404. https://doi.org/10.1016/j.ocemod.2004.08.002
+        
+        Stockdon, H. F., Holman, R. A., Howd, P. A., & Sallenger Jr, A. H. (2006). Empirical parameterization of setup, swash, and runup. Coastal engineering, 53(7), 573-588.
+        
+        Sunamura, T. (1984). Quantitative predictions of beach-face slopes. Geological Society of America Bulletin, 95(2), 242-245.
+        
+        Tolman, H. L. (2009). User manual and system documentation of WAVEWATCH-IIITM version 3.14. Technical Note, 3.14, 220. http://polart.ncep.noaa.gov/mmab/papers/tn276/MMAB_276.pdf%5Cnpapers2://publication/u uid/298F36C7-957F-4D13-A6AB-ABE61B08BA6B
+        
+        van Maanen, N., De Plaen, J. J.-F. G., Tiggeloven, T., Colmenares, M. L., Ward, P. J., Scussolini, P., and Koks, E.: Brief Communication: Bridging the data gap – enhancing the representation of global coastal flood protection, Nat. Hazards Earth Syst. Sci. Discuss. [preprint], https://doi.org/10.5194/nhess-2024-137, in review, 2024.
+        
+        Witjes, M., Parente, L., van Diemen, C. J., Hengl, T., Landa, M., Brodský, L., Halounova, L., Križan, J., Antonić, L., Ilie, C. M., Craciunescu, V., Kilibarda, M., Antonijević, O., & Glušica, L. (2022). A spatiotemporal ensemble machine learning framework for generating land use/land cover time-series maps for Europe (2000-2019) based on LUCAS, CORINE and GLAD Landsat. PeerJ, 10. https://doi.org/10.7717/peerj.13573.
+
+
+    === "Coastal Change Segments"
+
+        Coastal erosion and flooding are known to be linked, with erosion potentially exacerbating flood extents and risk, but analysis of the combined hazards is limited. Coastal environments are characterised by various key factors including sediment supply, beach materials, underlying geology and human infrastructure and activity, which all influence the dynamic nature of the coastal zone. 
+        
+        The ‘Coastal Typologies and Erosion for Risk’ (CoasTER) database integrates existing information on erosion and other relevant coastal characteristics for Europe’s coastal floodplains. In particular, coastal areas where mobile sediments and coastal floodplains are co-located identifying the areas where erosion and flooding are most likely to interact. It also includes a coastal geomorphological typology which incorporates the influence of human modification in the form of hard engineering and infrastructure.
+
+        The **Coastal Change Segments** CoasTER database provides projections of global shoreline evolution under climate change. This assessment considers the combined effects of:
 
         - **Ambient change**: Historical shoreline trends.
         - **Sea level rise (SLR)**: Based on RCP4.5 and RCP8.5 climate scenarios.
         - **Storm-driven erosion**: Instantaneous shoreline changes due to extreme events.
 
+
         > *"Example"*
 
-        ---
+        > *“Around Europe, where has notable erosion occurred along coastal floodplains over recent decades?.”*
 
         **Data Sources**
 
-        ---
+        The shoreline dataset for the analysis is that provided by the European Environment Agency (EEA, 2017). Other coastal characteristics were sourced as shown below.
+
+        <div class="grid cards" markdown>
+
+        **Geomorphology and sediment type**
+        EEA/Eurosion (EEA, 2004); interpretation of World Imagery / Google Earth (Esri, 2024; Google Earth, 2024).
+
+        **Land cover/use**
+        Corine Land Cover 2018 (CLC, 2020).
+
+        **Indicative coastal floodplain extent (extreme tides, storms, 2m sea-level rise)**
+        CoCliCo flood units (Lincke & Hinkel, 2023).
+
+        **Decadal shoreline movement trends (1984–2021)**
+        ShorelineMonitor+ (extended from Luijendijk et al., 2018).
+
+        **Location of coastal structures (hard defences, other human infrastructure constraining shoreline evolution)**
+        EEA/Eurosion (EEA, 2004); interpretation of World Imagery / Google Earth (Esri, 2024; Google Earth, 2024).
+
+        </div>
+
+        ![](./assets/Tool/flood_shoreline.png){ width=800 .center}
 
         **Methods**
+
+        The EEA shoreline was disaggregated into its component segments, which were then used as the basic unit for the database. A coastal zone extending 100m landward of the shoreline was defined as a representative landward extent and used for the identification of descriptive attributes. Attributes from the coastal characteristics data sources were added using spatial joins capabilities within the QGIS geographic information system software. Attributes were checked and amended, where appropriate, following visual interpretation of satellite imagery.
+
+        Important notes:
+
+        - 1. Indicative coastal floodplains were used in the database, scenario-based modelled flood extents are available and described in the Flood Maps Data Layer.
+        
+        - 2. The historical shoreline movement trend is based on satellite measurements and is classified into three trends; erosion, accretion and stable. These broad classes identify rapidly eroding or accreting shorelines with slower changing shorelines classed as stable. The CoasTER database therefore provides broad shoreline movement trends rather than providing precise localised rates.
 
         **Climate Scenarios**
 
@@ -573,23 +779,28 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         ---
 
-        **How to Use the Shoreline Change Data**
+        **How to Use the CoasTER database**
 
-        Users can filter the dataset based on:
+        Users can query the database using a range of attributes. For example:
 
-        - [x] **Scenario Selection**: Choose from the available scenarios (RCP4.5, RCP8.5) to explore how shorelines may change under different climate futures.
-        - [x] **Statistical ensembles**: Choose between different confidence levels (e.g., 1st percentile for extreme retreat, 99th for conservative estimates).
-        - [x] **Timeframes**: Select a future projections between **2050 and 2100**.
+        - [x] **Coastal classification**: see the distribution of geomorphological classes
+        - [x] **Hard engineering**: see where defences and other structures influence coastal evolution.
+        - [x] **Shoreline evolution**: for the indicative coastal floodplains, see shorelines with recent rapid shoreline movement trends
+        - [x] **Combine attributes**: to further define areas of interest
 
         ---
 
-        **Model Outputs**
+        **Database Outputs**
+
+        The CoasTER database considers the current situation around Europe. Its attributes can be queried for coastal analysis.
+        
+        ![](./assets/Tool/flood_shoreline_output.jpg){ width=800 .center}
 
         ---
 
         **Why Is This Data Important?**
 
-        The **Shoreline Change** dataset is critical for:
+        The CoasTER database allows coastal areas where mobile sediments and coastal floodplains are co-located to be identified. It can be used as a preliminary diagnostic tool to identify areas where the interaction between flooding and erosion should be examined more closely, especially where significant erosion has been a recent trend and may continue into the future. It can also show where coastal structures and development may be affected by, and/or influence, future coastal sediment movements. 
 
         - [x] **Coastal risk management**: Identifying areas vulnerable to erosion and planning protective measures.
         - [x] **Infrastructure planning**: Supporting long-term decision-making for sustainable coastal development.
@@ -598,11 +809,33 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         **Example of use**
 
-        > *"Example"*
+        > *"I would like to know where developed areas have coastal structures within 100m of the shoreline and have been subject to recent erosion and may need further management.”*
 
         ---
 
+        **Limitations**
+        
+        The CoasTER database is limited in coverage and accuracy by its source data. This has resulted in some counties and sections of the shoreline (e.g., inlets and small islands) not being included. It provides an interpretation of the coastal system as defined by the 2017 shoreline which omits more recent coastal developments such as port expansions and has digitizing artifacts that have not always been corrected.  
+        
         **Further Analysis**
+
+        The CoasTER database provides a base to which further information relevant to the broadscale analysis of coastal floodplains can be added or updated as required.
+
+        **References:**
+
+        CLC. (2020). CORINE Land Cover 2018 (vector), Europe, 6-yearly - version 2020_20u1, May 2020. https://land.copernicus.eu/en/products/corine-land-cover/clc2018
+        
+        EEA. (2004). Geology and geomorphology (EUROSION). Retrieved April 2023, from https://www.eea.europa.eu/data-and-maps/figures/geology-and-geomorphology
+       
+        Esri. (2024). Esri World Imagery https://www.arcgis.com/home/webmap/viewer.html?webmap=50c23e4987a44de4ab 163e1baeab4a46
+        
+        Google Earth. (2024). https://earth.google.com/web/
+        
+        Lincke, D., & Hinkel, J. (2023). Report and final GIS layer of flood risk management units.
+        
+        CoCliCo project deliverable 6.2. https://coclicoservices.eu/wp- content/uploads/2021/11/WP6_D6.2.Report-and-final-GIS-layer-of-flood-risk- management-units.pdf
+        
+        Luijendijk, A., Hagenaars, G., Ranasinghe, R., Baart, F., Donchyts, G., & Aarninkhof, S. (2018). The state of the world’s beaches. Scientific Reports, 8(1), 6641. https://doi.org/10.1038/s41598-018-24630-6
 
 ---
 
@@ -619,30 +852,44 @@ User research showed that policymakers need clear, actionable data for flood dir
         > *"I need to see building exposure now and in the future for different climate change scenarios, so I can better understand the potential risk hotspots."*
 
         ---
+       
+        **Methods**
 
+        The building footprints extracted from OpenStreetMap are combined with CoCliCo’s state-of-the-art inundation maps.
+        
         **Data Sources**
 
         The building exposure is based on the latest building information extracted from OpenStreetMap. OpenStreetMap provides a consistent data layer across Europe, with standardized information on building type and location. 
 
         ![](./assets/Tool/EXP_DATA.png){ width=900 .center}
-        ---
-
-        **Methods**
-
-        The building footprints extracted from OpenStreetMap are combined with CoCliCo’s state-of-the-art inundation maps.
 
         ---
 
         **How to Use the Building Exposure data**
+        
+        The Building Exposure data can be used to: 
+
+        - [x] **Visualize flood risk**: Explore which buildings are exposed to sea-level rise and coastal flooding under different scenarios.  
+        - [x] **Compare scenarios**: Switch between SSPs, percentiles, and time horizons to understand how exposure changes over time.  
+        - [x] **Overlay with other layers**: Combine with hazard, infrastructure, or socio-economic layers for a more complete risk assessment.  
+        - [x] **Export and analyze**: Download exposure maps or raw data for detailed local analysis in the Workbench or external GIS tools.  
 
         ---
 
         **Model Outputs**
+        - [x] Visualizations display building exposure at decadal timesteps from 2030 to 2150 for three SSPs scenarios and one high-end scenario.
+        - [x] Interactive features allow scenario comparisons and data downloads for local and regional decision-making.
+
+        ![](./assets/Tool/flood_building_output.png){ width=800 .center}
 
         ---
 
-        **Why Are This Data Important?**
-        
+        **Why is this Data Important?**
+        - [x] **Resilience planning**: Identifies hotspots of flood risk to guide adaptation strategies.  
+        - [x] **Policy support**: Informs compliance with EU and national flood directives.  
+        - [x] **Investment prioritization**: Helps authorities and planners focus resources on the most vulnerable areas.  
+        - [x] **Community safety**: Ensures critical buildings and neighborhoods remain protected as sea levels rise.  
+
         ---
 
         **Example of use**
@@ -657,9 +904,10 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         The building exposure layer is the starting point for the coastal risk assessment. Moreover, within the [Workbench](further_analysis.md) one can extract exposure data for their area of preference, allowing to better understand how sea-level rise will increase future coastal flood risk within any coastal area across Europe. 
 
-    === "Projections of Exposed People"
 
-        The Projections of Exposed People User Story in the CoCliCo platform shows how many people may be affected by coastal flooding in the future. It combines high-resolution flood and population data to provide clear insights under different climate and socioeconomic scenarios. 
+    === "People Exposure"
+
+        The **People Exposure** User Story in the CoCliCo platform shows how many people may be affected by coastal flooding in the future. It combines high-resolution flood and population data to provide clear insights under different climate and socioeconomic scenarios. 
 
         Since future population growth and movement are uncertain, this tool considers multiple scenarios to improve flood risk assessments. By mapping projected exposure to coastal flooding, it helps policymakers, urban planners, and resilience experts make informed decisions for adaptation and risk reduction.    
 
@@ -701,15 +949,34 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         ---
 
-        **How to Use the Exposed People data**
+        **How to Use the People Exposure data**
+        
+        The Exposed Population data can be used to:  
+        - [x] **Explore current and future exposure**: See how many people are projected to be affected by coastal flooding under different climate and socioeconomic scenarios.  
+        - [x] **Compare scenarios**: Analyze differences across SSPs, defence levels, and return periods (e.g., 100-year vs. 1000-year events).  
+        - [x] **Zoom into multiple scales**: View projections at national, NUTS2, and LAU levels for both broad and detailed insights.  
+        - [x] **Overlay with other layers**: Combine with sea-level rise or exposure datasets for a more complete picture of coastal risk.  
+        - [x] **Export and analyze further**: Download data and maps for advanced analysis in the Workbench or other GIS platforms.  
+
 
         ---
 
         **Model Outputs**
 
+        - [x] Visualizations display gridded population projections for the years 2010, 2030, 2050 and 2100 for five integrated scenarios (No SLR-SSP2, SSP1-2.6, SSP2-4.5, SSP5-8.5 and one high-end scenario with SSP5).
+        - [x] Interactive features allow scenario comparisons and data downloads for local to national decision-making.
+
+        ![](./assets/Tool/flood_people_output.png){ width=800 .center}
+
         ---
 
-        **Why Are This Data Important?**
+        **Why Is This Data Important?**
+
+        - [x] **Holistic planning**: Accounts for both climate change and population dynamics, the two key drivers of future flood exposure.  
+        - [x] **Supports adaptation**: Helps policymakers and planners target strategies where people are most at risk.  
+        - [x] **Improves equity**: Highlights vulnerable populations that may need priority protection and resources.  
+        - [x] **Evidence-based policy**: Provides transparent, high-resolution projections to align with EU directives and national adaptation plans.  
+
         
         ---
 
@@ -732,6 +999,129 @@ User research showed that policymakers need clear, actionable data for flood dir
         **Further Analysis**
 
         To account for the full range of uncertainty in population development and its impact on coastal flooding, it’s useful to explore other socioeconomic scenarios beyond the integrated ones. While these additional estimates aren’t included directly in the platform, they can be explored in the [Workbench](further_analysis.md) by combining various climate and socioeconomic scenarios at different spatial scales.  
+
+
+    === "Critical Infrastructure"
+   
+        The **Critical Infrastructure layer** provides EU-wide high-resolution, object-based representations of key economic assets, buildings, and infrastructure systems in coastal areas prone to flooding.  
+
+        It includes spatially explicit information on **buildings**, **transportation networks**, and **essential service facilities** that are vital for economic and societal functioning. These components are mapped as distinct object types to support risk assessments and inform coastal adaptation efforts.
+
+        **Example:**  
+        > *“I want to assess which critical infrastructure elements—like power stations, roads, or public service buildings—are at risk in coastal flood zones to help inform emergency planning and resilience investment.”*
+
+        ---
+
+        ### Data Sources
+        The dataset combines building and critical infrastructure data from:  
+
+        - **OpenStreetMap (OSM)**  
+        - **EUBUCCO database**  
+        - Auxiliary datasets (national and European-specific databases)  
+
+        This ensures both comprehensive coverage and data accuracy.  
+
+        ---
+
+        ### Critical Infrastructure Systems and Subsystems
+
+        <div class="grid cards" markdown>
+
+        - **Energy**  
+        - **Generation**: Power Plant, Generator  
+        - **Transmission**: Cable, Line  
+        - **Distribution**: Towers (Transmission Towers), Utility Poles, Substation, Switch, Catenary Mast, Transformer  
+
+        - **Transportation**  
+        - **Railways**: Railway  
+        - **Roads**: Primary, Secondary, Tertiary, Trunk, Link, Road  
+        - **Airports**: Aerodrome, Airport  
+
+        - **Telecommunication**  
+        - **Telecom**: Communication Tower, Mobile Phone  
+
+        - **Health**  
+        - **Healthcare**: Clinic, Doctors, Hospital, Dentist, Pharmacy, Physiotherapist, Alternative, Laboratory, Optometrist, Rehabilitation, Blood Donation, Birthing Center  
+
+        - **Education**  
+        - **Education**: College, Kindergarten, Library, School, University  
+
+        </div>
+
+        ---
+
+        ### Infrastructure Object Types
+
+        - **Grey polygons** → Buildings (residential, commercial, industrial, public)  
+        - **Blue lines** → Linear infrastructure (roads, railways, power lines)  
+        - **Red dots** → Point infrastructure (power stations, telecom towers, water pumping stations)  
+
+        All features are curated and geospatially aligned to reflect their **true footprint and geometry** as accurately as possible.  
+
+        ---
+
+        ### Methods
+
+        1. **Data Extraction**  
+        - Critical infrastructure subsystems from **OSM**.  
+        - Buildings from **EUBUCCO** (EU + UK coverage).  
+
+        2. **Attribute Completion**  
+        - Missing OSM attributes filled using a **Random Forest algorithm**.  
+        - Example: If road attributes (e.g., maximum speed, number of lanes) are missing, values are inferred from similar road segments.  
+
+        3. **Spatial Refinement**  
+        - Assets and buildings **clipped to the coastal zone**.  
+        - Subdivided by **Local Administrative Units (LAU)** for greater granularity.  
+
+        ---
+
+        ### Geographic Coverage
+        - Coastal **LAUs (municipality level)** within the **European Union** and the **United Kingdom**.  
+
+        ---
+
+        ### How to Use the Data
+
+        - **Visual Analysis** → Identify infrastructure exposed to flood risks.  
+        - **Overlay with Hazard Layers** → Combine with SLR and flood models to assess exposure.  
+        - **Stakeholder Engagement** → Support discussions with municipalities, utilities, planners.  
+        - **Risk Prioritisation** → Inform emergency preparedness, resilience planning, and investment.  
+
+        ---
+
+        ### Model Output
+        
+        The two following illustration provides an overview of how the infrastructure layer and the building can be used within the platform. For instance, Figure 1 shows a screenshot on overlying the flood map assuming a scenario with no protection standards for SSP5 for an event with a return period of a 1000 years at the time horizon of 2100 around the LAU Couarde-sur-Mer (FR). The shades of the LAUs give an indication on the percentage of building exposed. Furthermore, by clicking on the LAU polygon, the dashboard provides a timeline of the percentage of building exposed across all scenarios.
+
+        ***Figure 1**: Building exposure*
+
+        ![](./assets/Tool/flood_ci_output.png){ width=800 .center}
+
+        The critical infrastructure layer can also be overlayed with the flood maps. Figure 2 displays the flood depth around Couarde-sur-Mer (FR) assuming no protection standards, SSP5, for 2100 in combination to the infrastructure network.
+        
+        ***Figure 2**: Critical infrastructure exposure*
+
+        ![](./assets/Tool/flood_ci_output2.png){ width=800 .center}
+
+        ---
+
+        ### Why Is This Data Important?
+
+        Critical infrastructure is essential for **public safety, economic stability, and disaster recovery**.  
+        Mapping and assessing exposure in coastal zones supports:  
+
+        - [x] Evaluating direct & cascading impacts of flooding.  
+        - [x] Strengthening **climate resilience planning**.  
+        - [x] Guiding **land-use decisions & investment**.  
+        - [x] Ensuring continuity of **essential services**.  
+
+        ---
+
+        ### Example of Use
+
+        > *“A regional planning authority overlaid the critical infrastructure dataset with projected coastal flooding extents. This revealed that several **emergency response buildings** and **power substations** were at high risk under future sea-level rise scenarios. The data helped prioritise relocation efforts and informed a new coastal zoning policy, ensuring service continuity and community safety.”*
+
 
     === "Population Projections"
 
@@ -796,7 +1186,7 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         ---
 
-        **Why Are This Data Important?**
+        **Why Is This Data Important?**
 
         The population projections are crucial for accounting for uncertainties in socioeconomic development by depicting a wide range of possible futures in terms of population development. Furthermore, the population projections can be combined with spatial data on hazards to assess exposure and inform adaptation planning.  
         
@@ -811,67 +1201,6 @@ User research showed that policymakers need clear, actionable data for flood dir
         To account for the full range of uncertainty in population development and associated future exposure to coastal flooding, it’s useful to explore other socioeconomic scenarios beyond the integrated ones. While these additional estimates aren’t included directly in the platform, they can be explored in the Workbench by combining various climate and socioeconomic scenarios at different spatial scales.
 
 
-    === "Damage Costs of Exposed Infrastructures"
-
-        The Damage Costs of Exposed Infrastructures User Story in the CoCliCo aim at presenting the direct economical impacts of coastal flooding under different climate scenarios. While many coastal infrastructures are protected today, rising sea levels will increase flood extent and depth, leading to higher damage costs without further adaptation. 
-
-        This tool helps policymakers and planners assess these costs at national, regional, and local levels in order to inform adaptation strategies. It combines the latest sea level projections, European flood hazard data, and infrastructure inventories to provide city-scale estimates of future flood damage. 
-
-        > *"I need to quantify damage costs of infrastructures exposed to flooding and assess how it evolves under different climate change scenarios"*
-
-        **Data Sources**
-
-        Damage costs on infrastructures are calculated by crossing hazard, buildings and vulnerability curves.  
-
-        Hazards: Flood maps (water depth) calculated either with or without defences from the CoCliCo project (data producer: IH-Cantabria; available on the CoCliCo STAC Catalog). Flood maps are provided for hindcast, 2030, 2050, 2100 and 2150 for permanent flooding, 1-yr, 100-yr and 1000-yr return period with various SLR scenarios. 
-
-        Exposure: Coastal European Exposure Database (data producer: Institute for Environmental Studies, Vrije Universiteit Amsterdam, available on the CoCliCo STAC Catalog). 11 classes of infrastructures are considered: Building, Power, Wastewater, Telecom, Oil, Gaz, Education, Healthcare, Rail, Road and Water. Infrastructures can be represented as points, lines, polygons or multipolygons. 
-
-        Vulnerability curves: Physical Vulnerability Database for Critical Infrastructure Hazard Risk Assessments. (data producer: Institute for Environmental Studies, Vrije Universiteit Amsterdam, Dataset: Physical Vulnerability Database for Critical Infrastructure Hazard Risk Assessments).The data comes from a study that compiles most of the existing vulnerability curves found in the literature, along with the associated cost. It consists of 102 different vulnerability curves, which depend on the type of infrastructure, and 179 different cost values. The vulnerability curves are used to characterize the percentage of damage to infrastructure based on water height. 
-
-        ![](./assets/Tool/DAM_DATA.png){width=900px .center}
-
-
-        **Methods**
-
-        The damage costs are calculated by intersecting hazard (raster) and exposure (polygons) data layers, and vulnerability curves. First, we overlay the coastal flood hazard map with infrastructure data to obtain an average water height for each infrastructure. Then, based on the category of the infrastructure, we apply the corresponding vulnerability curves (e.g. healthcare, education, railway, etc).  
-
-        For the CoCliCo project, we used 18 different vulnerability curves. Once the damage is determined, the associated cost calculation is carried out: the damage cost is the product of the building's surface area, the percentage of damage, and the maximum damage, based on construction costs. 
-
-        **How to Use the Data**
-
-        ---
-
-        **Model Outputs**
-
-
-
-        ---
-
-        **Why Is This Data Important?**
-
-
-
-        ---
-
-        **Example of use**
-
-        > “National policy makers used the damage costs estimates to get a first order estimate of costs in regions and municipalities and prioritize on adaptation actions and investments in order to maximize the efficiency of public investments in adaptation. While this information can not be used as a single source of information to guide adaptation investments, it provides an element that can be considered together with additional evidence and selection criteria of decision makers”  
-
-    	> “The damage costs estimates at municipal level have been used to identify the potential damage costs in a particular flood plain, allowing to anticipate to what extent existing compensation mechanisms (e.g. insurance) are adequately designed to address loss and damages a now and in the future” 
-
-        ---
-
-        **Limitations**
-
-        One of the main limitations of this method lies in the assumption that infrastructures remain unchanged over time, without considering any construction or destruction of infrastructure. Additionally, the lack of detailed information on certain infrastructures can affect the accuracy of selecting the vulnerability curve, which may lead to variations in the estimated cost. Similarly, the price used is an average price that does not account for specific factors such as the location of the damage or the current local construction costs.  
-
-
-
-        ---
-
-        **Further Analysis**
-
 
 
 ---
@@ -880,9 +1209,9 @@ User research showed that policymakers need clear, actionable data for flood dir
 
 ???+ "Data Layers & User Stories"
 
-    === "Cost-Benefit Analysis of Coastal Adaptation"
+    === "Cost-Benefit Analyses"
 
-        The Adaptation based on Cost-Benefit Analysis User Story in the CoCliCo platform helps identify the most cost-effective ways to manage coastal flood risks under different climate scenarios. It evaluates three key adaptation strategies: 
+        The Cost-Benefit Analyses User Story in the CoCliCo platform helps identify the most cost-effective ways to manage coastal flood risks under different climate scenarios. It evaluates three key adaptation strategies: 
 
         - Protection – Building coastal defences like seawalls. 
         - Retreat – Relocating people and assets away from flood zones. 
@@ -967,6 +1296,10 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         - The web viewer illustrates the proportion of the coastline where each adaptation option is economically optimal by 2150 for each country, based on the economically optimal coastal adaptation pathways for all 41,327 floodplains. 
 
+        ![](./assets/Tool/flood_cba_output1.png){ width=800 .center}
+        ![](./assets/Tool/flood_cba_output2.png){ width=800 .center}
+
+
         ---
 
         **Why Is This Data Important?**
@@ -998,6 +1331,90 @@ User research showed that policymakers need clear, actionable data for flood dir
         Technical users can use the [Workbench](./further_analysis.md) to perform detailed, localized analyses by adjusting variables like flood risks, cost factors, and adaptation options. This allows for tailored assessments of the most cost-effective strategies and the timing of actions at the local scale. 
 
         Users can explore different sea-level rise scenarios, test adaptation measures, and incorporate local data such as infrastructure details to refine their analysis. The Workbench enables deeper insights, helping inform more precise local adaptation strategies.
+
+     === "Damage Costs"
+
+        The Damage Costs User Story in the CoCliCo aim at presenting the direct economical impacts of coastal flooding under different climate scenarios. While many coastal infrastructures are protected today, rising sea levels will increase flood extent and depth, leading to higher damage costs without further adaptation. 
+
+        This tool helps policymakers and planners assess these costs at national, regional, and local levels in order to inform adaptation strategies. It combines the latest sea level projections, European flood hazard data, and infrastructure inventories to provide city-scale estimates of future flood damage. 
+
+        > *"I need to quantify damage costs of infrastructures exposed to flooding and assess how it evolves under different climate change scenarios"*
+
+        **Data Sources**
+
+        Damage costs on infrastructures are calculated by combining three main components: **hazard**, **exposure**, and **vulnerability curves**.  
+
+        - **Hazards**  
+            - Source: CoCliCo project (data producer: IH-Cantabria; available on the CoCliCo STAC Catalog)  
+            - Data: Flood maps (water depth) with or without defences  
+            - Coverage: Hindcast, 2030, 2050, 2100, and 2150  
+            - Scenarios: Permanent flooding, 1-year, 100-year, and 1000-year return periods under multiple SLR scenarios  
+
+        - **Exposure**  
+            - Source: Coastal European Exposure Database (data producer: Institute for Environmental Studies, Vrije Universiteit Amsterdam; available on the CoCliCo STAC Catalog)  
+            - Classes: 11 infrastructure types – Building, Power, Wastewater, Telecom, Oil, Gas, Education, Healthcare, Rail, Road, and Water  
+            - Geometry: Infrastructures represented as **points, lines, polygons, or multipolygons**  
+
+        - **Vulnerability Curves**  
+            - Source: *Physical Vulnerability Database for Critical Infrastructure Hazard Risk Assessments* (data producer: Institute for Environmental Studies, Vrije Universiteit Amsterdam)  
+            - Data: Compilation of published vulnerability curves and associated costs  
+            - Coverage: 102 vulnerability curves linked to 179 cost values  
+            - Purpose: Characterize the **percentage of damage** to infrastructure as a function of **water depth**, differentiated by infrastructure type  
+        
+
+        ![](./assets/Tool/DAM_DATA.png){width=900px .center}
+
+
+        **Methods**
+
+        The damage costs are calculated by intersecting hazard (raster) and exposure (polygons) data layers, and vulnerability curves. First, we overlay the coastal flood hazard map with infrastructure data to obtain an average water height for each infrastructure. Then, based on the category of the infrastructure, we apply the corresponding vulnerability curves (e.g. healthcare, education, railway, etc).  
+
+        For the CoCliCo project, we used 18 different vulnerability curves. Once the damage is determined, the associated cost calculation is carried out: the damage cost is the product of the building's surface area, the percentage of damage, and the maximum damage, based on construction costs. 
+
+        **How to Use the Data**
+        
+        The Damage Cost data can be used to:
+
+        - [x] **Estimate economic impacts**: Quantify the direct financial losses from coastal flooding under different climate and sea-level rise scenarios.  
+        - [x] **Compare across scales**: Assess costs at municipal, regional, and national levels to understand where risks and damages are concentrated.  
+        - [x] **Support planning and investment**: Use damage estimates to prioritize adaptation strategies and allocate resources efficiently.  
+        - [x] **Overlay with exposure data**: Combine with building and infrastructure exposure layers for a more complete risk assessment.  
+        - [x] **Export and refine**: Download datasets for further analysis in the Workbench or other GIS tools.  
+
+        ---
+
+        **Model Outputs**
+        
+        Potential costs can be visualized in different ways: through a map that displays a color gradient based on the total damage cost for each LAU (Local Administrative Unit) across all infrastructures. To do this, the user selects the type of defense, the desired SSP scenario, the time horizon and the return period. The user can also view more details by clicking on a specific LAU. In this case, they can select the defense level, return period, and the category of infrastructure they are interested in. A graph will appear showing the evolution of costs over time, based on the different SSP scenarios. 
+
+        Importantly, the costs presented here are the costs associated to a particular return period. It neither corresponds to the costs associated to a particular event that would affect a specific region, nor to an expected annual damage value that would integrate costs of various return periods.
+
+        ![](./assets/Tool/flood_damage_output.png){ width=800 .center}
+
+        ---
+
+        **Why Is This Data Important?**
+
+        - [x] **Economic justification for adaptation**: Provides tangible cost estimates that can help policymakers argue for timely investments in resilience.  
+        - [x] **Supports strategic prioritization**: Highlights areas where damage costs are projected to be highest, helping decision-makers focus resources.  
+        - [x] **Complements exposure data**: Goes beyond identifying assets at risk by showing the financial implications of flooding.  
+        - [x] **Improves disaster preparedness**: Assists in planning for compensation mechanisms, insurance schemes, and recovery strategies.  
+
+
+        ---
+
+        **Example of use**
+
+        > “National policy makers used the damage costs estimates to get a first order estimate of costs in regions and municipalities and prioritize on adaptation actions and investments in order to maximize the efficiency of public investments in adaptation. While this information can not be used as a single source of information to guide adaptation investments, it provides an element that can be considered together with additional evidence and selection criteria of decision makers”  
+
+    	> “The damage costs estimates at municipal level have been used to identify the potential damage costs in a particular flood plain, allowing to anticipate to what extent existing compensation mechanisms (e.g. insurance) are adequately designed to address loss and damages a now and in the future” 
+
+        ---
+
+        **Limitations**
+
+        One of the main limitations of this method lies in the assumption that infrastructures remain unchanged over time, without considering any construction or destruction of infrastructure. Additionally, the lack of detailed information on certain infrastructures can affect the accuracy of selecting the vulnerability curve, which may lead to variations in the estimated cost. Similarly, the price used is an average price that does not account for specific factors such as the location of the damage or the current local construction costs.  
+
 
 
 
