@@ -14,7 +14,7 @@ dependencies:
   - rioxarray
   - hvplot
   - ipyleaflet
-  - cartopy 
+  - cartopy
   - pyam
   - pathlib
   - dask-geopandas

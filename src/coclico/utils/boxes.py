@@ -1,9 +1,7 @@
 #!/usr/bin/env python
-# coding: utf-8
 
 
 import math
-import pathlib
 from itertools import product, repeat
 
 import geopandas as gpd
@@ -24,7 +22,7 @@ def deg2num(lon_deg: float, lat_deg: float, zoom: int) -> tuple:
     """
 
     lat_rad = math.radians(lat_deg)
-    n = 2.0 ** zoom
+    n = 2.0**zoom
     xtile = int((lon_deg + 180.0) / 360.0 * n)
     ytile = int((1.0 - math.asinh(math.tan(lat_rad)) / math.pi) / 2.0 * n)
     return (xtile, ytile)
@@ -41,7 +39,7 @@ def num2deg(xtile: int, ytile: int, zoom: int) -> tuple:
     Returns:
         tuple: point (longitude, latitude) in WGS 84.
     """
-    n = 2.0 ** zoom
+    n = 2.0**zoom
     lon_deg = xtile / n * 360.0 - 180.0
     lat_rad = math.atan(math.sinh(math.pi * (1 - 2 * ytile / n)))
     lat_deg = math.degrees(lat_rad)
@@ -92,7 +90,7 @@ def zoom2num(zoom: int) -> list:
         list: list with tuples of tile numbers.
     """
     # tiles (zoom level) = 2**zoom * 2**zoom
-    ntiles = 2 ** zoom
+    ntiles = 2**zoom
     tile_arange = np.arange(ntiles)
     return list(product(tile_arange, tile_arange))
 
@@ -123,7 +121,7 @@ def make_boxes(zoom_level, output_crs):
     # Convert the tile coordinates (xtile, ytile) to boxes by deriving the corners.
     # Note, tile2box function is wrapped within lambda function to unpack tuples
     # (xtile, ytile) in map
-    boxes = list(map(lambda xytile: tile2box(*xytile, zoom=zoom_level), tile_numbers))
+    boxes = [tile2box(*xytile, zoom=zoom_level) for xytile in tile_numbers]
 
     # Result from previous function is a list of dictionaries. Here, merge into one dict.
     boxes = {k: v for d in boxes for k, v in d.items()}
@@ -136,6 +134,5 @@ def make_boxes(zoom_level, output_crs):
 
 
 if __name__ == "__main__":
-
     # Set zoom level and generate xtiles and ytiles
     boxes = make_boxes(zoom_level=8, output_crs="epsg:3857")

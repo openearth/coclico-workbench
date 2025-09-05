@@ -1,0 +1,41 @@
+name: Release
+
+on:
+  release:
+    types:
+      - created
+
+permissions:
+  contents: read
+
+jobs:
+  check-package:
+    name: Build & inspect our package.
+    runs-on: ubuntu-latest
+    if: ${{ github.repository }} == 'openearth/coclico-workbench'
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: hynek/build-and-inspect-python-package@v2
+
+  release-pypi:
+    permissions:
+      id-token: write
+      contents: read
+    name: Publish released package to pypi.org
+    environment: release-pypi
+    runs-on: ubuntu-latest
+    needs: check-package
+
+    steps:
+      - name: Download packages built by build-and-inspect-python-package
+        uses: actions/download-artifact@v5
+        with:
+          name: Packages
+          path: dist
+      - name: Upload package to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}

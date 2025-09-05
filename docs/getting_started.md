@@ -11,7 +11,7 @@ Once you've accessed the CoCliCo platform, you'll be greeted with an interactive
 The main interface consists of the following elements:
 
 - **Map Window** – The central area where you can visualize data layers and explore different locations.
-- **Sidebar Menu** – Access to datasets and background layers. Click on the layers you want to activate. 
+- **Sidebar Menu** – Access to datasets and background layers. Click on the layers you want to activate.
 - **Active Data Layers** – Adjust map settings, filters, and toggle visualization options.
 - **Dashboard** - Save your analysis and scenarios in the Dashboard window for further analysis and comparison.
 - **Interactive Pop-ups** – Click on specific locations to display detailed data insights.
@@ -23,7 +23,7 @@ The main interface consists of the following elements:
 To bagin your analysis, activate relevant data layers from the Sidebar Menu. These layers include sea level rise projections, coastal hazards, exposure, adaptation strategies and more.
 
 1. Open a category from the **Sidebar Menu**
-**![Upload an image or GIF showing how to activate layers](assets/Tool/Sidebar.png)** 
+**![Upload an image or GIF showing how to activate layers](assets/Tool/Sidebar.png)**
 2. Toggle the desired layer to display it on the map.
 
 **![Upload an image or GIF showing how to activate layers](assets/Tool/layers.png)**

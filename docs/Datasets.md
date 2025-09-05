@@ -13,11 +13,11 @@ User Stories are ready-made map datasets in the CoCliCo platform. They combine d
 
 User research showed that policymakers need clear, actionable data for flood directives, while urban planners want tools to assess local risks, and where infrastructure managers focus on long-term resilience planning. These insights helped shape User Stories to provide accessible, scenario-driven visualizations for diverse decision-making needs. There are five User Stories: 
 
-1. Inundation distribution during a flood event 
-2. Building Exposure 
-3. Projections of Exposed People 
-4. Damage costs of exposed infrastructures   
-5. Adaptation based on cost-benefit analysis 
+1. Flood Perspectives 
+2. People Exposure 
+3. Building Exposure 
+4. Cost Benefit Analysis
+5. Damage Costs
 
 ---
 
@@ -157,7 +157,7 @@ User research showed that policymakers need clear, actionable data for flood dir
 
 
 
-    === "Extreme Surge Level"
+    === "Future Total Water Levels and Return Periods"
 
         The **Extreme Surge Level (SSL) data layer** provides projections of storm surge levels along the European coastline under different climate scenarios. Storm surges are a critical component of coastal hazards, and understanding how they may evolve in the future is essential for coastal risk assessment and adaptation planning. This dataset is part of the **LISCOAST project** and is based on hydrodynamic modeling and climate projections.
 
@@ -279,7 +279,7 @@ User research showed that policymakers need clear, actionable data for flood dir
 
 
 
-    === "Extreme Sea Level"
+    === "Drivers of Total Water Level"
 
         The **Extreme Sea Level (ESL) data layer** provides projections of total water levels (TWL) along European coastlines under climate change. This dataset combines **mean sea level rise**, **tides**, **storm surges**, and **wave heights** to assess future coastal flood risks. It is part of the **LISCOAST project** and is critical for understanding how climate change will impact coastal hazards.
 
