@@ -16,17 +16,17 @@ The main interface consists of the following elements:
 - **Dashboard** - Save your analysis and scenarios in the Dashboard window for further analysis and comparison.
 - **Interactive Pop-ups** – Click on specific locations to display detailed data insights.
 
-**![Upload an image of the main interface here](assets/Tool/Main.png)**
+**![Upload an image of the main interface here](assets/Tool/gs1.png)**
 
 ### **2. Activate Data Layers**
 
 To bagin your analysis, activate relevant data layers from the Sidebar Menu. These layers include sea level rise projections, coastal hazards, exposure, adaptation strategies and more.
 
 1. Open a category from the **Sidebar Menu**
-**![Upload an image or GIF showing how to activate layers](assets/Tool/Sidebar.png)**
+**![Upload an image or GIF showing how to activate layers](assets/Tool/gs2.png)**
 2. Toggle the desired layer to display it on the map.
 
-**![Upload an image or GIF showing how to activate layers](assets/Tool/layers.png)**
+**![Upload an image or GIF showing how to activate layers](assets/Tool/gs3.png)**
 
 ### **3. Apply Filters**
 
@@ -37,7 +37,7 @@ The platform allows you to refine your analysis using filters such as return per
 3. Select a **Return Period** (e.g., 10-year, 100-year).
 4. The Filters are applied automatically, so go to your **Map Window** and check the changes in the **Data Layer**.
 
-**![Upload a screenshot or video demonstrating filters](assets/Tool/Filters.png)**
+**![Upload a screenshot or video demonstrating filters](assets/Tool/gs4.png)**
 
 ### **4. Interact with data**
 
@@ -45,7 +45,7 @@ The platform allows you to refine your analysis using filters such as return per
 - **Click on a Location** – View detailed data insights through interactive pop-ups.
 - **Compare Layers** – Activate multiple layers to analyze overlapping datasets.
 
-**![Upload a GIF showing map interactions](assets/Tool/Exploring.png)**
+**![Upload a GIF showing map interactions](assets/Tool/gs5.png)**
 
 ### **5. Compare**
 
@@ -55,13 +55,15 @@ Users can save and compare results by adding charts into the **Dashboard Window*
 2. Select **Add to Dashboard** to save it for later.
 3. Compare different locations in the Dashboard window.
 
-**![Upload a video or step-by-step image sequence for exporting](assets/Tool/dashboard.png)**
+**![Upload a video or step-by-step image sequence for exporting](assets/Tool/gs6.png)**
 
 ---
 
 ### **6. Accessing to raw data and examples**
 
 Now that you're familiar with navigating the interface, continue to [Undestanding the Data](Datasets.md) for deeper insights into dataset usage or go to [Further Analysis](further_analysis.md) if you want to create you own experiments with the raw data (Examples included in this section).
+
+**![Upload a photo of more actions](assets/Tool/gs7.png)**
 
 ---
 

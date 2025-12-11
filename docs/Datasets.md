@@ -159,41 +159,47 @@ User research showed that policymakers need clear, actionable data for flood dir
 
     === "Future Total Water Levels and Return Periods"
 
-        The **Extreme Surge Level (SSL) data layer** provides projections of storm surge levels along the European coastline under different climate scenarios. Storm surges are a critical component of coastal hazards, and understanding how they may evolve in the future is essential for coastal risk assessment and adaptation planning. This dataset is part of the **LISCOAST project** and is based on hydrodynamic modeling and climate projections.
+        The **Future Total Water Levels (TWL)** and **Total Water Level Return Periods** data layers estimate how high sea levels may rise during coastal storm events in the future. These projections combine several key components that influence water levels along the coast: 
 
-        > *"Example"*
+        - **Storm surge** (temporary rise in sea level caused by storms) 
+        - **Wave setup** (increase in water level due to breaking waves) 
+        - **Tidal range** (variation in sea level due to tides) 
+        - **Sea Level Rise** (long-term rise including vertical land motion, like subsidence) 
+
+        These layers provide insight into **how extreme total water levels will change over time**—for example, what might be considered a “1-in-100-year” flood today could occur more frequently in the future under climate change. 
+
+        > *“I need to know how high-total water levels could reach along my coast by 2050 or 2100 so I can set safe design levels for infrastructure like sea walls or power stations.”*
 
         **Data Sources**
+        These datasets are based on a combination of: 
+
+        - **Numerical model simulations** for storm surge and wave climate 
+        - **Global tidal models assimilating satellite altimetry** (e.g. TPXO9) to compute the astronomical tide 
+        - **Sea-level rise projections** from IPCC-consistent scenarios 
 
         **Methods**
 
-        The SSL projections are based on:
+        The data represent **extreme total water levels** at **coastal target points** along the European shoreline. They account for the combined effect of multiple flood drivers under different: 
+
+        - **Time horizons**: e.g., 2030, 2050, 2100 
+        - **Emission scenarios**: Shared Socioeconomic Pathways (SSP1-2.6, SSP5-8.5, etc.) 
 
         <div class="grid cards" markdown>
 
-        -   :octicons-check-16:{ .lg .middle } __Hydrodynamic Modeling__
+        -   :octicons-check-16:{ .lg .middle } __Future Total Water Levels Layer__
 
             ---
 
-            The **Delft3D-Flow** model was used to simulate storm surge dynamics.
+            This dataset provides the **total water level values** expected at each coastal point for a given return period, for different scenarios and time horizons. These values represent plausible **design levels** for planning and infrastructure. 
 
-        -   :octicons-check-16:{ .lg .middle } __Climate Forcing__
-
-            ---
-
-            The model was forced by surface wind and atmospheric pressure fields from an **8-member climate model ensemble**.
-
-        -   :octicons-check-16:{ .lg .middle } __Validation__
+        -   :octicons-check-16:{ .lg .middle } __Return Periods Layer__
 
             ---
 
-            The model was validated using data from **110 tidal gauge stations** across Europe, showing good predictive skill (RMSE: 0.06 m to 0.29 m).
+            This dataset provides the **total water level values** expected at each coastal point for a given scenario and time horizon, for different return periods, such as: **1-in-10 years, 1-in-50 years, and 1-in-100 years.** 
 
-        -   :octicons-check-16:{ .lg .middle } __Extreme Value Analysis__
+            These show how often such total water levels might be expected in the future, allowing for better risk assessment and planning. 
 
-            ---
-
-            The **Peak-Over-Threshold (POT) method** was applied to estimate SSL values for different return periods.
 
 
         </div>
@@ -217,165 +223,128 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         ---
 
-        **Return Periods**
-
-        The dataset provides SSL estimates for **eight return periods**, which represent the frequency of extreme events:
-
-        | Return Period (Years) | Description                                                                 |
-        |-----------------------|-----------------------------------------------------------------------------|
-        | **5**                 | Events expected to occur once every 5 years.                               |
-        | **10**                | Events expected to occur once every 10 years.                              |
-        | **20**                | Events expected to occur once every 20 years.                              |
-        | **50**                | Events expected to occur once every 50 years.                              |
-        | **100**               | Events expected to occur once every 100 years.                             |
-        | **200**               | Events expected to occur once every 200 years.                             |
-        | **500**               | Events expected to occur once every 500 years.                             |
-        | **1000**              | Events expected to occur once every 1000 years.                            |
-
-        ---
-
         **Geographic Coverage**
-        The dataset covers the **European coastline**, with detailed projections for:
 
-        <div class="grid cards" markdown>
-
-        - **Northern Europe**  
-        *Areas north of 50°N, where significant increases in SSL are projected, especially under RCP8.5.*
-
-        - **Southern Europe**  
-        *Areas south of 50°N, where minimal changes or small decreases in SSL are projected, except under RCP8.5 towards the end of the century.*
+        - Entire **European coastline**, including EU countries and the UK 
+        - Coastal **target points** represent strategic sampling locations for local flood modelling 
 
         </div>
 
         ---
 
-        **How to Use the Extreme Surge Level Data**
+        **How to Use the Future Total Water Levels and Return Periods Data**
 
-        - [x] **Scenario Selection**: Choose from the available scenarios (Historical, RCP4.5, RCP8.5) to explore how storm surge levels may change under different climate futures.
-        - [x] **Return Period Selection**: Select a return period (e.g., 5, 10, 20, 50, 100, 200, 500, or 1000 years) to assess the frequency and magnitude of extreme storm surge events.
-        - [x] **Geographic Analysis**: Zoom in on specific regions (e.g., Northern or Southern Europe) to see how storm surge levels may vary across the coastline.
+        - [x] **Design coastal infrastructure**: Use future TWL data to set minimum elevation or structural thresholds for sea defences, ports, and buildings 
+        - [x] **Inform flood hazard mapping**: Identify which coastal areas are most at risk under future sea level and storm conditions 
+        - [x] **Set emergency thresholds**: Prepare response plans based on likely flood heights in future storms 
+        - [x] **Support long-term adaptation**: Evaluate how flood risk will evolve under different emissions scenarios and timeframes 
+        - [x] **Use return periods for planning**: Determine how often extreme flood levels may occur in the future to inform building codes or insurance strategies 
 
         ---
 
         **Model Outputs**
 
+        ![](./assets/Tool/FUTURE TWL.png){ width=900 .center}
+
         ---
 
         **Why Is This Data Important?**
 
-        - [x] **Coastal Risk Assessment**: The SSL data is critical for assessing the risks of coastal flooding and erosion, especially in areas prone to extreme storm surges.
-        - [x] **Adaptation Planning**: By understanding how storm surge levels may change in the future, coastal planners and policymakers can develop strategies to protect communities, infrastructure, and ecosystems.
-        - [x] **Combined Effects**: The dataset highlights the combined effects of **relative sea-level rise (RSLR)** and **storm surge levels**, which can significantly increase coastal hazards, particularly under high-emission scenarios like RCP8.5.
+        These layers support **evidence-based adaptation planning** by providing clear, localized estimates of **how sea levels and storm-driven floods will change** over time. They are crucial for: 
+
+        - [x] **Avoiding under-designing infrastructure** in future high-risk zones 
+        - [x] **Comparing today’s flood risks with future conditions** 
+        - [x] **Understanding how different climate pathways (e.g. low vs high emissions) will impact coastal flood hazards** 
 
         ---
 
         **Example of use**
 
-        > *"Example"*
+        > *“A regional planner working on the future of a coastal city used the Total Water Levels Return Period dataset to identify that the city’s current flood defence—designed for a 1-in-100-year event—will be overtopped more frequently by 2100 under high emissions. This helped secure funding for upgrades, ensuring the city remains protected against more frequent and intense flooding.”* 
 
         ---
 
         **Further Analysis**
+        The values provided here correspond to the best fit. However, it is also important to consider the uncertainty associated with extreme-value modeling when interpreting return levels. For further discussion of this issue, more details can be found in Cotrim et al., 2025. 
 
 
 
     === "Drivers of Total Water Level"
 
-        The **Extreme Sea Level (ESL) data layer** provides projections of total water levels (TWL) along European coastlines under climate change. This dataset combines **mean sea level rise**, **tides**, **storm surges**, and **wave heights** to assess future coastal flood risks. It is part of the **LISCOAST project** and is critical for understanding how climate change will impact coastal hazards.
+        The *Drivers of Future Total Water Levels* data layer decomposes the contributing components of extreme coastal water levels under future climate scenarios. It shows **representative statistics** of individual physical drivers—**storm surge, wave height, tidal range, and sea-level rise (SLR)**—to the projected *Total Water Level (TWL)* at specific coastal locations. 
 
-        > *"Example"*
+        Understanding the *relative influence* of each driver helps identify which processes dominate flood risk in different regions and informs targeted adaptation measures. 
+
+        > *“I want to understand whether sea-level rise or storm surges will be the dominant factor increasing flood risk in my region by 2100, to design more effective coastal defences.”*
 
         ---
 
         **Data Sources**
 
+        This dataset is derived from: 
+
+        - **Numerical model simulations** for storm surge and wave climate 
+        - **Global tidal models assimilating satellite altimetry** (e.g. TPXO9) to compute the astronomical tide 
+        - **Sea-level rise projections** from IPCC-consistent scenarios 
+
+        Each component is statistically analysed and summarised at key coastal points across Europe. 
+
         ---
 
         **Methods**
 
+        The data represent relevant statistics of each TWL driver, summarised at coastal "target points". For each point, the following indicators are provided: 
 
-        **Climate Scenarios**
-        The dataset includes projections for two climate scenarios:
+        - ** Mean significant wave height (Hs)** – captures wave climate mean conditions 
+        - ** 99th percentile of storm surge level** – represents extreme storm surge events 
+        - ** 50th percentile of sea-level rise (SLR)** – median projection of SLR 
+        - ** Mean tidal range** – average difference between high and low tide 
 
-        <div class="grid cards" markdown>
-
-        - **RCP4.5**  
-        *A medium-emission scenario where global temperatures rise moderately.*
-
-        - **RCP8.5**  
-        *A high-emission scenario where global temperatures rise significantly.*
-
-
-        </div>
-
-        ---
-
-        **Return Periods**
-        The dataset estimates extreme sea levels for **eight return periods**, representing the frequency of extreme events:
-
-        | Return Period (Years) | Description                                                                 |
-        |-----------------------|-----------------------------------------------------------------------------|
-        | **5**                 | Events expected once every 5 years.                                        |
-        | **10**                | Events expected once every 10 years.                                       |
-        | **20**                | Events expected once every 20 years.                                       |
-        | **50**                | Events expected once every 50 years.                                       |
-        | **100**               | Events expected once every 100 years.                                      |
-        | **200**               | Events expected once every 200 years.                                      |
-        | **500**               | Events expected once every 500 years.                                      |
-        | **1000**              | Events expected once every 1000 years.                                     |
-
-        ---
-
-        **Components of Extreme Sea Levels**
-
-        <div class="grid cards" markdown>
-
-        - **Total Water Level (TWL)**  
-        *Combines mean sea level (MSL), tides, storm surges, and wave setup.*
-
-        - **Episodic Extreme Water Level (EEWL)**  
-        *Includes extreme storm surge levels and wave heights during episodic events (e.g., storms).*
-
-        </div>
+        These are estimated under future scenarios and time periods (e.g., 2050, 2100), allowing a component-by-component comparison of influence across Europe’s coastline. 
 
         ---
 
         **Geographic Coverage**
-        The dataset covers **Europe’s coastline**, with regional projections highlighting:
-
-        - **North Sea**: Highest projected increase in ESLs (up to 1 m under RCP8.5 by 2100).
-        - **Baltic Sea & UK/Ireland Atlantic Coasts**: Significant increases in ESLs.
-        - **Southern Europe**: Stable or decreasing extremes, except for Portugal and the Gulf of Cadiz.
+        The dataset covers **coastal target points** along the **entire European coastline**, including EU countries and the United Kingdom. Each point represents a coastal segment with distinct hydrodynamic conditions.
 
         ---
 
         **How to Use the Extreme Sea Level Data**
 
-        - [x] **Scenario Selection**: Choose between **RCP4.5** (moderate warming) and **RCP8.5** (high warming) to explore future risks.
-        - [x] **Return Period Selection**: Select a return period (e.g., 100-year event) to assess the magnitude and frequency of extreme sea levels.
-        - [x] **Regional Analysis**: Focus on specific regions (e.g., North Sea, Southern Europe) to understand local impacts.
+        - [x] **Assess Local Drivers**: Identify whether storm surge, waves, tides, or sea-level rise contribute most to future flood risk in a specific area 
+        - [x] **Compare Regions**: Understand geographic variability in TWL drivers to support regional adaptation planning 
+        - [x] **Model Inputs**: Use component values to inform flood models or hybrid hazard simulations 
+        - [x] **Design Criteria**: Tailor flood protection designs based on the dominant local driver (e.g., wave-dominated vs surge-dominated coasts) 
+        - [x] **Support Stakeholder Dialogue**: Communicate clearly why specific interventions (e.g., breakwaters vs dikes) are necessary in different areas 
 
         ---
 
         **Model Outputs**
 
+        ![](./assets/Tool/DRIVERS TWL.png){ width=900 .center}
+
         ---
 
         **Why Is This Data Important?**
 
-        - [x] **Coastal Flood Risk**: ESL projections help identify areas most vulnerable to flooding, particularly under high-emission scenarios.
-        - [x] **Adaptation Planning**: Supports decision-making for coastal defenses, land-use planning, and emergency preparedness.
-        - [x] **Combined Effects**: Highlights how **relative sea level rise (RSLR)**, storm surges, and waves interact to amplify risks.
+        While total future flood levels are essential for risk planning, knowing *which processes drive those levels* is equally critical. This data layer: 
+
+        - [x] Enables **mechanistic understanding** of coastal hazards 
+        - [x] Supports **tailored adaptation solutions** based on local conditions 
+        - [x] Helps identify **coastal segments where sea-level rise may be the main future risk,** versus those where **storms or waves** dominate 
+        - [x] Provides inputs for **dynamic modelling and hybrid flood simulations** that consider interacting drivers 
 
         --- 
 
         **Example of use**
 
-        > *"Example"* 
+        > *“A coastal engineer working on adaptation planning for the Dutch coastline used the Drivers of TWL data to determine that in their region, future total water levels were increasingly dominated by tidal range and sea-level rise, while wave height and storm surge level remained constant. This informed a dual approach of reinforcing flood barriers and elevating critical infrastructure, with less emphasis on wave attenuation measures.”* 
 
         ---
 
         **Further Analysis**
+        
+        The statistics provided here offer a broad view of the role played by the different components of the total water level. It is important to consider the possible contribution of extreme waves, storm surge events associated with other percentiles, and tidal variability. A more detailed analysis of the contributions of the different components to the TWL can be found in Cotrim et al., 2025. 
 
 
 ---
@@ -525,7 +494,7 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         **Further Analysis**
 
-=== "Flood Maps"
+    === "Flood Maps"
 
         The Flood Maps Data Layer provides clear, reliable visualizations of flood maps for identifying coastal areas at risk from flooding due to extreme weather events and sea-level rise. Besides risk identification and planning, the spatial distribution of coastal flooding projections is key to guide well-informed decisions and enhance community and stakeholder preparedness.
 
@@ -536,7 +505,7 @@ User research showed that policymakers need clear, actionable data for flood dir
         **Data Sources**
 
         Topographic data used to represent the European floodplain terrain included a 25-m resolution digital elevation model (DEM) (Copernicus, 2019), the corresponding coastline used to define boundary conditions (EEA, 2017), and land-use information (Witjes et al., 2022), which was translated into Manning's roughness coefficients.
-       
+    
         Marine dynamic forcing conditions were obtained using two approaches for 1 km-spaced coastal points along the European coastline. For permanent inundation scenarios, input data were derived from the CoCliCo Regional Sea-Level Rise (SLR) Projections. For episodic flood events, input data were obtained from extreme total water level (TWL) return level scenarios based on a reconstructed TWL hindcast. This hindcast consisted of the astronomical tide from the latest version of the TPXO database, storm surge simulated using the ROMS model (Shchepetkin & McWilliams, 2005), and wave setup estimated from wave conditions in a downscaled wave hindcast generated with the WaveWatch III model (Tolman, 2009).
         
         Additionally, the dataset on protection standards around Europe’s coast developed by Vrije Universiteit Amsterdam was incorporated into the flood maps in a post-processing step (van Maanen et al., 2024). 
@@ -1332,7 +1301,10 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         Users can explore different sea-level rise scenarios, test adaptation measures, and incorporate local data such as infrastructure details to refine their analysis. The Workbench enables deeper insights, helping inform more precise local adaptation strategies.
 
-     === "Damage Costs"
+
+
+    === "Damage Costs"
+
 
         The Damage Costs User Story in the CoCliCo aim at presenting the direct economical impacts of coastal flooding under different climate scenarios. While many coastal infrastructures are protected today, rising sea levels will increase flood extent and depth, leading to higher damage costs without further adaptation. 
 
