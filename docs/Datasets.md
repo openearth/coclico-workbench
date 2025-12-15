@@ -1,7 +1,7 @@
 # **Key Layers, Sources, and How to Interpret Them**
 
 
-## **Data Layers in the CoCliCo platform** test
+## **Data Layers in the CoCliCo platform** 
 
 In the CoCliCo Platform, each data layer is the result of modeling and transforming various datasets from the STAC (SpatioTemporal Asset Catalog) to generate the final geospatial data layers. The platform is organized into five main categories: Sea Levels, Natural Hazards, Exposure and Vulnerability, Risk and Adaptation, and Background Layers, each containing its own specific data layers. Keep reading to discover which datasets are used to create the data layers in the platform.
 
@@ -348,7 +348,9 @@ User research showed that policymakers need clear, actionable data for flood dir
 
 
 ---
+
 ## **Natural Hazards**
+
 
 
 ???+ "Data Layers & User Stories"
@@ -493,6 +495,7 @@ User research showed that policymakers need clear, actionable data for flood dir
         The maps without defences (undefended maps) provide the upper limit of coastal flooding. The maps with defences (defended maps) provide the lower limit of coastal flooding. Importantly, defended maps should be treated with caution as they assume that the whole province is protected with the same level of protection. 
 
         **Further Analysis**
+
 
     === "Flood Maps"
 
@@ -809,6 +812,8 @@ User research showed that policymakers need clear, actionable data for flood dir
 ---
 
 ## **Exposure and Vulnerability**
+
+
 
 ???+ "Data Layers & User Stories"
 
@@ -1169,12 +1174,11 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         To account for the full range of uncertainty in population development and associated future exposure to coastal flooding, it’s useful to explore other socioeconomic scenarios beyond the integrated ones. While these additional estimates aren’t included directly in the platform, they can be explored in the Workbench by combining various climate and socioeconomic scenarios at different spatial scales.
 
-
-
-
 ---
 
 ## **Risk and Adaptation**
+
+
 
 ???+ "Data Layers & User Stories"
 
