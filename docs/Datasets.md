@@ -353,7 +353,7 @@ User research showed that policymakers need clear, actionable data for flood dir
 
 
 
-???+ "Data Layers & User Stories"
+???+  "Data Layers & User Stories"
 
     === "Flood Perspectives"
 
@@ -815,7 +815,7 @@ User research showed that policymakers need clear, actionable data for flood dir
 
 
 
-???+ "Data Layers & User Stories"
+???+  "Data Layers & User Stories"
 
     === "Building Exposure"
 
@@ -1180,7 +1180,7 @@ User research showed that policymakers need clear, actionable data for flood dir
 
 
 
-???+ "Data Layers & User Stories"
+???+  "Data Layers & User Stories"
 
     === "Cost-Benefit Analyses"
 
@@ -1391,6 +1391,7 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         One of the main limitations of this method lies in the assumption that infrastructures remain unchanged over time, without considering any construction or destruction of infrastructure. Additionally, the lack of detailed information on certain infrastructures can affect the accuracy of selecting the vulnerability curve, which may lead to variations in the estimated cost. Similarly, the price used is an average price that does not account for specific factors such as the location of the damage or the current local construction costs.  
 
+---
 
 
 
