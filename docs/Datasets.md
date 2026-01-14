@@ -716,7 +716,7 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         </div>
 
-        ![](docs/assets/Tool/shoreline.png){ width=800 .center}
+        ![](./assets/Tool/shoreline.png){ width=800 .center}
 
         **Methods**
 
@@ -764,7 +764,7 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         The CoasTER database considers the current situation around Europe. Its attributes can be queried for coastal analysis.
         
-        ![](docs/assets/Tool/shoreline_output.jpg){ width=800 .center} 
+        ![](./assets/Tool/shoreline_output.jpg){ width=800 .center} 
 
         ---
 
@@ -852,7 +852,7 @@ User research showed that policymakers need clear, actionable data for flood dir
         - [x] Visualizations display building exposure at decadal timesteps from 2030 to 2150 for three SSPs scenarios and one high-end scenario.
         - [x] Interactive features allow scenario comparisons and data downloads for local and regional decision-making.
 
-        ![](docs/assets/Tool/building_output.png){ width=800 .center}
+        ![](./assets/Tool/building_output.png){ width=800 .center}
 
         ---
 
@@ -938,7 +938,7 @@ User research showed that policymakers need clear, actionable data for flood dir
         - [x] Visualizations display gridded population projections for the years 2010, 2030, 2050 and 2100 for five integrated scenarios (No SLR-SSP2, SSP1-2.6, SSP2-4.5, SSP5-8.5 and one high-end scenario with SSP5).
         - [x] Interactive features allow scenario comparisons and data downloads for local to national decision-making.
 
-        ![](docs/assets/Tool/people_output.png){ width=800 .center}
+        ![](./assets/Tool/people_output.png){ width=800 .center}
 
         ---
 
@@ -1068,13 +1068,13 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         ***Figure 1**: Building exposure*
 
-        ![](docs/assets/Tool/ci_output.png){ width=800 .center}
+        ![](./assets/Tool/ci_output.png){ width=800 .center}
 
         The critical infrastructure layer can also be overlayed with the flood maps. Figure 2 displays the flood depth around Couarde-sur-Mer (FR) assuming no protection standards, SSP5, for 2100 in combination to the infrastructure network.
         
         ***Figure 2**: Critical infrastructure exposure*
 
-        ![](docs/assets/Tool/ci_output2.png){ width=800 .center}
+        ![](./assets/Tool/ci_output2.png){ width=800 .center}
 
         ---
 
@@ -1267,8 +1267,8 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         - The web viewer illustrates the proportion of the coastline where each adaptation option is economically optimal by 2150 for each country, based on the economically optimal coastal adaptation pathways for all 41,327 floodplains. 
 
-        ![](docs/assets/Tool/cba_output1.png){ width=800 .center}
-        ![](docs/assets/Tool/cba_output2.png){ width=800 .center}
+        ![](./assets/Tool/cba_output1.png){ width=800 .center}
+        ![](./assets/Tool/cba_output2.png){ width=800 .center}
 
 
         ---
@@ -1363,7 +1363,7 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         Importantly, the costs presented here are the costs associated to a particular return period. It neither corresponds to the costs associated to a particular event that would affect a specific region, nor to an expected annual damage value that would integrate costs of various return periods.
 
-        ![](docs/assets/Tool/damage_output.png){ width=800 .center}
+        ![](./assets/Tool/damage_output.png){ width=800 .center}
 
         ---
 
