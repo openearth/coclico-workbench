@@ -115,7 +115,6 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         **How to Use the Sea Level Rise Projections**
 
-
         - [x]  **Scenario Selection**: Choose from the available scenarios (SSP1-2.6, SSP2-4.5, SSP5-8.5, and high-end) to explore different future pathways of sea-level rise.
         - [x]  **Ensemble Selection**: Select between the high (MSL_h), median (MSL_m), and low (MSL_l) ensembles to understand the range of possible outcomes.
         - [x]  **Time Horizon**: View projections for specific decades (e.g., 2030, 2040, 2050, etc.) to assess how sea levels may change over time.
@@ -517,6 +516,7 @@ User research showed that policymakers need clear, actionable data for flood dir
         # European Coastal Flood Modelling Process
 
         ### (1) Definition of Floodplain and Meshes
+        
         - The European floodplain was defined as **coastal regions located between 0 and 15 m elevation** that are hydraulically connected to the sea.  
         - This floodplain was segmented into **22 flood units**, from which **topographic meshes** were generated.  
         - Each mesh is composed of **irregular cells (impact zones)** containing **sub-element topography** (impact cells with 25 m resolution inherited from the DEM).  
@@ -530,9 +530,11 @@ User research showed that policymakers need clear, actionable data for flood dir
         ### (2) Hydrograph Construction
 
         **Permanent inundation scenarios**
+
         - Hydrographs were created by combining **sea-level rise (SLR)** with the **mean spring high tide** at each coastal point.  
 
         **Episodic flooding scenarios**
+
         - Hydrographs were based on:
         - **TWL (Total Water Level) extreme value analysis**.  
         - A **storm duration function** for TWL storms.  
@@ -545,12 +547,14 @@ User research showed that policymakers need clear, actionable data for flood dir
         - Foreshore slopes estimated via **Sunamura (1984)**.  
 
         **Extreme event detection**
+
         - **Peak Over Threshold (POT) method** applied to identify TWL extreme events.  
         - Threshold chosen to yield ~**2 events per year**.  
         - **Return values** of TWL estimated by fitting extremes to an **exponential model**.  
         - **Storm durations** for return-period events estimated from individual POT events.  
 
         **Combined scenarios**
+
         - Future episodic flooding scenarios were obtained by **superimposing relative SLR** onto hydrographs generated from TWL return values (hindcast period).  
 
         ---
@@ -615,6 +619,7 @@ User research showed that policymakers need clear, actionable data for flood dir
         **Components of Flood Maps**
 
         To estimate flood extent and depth under various scenarios for the entire coast of Europe, these maps integrate:  
+
         - [x] Elevation data  
         - [x] Manning roughness information inferred from land cover data  
         - [x] Hydrodynamic simulations  
@@ -849,6 +854,7 @@ User research showed that policymakers need clear, actionable data for flood dir
         ---
 
         **Model Outputs**
+
         - [x] Visualizations display building exposure at decadal timesteps from 2030 to 2150 for three SSPs scenarios and one high-end scenario.
         - [x] Interactive features allow scenario comparisons and data downloads for local and regional decision-making.
 
@@ -856,7 +862,8 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         ---
 
-        **Why is this Data Important?**
+        **Why is this Data Important?** 
+
         - [x] **Resilience planning**: Identifies hotspots of flood risk to guide adaptation strategies.  
         - [x] **Policy support**: Informs compliance with EU and national flood directives.  
         - [x] **Investment prioritization**: Helps authorities and planners focus resources on the most vulnerable areas.  
@@ -924,6 +931,7 @@ User research showed that policymakers need clear, actionable data for flood dir
         **How to Use the People Exposure data**
         
         The Exposed Population data can be used to:  
+
         - [x] **Explore current and future exposure**: See how many people are projected to be affected by coastal flooding under different climate and socioeconomic scenarios.  
         - [x] **Compare scenarios**: Analyze differences across SSPs, defence levels, and return periods (e.g., 100-year vs. 1000-year events).  
         - [x] **Zoom into multiple scales**: View projections at national, NUTS2, and LAU levels for both broad and detailed insights.  
@@ -1035,20 +1043,24 @@ User research showed that policymakers need clear, actionable data for flood dir
         ### Methods
 
         1. **Data Extraction**  
+
         - Critical infrastructure subsystems from **OSM**.  
         - Buildings from **EUBUCCO** (EU + UK coverage).  
 
         2. **Attribute Completion**  
+
         - Missing OSM attributes filled using a **Random Forest algorithm**.  
         - Example: If road attributes (e.g., maximum speed, number of lanes) are missing, values are inferred from similar road segments.  
 
         3. **Spatial Refinement**  
+
         - Assets and buildings **clipped to the coastal zone**.  
         - Subdivided by **Local Administrative Units (LAU)** for greater granularity.  
 
         ---
 
         ### Geographic Coverage
+
         - Coastal **LAUs (municipality level)** within the **European Union** and the **United Kingdom**.  
 
         ---
@@ -1068,8 +1080,7 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         ***Figure 1**: Building exposure*
 
-        ![](./assets/Tool/CBA_DATA.png){ width=900 .center}
-        ![](./assets/Tool/ci_output.png){ width=900 .center}
+        ![](./assets/Tool/ci_output.png){ width=800 .center}
 
         The critical infrastructure layer can also be overlayed with the flood maps. Figure 2 displays the flood depth around Couarde-sur-Mer (FR) assuming no protection standards, SSP5, for 2100 in combination to the infrastructure network.
         
@@ -1237,15 +1248,15 @@ User research showed that policymakers need clear, actionable data for flood dir
         <div class="grid cards" markdown>
 
         - **Protection**  
-        *Raising coastal defenses.*
+            *Raising coastal defenses.*
         - **Retreat**  
             *Managed withdrawal from vulnerable areas.*
         - **Accommodation**  
             *Implementing flood-proofing measures.*
         - **Protection & Retreat**  
-        *A combined strategy where both approaches are efficient.*
+            *A combined strategy where both approaches are efficient.*
         - **No Adaptation**  
-        *Areas where adaptation measures are deemed inefficient.*
+            *Areas where adaptation measures are deemed inefficient.*
 
         </div>
 
@@ -1320,17 +1331,20 @@ User research showed that policymakers need clear, actionable data for flood dir
         Damage costs on infrastructures are calculated by combining three main components: **hazard**, **exposure**, and **vulnerability curves**.  
 
         - **Hazards**  
+
             - Source: CoCliCo project (data producer: IH-Cantabria; available on the CoCliCo STAC Catalog)  
             - Data: Flood maps (water depth) with or without defences  
             - Coverage: Hindcast, 2030, 2050, 2100, and 2150  
             - Scenarios: Permanent flooding, 1-year, 100-year, and 1000-year return periods under multiple SLR scenarios  
 
         - **Exposure**  
+
             - Source: Coastal European Exposure Database (data producer: Institute for Environmental Studies, Vrije Universiteit Amsterdam; available on the CoCliCo STAC Catalog)  
             - Classes: 11 infrastructure types – Building, Power, Wastewater, Telecom, Oil, Gas, Education, Healthcare, Rail, Road, and Water  
             - Geometry: Infrastructures represented as **points, lines, polygons, or multipolygons**  
 
         - **Vulnerability Curves**  
+
             - Source: *Physical Vulnerability Database for Critical Infrastructure Hazard Risk Assessments* (data producer: Institute for Environmental Studies, Vrije Universiteit Amsterdam)  
             - Data: Compilation of published vulnerability curves and associated costs  
             - Coverage: 102 vulnerability curves linked to 179 cost values  
