@@ -1090,26 +1090,34 @@ The dataset covers <strong>coastal target points</strong> along the <strong>enti
 </ul>
 <hr />
 <h3 id="2-hydrograph-construction">(2) Hydrograph Construction</h3>
-<p><strong>Permanent inundation scenarios</strong>
-- Hydrographs were created by combining <strong>sea-level rise (SLR)</strong> with the <strong>mean spring high tide</strong> at each coastal point.  </p>
-<p><strong>Episodic flooding scenarios</strong>
-- Hydrographs were based on:
-- <strong>TWL (Total Water Level) extreme value analysis</strong>.<br />
-- A <strong>storm duration function</strong> for TWL storms.<br />
-- TWL hindcast reconstructed by summing:
-- Astronomical tide<br />
-- Storm surge<br />
-- Wave setup<br />
-- Wave setup:
-- Computed using the semi-empirical formulation of <strong>Stockdon et al. (2006)</strong>.<br />
-- Foreshore slopes estimated via <strong>Sunamura (1984)</strong>.  </p>
-<p><strong>Extreme event detection</strong>
-- <strong>Peak Over Threshold (POT) method</strong> applied to identify TWL extreme events.<br />
-- Threshold chosen to yield ~<strong>2 events per year</strong>.<br />
-- <strong>Return values</strong> of TWL estimated by fitting extremes to an <strong>exponential model</strong>.<br />
-- <strong>Storm durations</strong> for return-period events estimated from individual POT events.  </p>
-<p><strong>Combined scenarios</strong>
-- Future episodic flooding scenarios were obtained by <strong>superimposing relative SLR</strong> onto hydrographs generated from TWL return values (hindcast period).  </p>
+<p><strong>Permanent inundation scenarios</strong></p>
+<ul>
+<li>Hydrographs were created by combining <strong>sea-level rise (SLR)</strong> with the <strong>mean spring high tide</strong> at each coastal point.  </li>
+</ul>
+<p><strong>Episodic flooding scenarios</strong></p>
+<ul>
+<li>Hydrographs were based on:</li>
+<li><strong>TWL (Total Water Level) extreme value analysis</strong>.  </li>
+<li>A <strong>storm duration function</strong> for TWL storms.  </li>
+<li>TWL hindcast reconstructed by summing:</li>
+<li>Astronomical tide  </li>
+<li>Storm surge  </li>
+<li>Wave setup  </li>
+<li>Wave setup:</li>
+<li>Computed using the semi-empirical formulation of <strong>Stockdon et al. (2006)</strong>.  </li>
+<li>Foreshore slopes estimated via <strong>Sunamura (1984)</strong>.  </li>
+</ul>
+<p><strong>Extreme event detection</strong></p>
+<ul>
+<li><strong>Peak Over Threshold (POT) method</strong> applied to identify TWL extreme events.  </li>
+<li>Threshold chosen to yield ~<strong>2 events per year</strong>.  </li>
+<li><strong>Return values</strong> of TWL estimated by fitting extremes to an <strong>exponential model</strong>.  </li>
+<li><strong>Storm durations</strong> for return-period events estimated from individual POT events.  </li>
+</ul>
+<p><strong>Combined scenarios</strong></p>
+<ul>
+<li>Future episodic flooding scenarios were obtained by <strong>superimposing relative SLR</strong> onto hydrographs generated from TWL return values (hindcast period).  </li>
+</ul>
 <hr />
 <h3 id="3-coastal-flood-simulations">(3) Coastal Flood Simulations</h3>
 <ul>
@@ -1217,11 +1225,13 @@ The dataset covers <strong>coastal target points</strong> along the <strong>enti
 <p><strong>Ensembles</strong></p>
 <p>Data is computed for seven statistical ensembles (1st, 5th, 17th, 50th, 83rd, 95th, and 99th percentiles) at two key timeframes: <strong>2050 and 2100</strong>. The projections stem from the <strong>LISCOAST project</strong>, a comprehensive study of coastal dynamics under climate change.</p>
 <p><strong>Components of Flood Maps</strong></p>
-<p>To estimate flood extent and depth under various scenarios for the entire coast of Europe, these maps integrate:<br />
-- [x] Elevation data<br />
-- [x] Manning roughness information inferred from land cover data<br />
-- [x] Hydrodynamic simulations<br />
-- [x] Climate information (hindcast and projections)   </p>
+<p>To estimate flood extent and depth under various scenarios for the entire coast of Europe, these maps integrate:  </p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Elevation data  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Manning roughness information inferred from land cover data  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Hydrodynamic simulations  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Climate information (hindcast and projections)   </li>
+</ul>
 <hr />
 <p><strong>How to Use the Flood Maps Data</strong></p>
 <ul class="task-list">
@@ -1386,16 +1396,20 @@ EEA/Eurosion (EEA, 2004); interpretation of World Imagery / Google Earth (Esri, 
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Export and analyze</strong>: Download exposure maps or raw data for detailed local analysis in the Workbench or external GIS tools.  </li>
 </ul>
 <hr />
-<p><strong>Model Outputs</strong>
-- [x] Visualizations display building exposure at decadal timesteps from 2030 to 2150 for three SSPs scenarios and one high-end scenario.
-- [x] Interactive features allow scenario comparisons and data downloads for local and regional decision-making.</p>
+<p><strong>Model Outputs</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Visualizations display building exposure at decadal timesteps from 2030 to 2150 for three SSPs scenarios and one high-end scenario.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Interactive features allow scenario comparisons and data downloads for local and regional decision-making.</li>
+</ul>
 <p><img alt="" class="center" src="../assets/Tool/building_output.png" width="800" /></p>
 <hr />
-<p><strong>Why is this Data Important?</strong>
-- [x] <strong>Resilience planning</strong>: Identifies hotspots of flood risk to guide adaptation strategies.<br />
-- [x] <strong>Policy support</strong>: Informs compliance with EU and national flood directives.<br />
-- [x] <strong>Investment prioritization</strong>: Helps authorities and planners focus resources on the most vulnerable areas.<br />
-- [x] <strong>Community safety</strong>: Ensures critical buildings and neighborhoods remain protected as sea levels rise.  </p>
+<p><strong>Why is this Data Important?</strong> </p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Resilience planning</strong>: Identifies hotspots of flood risk to guide adaptation strategies.  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Policy support</strong>: Informs compliance with EU and national flood directives.  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Investment prioritization</strong>: Helps authorities and planners focus resources on the most vulnerable areas.  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Community safety</strong>: Ensures critical buildings and neighborhoods remain protected as sea levels rise.  </li>
+</ul>
 <hr />
 <p><strong>Example of use</strong></p>
 <blockquote>
@@ -1440,12 +1454,14 @@ EEA/Eurosion (EEA, 2004); interpretation of World Imagery / Google Earth (Esri, 
 <p>These population projections are combined with flood projections based on the integrated climate and socioeconomic scenarios to assess how many people are exposed to coastal flooding. The population and flood projections are aligned to ensure they match in both projection and resolution, allowing for accurate calculation of exposed populations at the Local Administrative Units (LAUs) level in coastal areas. These results are then summarized at smaller spatial levels. </p>
 <hr />
 <p><strong>How to Use the People Exposure data</strong></p>
-<p>The Exposed Population data can be used to:<br />
-- [x] <strong>Explore current and future exposure</strong>: See how many people are projected to be affected by coastal flooding under different climate and socioeconomic scenarios.<br />
-- [x] <strong>Compare scenarios</strong>: Analyze differences across SSPs, defence levels, and return periods (e.g., 100-year vs. 1000-year events).<br />
-- [x] <strong>Zoom into multiple scales</strong>: View projections at national, NUTS2, and LAU levels for both broad and detailed insights.<br />
-- [x] <strong>Overlay with other layers</strong>: Combine with sea-level rise or exposure datasets for a more complete picture of coastal risk.<br />
-- [x] <strong>Export and analyze further</strong>: Download data and maps for advanced analysis in the Workbench or other GIS platforms.  </p>
+<p>The Exposed Population data can be used to:  </p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Explore current and future exposure</strong>: See how many people are projected to be affected by coastal flooding under different climate and socioeconomic scenarios.  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Compare scenarios</strong>: Analyze differences across SSPs, defence levels, and return periods (e.g., 100-year vs. 1000-year events).  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Zoom into multiple scales</strong>: View projections at national, NUTS2, and LAU levels for both broad and detailed insights.  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Overlay with other layers</strong>: Combine with sea-level rise or exposure datasets for a more complete picture of coastal risk.  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Export and analyze further</strong>: Download data and maps for advanced analysis in the Workbench or other GIS platforms.  </li>
+</ul>
 <hr />
 <p><strong>Model Outputs</strong></p>
 <ul class="task-list">
@@ -1543,22 +1559,30 @@ EEA/Eurosion (EEA, 2004); interpretation of World Imagery / Google Earth (Esri, 
 <hr />
 <h3 id="methods_1">Methods</h3>
 <ol>
-<li><strong>Data Extraction</strong>  </li>
-<li>Critical infrastructure subsystems from <strong>OSM</strong>.  </li>
+<li>
+<p><strong>Data Extraction</strong>  </p>
+</li>
+<li>
+<p>Critical infrastructure subsystems from <strong>OSM</strong>.  </p>
+</li>
 <li>
 <p>Buildings from <strong>EUBUCCO</strong> (EU + UK coverage).  </p>
 </li>
 <li>
 <p><strong>Attribute Completion</strong>  </p>
 </li>
-<li>Missing OSM attributes filled using a <strong>Random Forest algorithm</strong>.  </li>
+<li>
+<p>Missing OSM attributes filled using a <strong>Random Forest algorithm</strong>.  </p>
+</li>
 <li>
 <p>Example: If road attributes (e.g., maximum speed, number of lanes) are missing, values are inferred from similar road segments.  </p>
 </li>
 <li>
 <p><strong>Spatial Refinement</strong>  </p>
 </li>
-<li>Assets and buildings <strong>clipped to the coastal zone</strong>.  </li>
+<li>
+<p>Assets and buildings <strong>clipped to the coastal zone</strong>.  </p>
+</li>
 <li>Subdivided by <strong>Local Administrative Units (LAU)</strong> for greater granularity.  </li>
 </ol>
 <hr />
@@ -1578,8 +1602,7 @@ EEA/Eurosion (EEA, 2004); interpretation of World Imagery / Google Earth (Esri, 
 <h3 id="model-output">Model Output</h3>
 <p>The two following illustration provides an overview of how the infrastructure layer and the building can be used within the platform. For instance, Figure 1 shows a screenshot on overlying the flood map assuming a scenario with no protection standards for SSP5 for an event with a return period of a 1000 years at the time horizon of 2100 around the LAU Couarde-sur-Mer (FR). The shades of the LAUs give an indication on the percentage of building exposed. Furthermore, by clicking on the LAU polygon, the dashboard provides a timeline of the percentage of building exposed across all scenarios.</p>
 <p><em><strong>Figure 1</strong>: Building exposure</em></p>
-<p><img alt="" class="center" src="../assets/Tool/CBA_DATA.png" width="900" />
-<img alt="" class="center" src="../assets/Tool/ci_output.png" width="900" /></p>
+<p><img alt="" class="center" src="../assets/Tool/ci_output.png" width="800" /></p>
 <p>The critical infrastructure layer can also be overlayed with the flood maps. Figure 2 displays the flood depth around Couarde-sur-Mer (FR) assuming no protection standards, SSP5, for 2100 in combination to the infrastructure network.</p>
 <p><em><strong>Figure 2</strong>: Critical infrastructure exposure</em></p>
 <p><img alt="" class="center" src="../assets/Tool/ci_output2.png" width="800" /></p>
