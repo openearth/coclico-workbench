@@ -1068,7 +1068,8 @@ User research showed that policymakers need clear, actionable data for flood dir
 
         ***Figure 1**: Building exposure*
 
-        ![](./assets/Tool/ci_output.png){ width=800 .center}
+        ![](./assets/Tool/CBA_DATA.png){ width=900 .center}
+        ![](./assets/Tool/ci_output.png){ width=900 .center}
 
         The critical infrastructure layer can also be overlayed with the flood maps. Figure 2 displays the flood depth around Couarde-sur-Mer (FR) assuming no protection standards, SSP5, for 2100 in combination to the infrastructure network.
         
