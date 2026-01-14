@@ -228,8 +228,6 @@ User research showed that policymakers need clear, actionable data for flood dir
         - Entire **European coastline**, including EU countries and the UK 
         - Coastal **target points** represent strategic sampling locations for local flood modelling 
 
-        </div>
-
         ---
 
         **How to Use the Future Total Water Levels and Return Periods Data**
