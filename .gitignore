@@ -154,9 +154,6 @@ dist*
 # don't add lightning logs
 *lightning_logs*
 
-# don't add html (dask logs)
-.*.html
-*.html*
 
 # duckdb
 *:memory*
